@@ -1,0 +1,540 @@
+/* Styling for the main banner section. */
+.Uranking {
+    background-color: #eddbc3;
+    padding: 30px 20px; /* Adjusted padding */
+    padding: 30px 20px 30px 400px; /* Added 400px padding to the left */
+    background-image: url('/public/assets/Uranking.jpg');
+    background-position: right; /* Centered background */
+    background-repeat: no-repeat;
+    background-size: 490px; /* Cover the area */
+    box-shadow: 1px 5px 9px rgb(222, 222, 222);
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start; /* Align content to the left */
+    height: 300px; /* Set a default height */
+}
+
+/* Styling for the breadcrumb text in the banner. */
+.p1 {
+    font-size: 18px;
+    color: black;
+    padding: 0;
+    /* padding-right: 300px; Removed as content is now left-aligned */
+    margin-bottom: 10px;
+}
+
+/* Styling for the main heading in the banner. */
+.h1 {
+    font-weight: bold;
+    font-size: 45px;
+    /* padding-right: 240px; Removed as content is now left-aligned */
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Styling for the descriptive paragraph in the banner. */
+.p2 {
+    padding-top:20px;
+    /* padding-right: 200px; Removed as content is now left-aligned */
+    font-size: 20px;
+    line-height: normal;
+    color: black;
+    /* text-align: center; Removed as content is now left-aligned */
+    max-width: 800px; /* Limit width for readability */
+}
+
+/* Styling for the container that holds the search input fields and button. */
+.search-bars {
+    max-width: 1100px;
+    max-width: 1500px; /* Increased max-width by 400px */
+    color: black;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #dedede;
+    border-radius: var(--font-size-base);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Styling for the individual field containers within the search bar. */
+.field {
+    flex: 1;
+}
+
+/* Styling for the text input fields. */
+.input {
+    width: 100%;
+    height: 56px;
+    padding: 0 var(--font-size-base);
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    font-size: var(--font-size-base);
+    background-color: #fbfbfb;
+}
+
+/* Styling for the "or" text between the search fields. */
+.or {
+    color: #343639;
+    font-weight: 600;
+}
+
+/* Styling for the search button. */
+.search-btn {
+    height: 56px;
+    padding: 0 28px;
+    background-color: #1e80ff;
+    color: #ffffff;
+    border: rgb(177, 177, 177);
+    border-radius: 28px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Hover effect for the search button. */
+.search-btn:hover {
+    background-color: #020d1d;
+    color: white;
+}
+
+/* Styling for the line of text that displays the number of universities found. */
+.line {
+    margin-left: 110px;
+    font-size: 18px;
+}
+
+.nua {
+    margin-left: 150px;
+    padding: 20px;
+}
+
+/* Hide the mobile QS link by default on larger screens */
+.mobile-qs-link-container {
+    display: none;
+}
+
+/* Rankings list */
+.rankings {
+    max-width: 1200px;
+    margin: 19px auto 70px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Styling for a single university ranking card. */
+.rank-card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: var(--font-size-base);
+    padding: 18px 22px;
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    align-items: center;
+    box-shadow: 0 6px 18px rgba(20, 165, 255, 0.06);
+}
+
+/* Hover effect for the ranking card. */
+.rank-card:hover {
+    border: 1px solid #1e80ff;
+    transform: translate(0, -2px);
+    box-shadow: 0 8px 24px rgba(30, 128, 255, 0.2);
+}
+
+/* Wrapper for the rank number element. */
+.rank-num-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the rank number element itself. */
+.rank-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #f3f6ff;
+    color: #2453b1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    border: 1px solid #dbe4ff;
+}
+
+/* Hover effect for the rank number wrapper. */
+.rank-num-wrap:hover {
+    cursor: pointer;
+}
+
+/* Container for the university's name and country. */
+.rank-info {
+    padding: 0 10px;
+}
+
+/* Hover effect for the info section. */
+.rank-info:hover {
+    cursor: pointer;
+}
+
+/* Styling for the university name. */
+.uni-name {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #171717;
+}
+
+/* Styling for the university's country. */
+.uni-country {
+    margin: 6px 0 0 0;
+    color: #5b5e6a;
+    font-size: 14px;
+}
+
+/* Container for the action buttons (e.g., "View details"). */
+.rank-actions {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the "View details" button. */
+.details-btn {
+    padding: 10px 18px;
+    border-radius: 22px;
+    background: #ffffff;
+    border: 1px solid #c1ccff;
+    color: #314e98;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Hover effect for the "View details" button. */
+.details-btn:hover {
+    background: #17337a;
+    color: #ffffff;
+}
+
+/* Styling for the message displayed when no results are found. */
+.no-results-message {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    padding: 50px 20px;
+}
+
+.FIndU-Arrs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; 
+    padding-bottom: 50px; 
+}
+
+/* Styling for the pagination links (reused from FindU.css). */
+.FIndU-page-link {
+    min-width: 34px;
+    height: 34px;
+    margin: 0 4px;
+    padding: 0 5px; 
+    font-size: 20px;
+    font-weight: 500;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px; 
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Styling for the active page link. */
+.FIndU-page-link.FIndU-active {
+    background-color: #e9ecef; 
+    color: #343a40; 
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Styling for the current page link (seems redundant with .FIndU-active). */
+.FIndU-page-link.FIndU-current {
+    background-color: #f7f7f7; 
+    color: #343a40;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+/* Styling for disabled page links. */
+.FIndU-page-link.FIndU-disabled {
+    color: #adb5bd; 
+    cursor: default;
+    pointer-events: none; 
+}
+.FIndU-page-link {
+    /* General styling for page links. */
+    background-color: transparent;
+    font-weight: 600;
+    padding: 0 6px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .Uranking {
+        background-size: auto 150px; /* Adjusted background size for smaller screens */
+        background-position: center top; /* Center image at the top */
+        height: auto; /* Allow height to adjust */
+        justify-content: center; /* Re-center content vertically for smaller screens */
+        align-items: center; /* Re-center content horizontally for smaller screens */
+        padding: 20px; /* Adjusted padding */
+    }
+
+    .h1 {
+        font-size: 32px;
+        padding-left: 0; /* Remove fixed padding */
+        padding-right: 0; /* Remove fixed padding */
+        text-align: center; 
+    }
+    .p1{
+        padding-right: 0; /* Remove fixed padding */
+        color: black;
+        font-size: 14px;
+        text-align: center; 
+    }
+    .p2 {
+        padding-left: 0; /* Remove fixed padding */
+        padding-right: 0; /* Remove fixed padding */
+        margin-right: 0;
+        line-height: normal;
+        font-size: 14px;
+        padding-top: 10px;
+        text-align: center; 
+    }
+
+    .search-bars {
+        flex-direction: column;
+        gap: var(--font-size-base);
+        padding: 20px; /* Adjusted padding */
+    }
+
+    .field {
+        width: 100%;
+    }
+
+    .line {
+        margin-left: 0; /* Remove fixed margin */
+        text-align: center;
+    }
+
+    .nua {
+        margin-left: 0; /* Remove fixed margin */
+        padding: 10px;
+        text-align: center;
+    }
+
+    .rankings {
+        padding: 0 20px; /* Adjusted padding */
+    }
+
+    .rank-card {
+        grid-template-columns: 1fr; /* Stack elements vertically */
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+    .rank-num-wrap {
+        margin-bottom: 10px;
+    }
+    .rank-info {
+        padding: 0;
+    }
+    .uni-name {
+        font-size: 18px;
+    }
+    .uni-country {
+        font-size: 13px;
+    }
+    .rank-actions {
+        justify-content: center;
+    }
+    .details-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .FIndU-Arrs {
+        flex-wrap: wrap; /* Allow pagination to wrap */
+        gap: 8px;
+        padding-bottom: 30px;
+        padding: 20px;
+    }
+    .FIndU-page-link {
+        font-size: var(--font-size-base);
+        min-width: 30px;
+        height: 30px;
+    }
+}
+
+/* Media query for screens up to 400px wide */
+@media (max-width: 400px) {
+    .Uranking {
+        padding: 10px; /* Further reduced padding for very small screens */
+        height: auto;
+        background-image: none; /* Remove background image for very small screens */
+    }
+
+    .h1 {
+        font-size: 20px; /* Smaller heading for very small screens */
+    }
+
+    .p1, .p2 {
+        font-size: 11px; /* Smaller text for very small screens */
+    }
+
+    .search-bars {
+        padding: 10px; /* Further reduced padding */
+        gap: 8px;
+    }
+
+    .field {
+        width: 100%;
+    }
+
+    .input {
+        height: 40px; /* Smaller input height */
+        font-size: 12px; /* Smaller font size in input */
+    }
+
+    .or {
+        font-size: 14px; /* Adjust 'or' text size */
+    }
+
+    .search-btn {
+        height: 40px; /* Smaller button height */
+        font-size: 14px; /* Smaller font size in button */
+        padding: 0 15px;
+    }
+
+    .line {
+        font-size: 12px; /* Smaller font size for university count */
+        padding: 10px;
+    }
+
+    .nua {
+        padding: 5px;
+    }
+
+    .rankings {
+        padding: 0 5px; /* Further reduced padding for ranking cards container */
+    }
+
+    .rank-card {
+        padding: 8px; /* Further reduced padding for individual cards */
+        gap: 8px;
+    }
+
+    .rank-num {
+        width: 25px; /* Smaller rank number circle */
+        height: 25px;
+        font-size: 12px; /* Smaller font size for rank number */
+    }
+
+    .uni-name {
+        font-size: 14px; /* Smaller university name font size */
+    }
+
+    .uni-country {
+        font-size: 11px; /* Smaller country name font size */
+    }
+    .FIndU-page-link {
+        font-size: 12px; /* Smaller pagination link font size */
+        min-width: 20px;
+        height: 20px;
+        margin: 0 1px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .Uranking {
+        background-size:none; /* Further adjust background size */
+        padding: 15px;
+        height: auto;
+    }
+    .h1 {
+        font-size: 24px;
+    }
+    .p1 {
+        font-size: 12px;
+    }
+    .p2 {
+        font-size: 12px;
+    }
+    .search-bars {
+        padding: 15px;
+        gap: 10px;
+    }
+    .input {
+        height: 48px;
+        font-size: 14px;
+    }
+    .search-btn {
+        height: 48px;
+        font-size: var(--font-size-base);
+        padding: 0 20px;
+    }
+    .line {
+        font-size: 14px;
+    }
+    .rankings {
+        padding: 0 10px;
+    }
+    .rank-card {
+        padding: 10px;
+    }
+    .uni-name {
+        font-size: var(--font-size-base);
+    }
+    .uni-country {
+        font-size: 12px;
+    }
+    .rank-num {
+        width: 30px;
+        height: 30px;
+        font-size: var(--font-size-base);
+    }
+    .FIndU-page-link {
+        font-size: 14px;
+        min-width: 25px;
+        height: 25px;
+        margin: 0 2px;
+    }
+
+    /* Show and style mobile navigation links for screens 480px and below */
+    .mobile-qs-link-container {
+        display: block; /* Show on small screens */
+        text-align: center;
+        margin: 20px auto; /* Center the container */
+        padding: 0 20px; /* Add some horizontal padding */
+    }
+
+    .mobile-qs-link {
+        display: block; /* Make the link take full width of its container */
+        background-color: #007bff; /* Primary link color */
+        color: white;
+        text-decoration: none;
+        padding: 12px 15px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        transition: background-color 0.2s ease;
+        max-width: 300px; /* Limit width for better appearance */
+        margin: 0 auto; /* Center the link itself */
+    }
+
+    .mobile-qs-link:hover {
+        background-color: #0056b3; /* Light hover effect */
+    }
+}

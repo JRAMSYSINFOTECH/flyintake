@@ -1,0 +1,40 @@
+.stdyabcnt-container {
+  background: #f8fafc;
+  padding: 5rem ;
+  
+  
+}
+
+
+.stdyabcnt-container p {
+  margin-bottom: 1.2rem;
+}
+
+.stdyabcnt-container h2 {
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+}
+.stdyabcnt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #fff;
+}
+
+.stdyabcnt-table th,
+.stdyabcnt-table td {
+  border: 1px solid #d1d5db;
+  padding: 0.7rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.stdyabcnt-table th {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #1a237e;
+}
+
+.stdyabcnt-table tr:nth-child(even) {
+  background: #f8fafc;
+}

@@ -1,0 +1,106 @@
+/* Enhancements for StudyDs.css */
+
+/* Add a smooth transition for all properties */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+.stdy-dest-bg {
+  width: 100%;
+  height: auto; /* Make height responsive */
+  padding: 4rem 0; /* Use padding for vertical spacing */
+  background-image:
+    linear-gradient(120deg, rgba(0,0,0,0.65) 0%, rgba(44,62,80,0.45) 100%),
+    url("https://th.bing.com/th/id/OIP.tY0o4Wa0WE3AqKkC__hMlAHaDt?w=298&h=175&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.stdy-dest-content {
+  margin: 0 auto; /* Center content */
+  padding: 0 2rem; /* Add horizontal padding */
+  max-width: 1200px; /* Set a max-width for larger screens */
+  color: white;
+}
+
+/* Use clamp() for fluid typography */
+.stdy-dest-content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.stdy-dest-content h2 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.stdy-dest-breadcrumb {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.stdy-dest-content h3 {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.stdy-dest-content p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  margin-bottom: 2rem;
+}
+
+.stdy-dest-btn {
+  background: #ffffff;
+  color: #23272b;
+  border: none;
+  padding: clamp(0.8rem, 1.5vw, 1rem) clamp(2rem, 3vw, 2.5rem);
+  border-radius: 8px;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.stdy-dest-btn:hover {
+  background: #ffb300;
+  transform: translateY(-2px);
+  box-shadow: 0 6px var(--font-size-base) rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stdy-dest-bg {
+    padding: 3rem 0;
+  }
+  .stdy-dest-content {
+    padding: 0 1rem;
+    text-align: center; /* Center text on smaller screens */
+  }
+}
+
+.stdy-dest-info {
+  background: #f1f5fa;
+  border-radius: 14px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  margin: 2.5rem auto;
+  color: #23272b;
+  font-size: clamp(1rem, 2.5vw, 1.13rem);
+  line-height: 1.8;
+  text-align: left;
+  max-width: 1200px;
+}
+
+.stdy-dest-info strong {
+  display: block; /* Make strong tag a block element */
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 1rem; /* Add space below the heading */
+}

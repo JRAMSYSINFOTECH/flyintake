@@ -1,0 +1,102 @@
+.apply-section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.apply-section h2 {
+  font-size: 1.8rem;
+  color: #1d4ed8;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #1d4ed8;
+  padding-bottom: 0.5rem;
+}
+
+.apply-section h3 {
+  font-size: 1.5rem;
+  color: #113a92;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.apply-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.apply-section ul {
+  list-style-position: inside;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.apply-section li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.apply-section li strong {
+  font-weight: 600;
+  color: #222;
+}
+
+.apply-btn {
+  display: inline-block;
+  background-color: #1d4ed8;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.apply-btn:hover {
+  background-color: #153ea4;
+  transform: translateY(-2px);
+}
+
+.apply-section-country {
+  background-color: #f9fafb;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.apply-section-country h3 {
+  border-left: 4px solid #1d4ed8;
+  padding-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .apply-section {
+    padding: 1.5rem;
+  }
+
+  .apply-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .apply-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .apply-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .apply-section {
+    padding: 1rem;
+  }
+}

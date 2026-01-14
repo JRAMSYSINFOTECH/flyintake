@@ -1,0 +1,154 @@
+/* ...existing code... */
+.blue-nav {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.blue-nav__logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.blue-nav__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.3s ease;
+}
+
+
+.blue-nav__link a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger styles */
+.blue-nav__hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+
+
+.blue-nav__hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+.blue-nav__arrow {
+  display: none; /* Hidden by default on larger screens */
+}
+
+/* Default styles for larger screens (desktop) */
+/* Ensure horizontal layout and hide mobile-specific elements */
+@media (min-width: 901px) {
+  .blue-nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+  }
+  .blue-nav__links {
+    max-height: none; /* Ensure links are visible */
+    overflow: visible;
+    padding: 0; /* Remove mobile padding */
+    flex-direction: row; /* Ensure horizontal layout */
+    gap: 2rem; /* Restore default gap */
+  }
+  .blue-nav__link {
+    background: none; /* Remove background for larger screens */
+    box-shadow: none; /* Remove shadow for larger screens */
+    margin: 0; /* Remove margin for larger screens */
+    padding: 0; /* Remove padding for larger screens */
+  }
+  .blue-nav__link span { /* Hide the >> on larger screens */
+    display: none;
+  }
+}
+
+/* Media query for screens up to 900px wide (mobile/tablet) */
+@media (max-width: 900px) { /* Changed breakpoint from 768px to 900px */
+  .blue-nav {
+    flex-direction: row; /* Changed from column to row */
+    justify-content: flex-end; /* Align arrow to the right */
+    align-items: center; /* Vertically center the arrow */
+    position: relative;
+    padding: 0.5rem 1rem; /* Adjust padding for mobile */
+  }
+
+  .blue-nav__arrow {
+    display: block; /* Show the toggle button */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .blue-nav__links {
+    flex-direction: row; /* Changed from column to row for horizontal layout */
+    flex-wrap: nowrap; /* Ensure links stay in one line */
+    overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+    position: absolute; /* Changed from static to absolute */
+    top: 100%; /* Position below the blue-nav */
+    left: 0;
+    width: 100%; /* Take full width */
+    background: var(--primary-color); /* Ensure background covers the area */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow for depth */
+    z-index: 10; /* Ensure it's above other content */
+    gap: 1rem;
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Smooth transition */
+    padding: 1rem 0;
+    justify-content: flex-start; /* Align links to the start */
+  }
+
+  .blue-nav__links.open {
+    max-height: 500px; /* Sufficient height to show all links when open */
+    overflow-x: auto; /* Allow horizontal scrolling when open */
+    overflow-y: hidden; /* Prevent vertical scrolling when open */
+    padding: 1rem 0; /* Add padding when open */
+  }
+
+  .blue-nav__hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+  .blue-nav__link {
+    background: #1560bd;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin: 0 0.5rem; /* Adjusted margin for horizontal layout */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.2s;
+    flex-shrink: 0; /* Prevent links from shrinking */
+  }
+  .blue-nav__link a {
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  .blue-nav__link:hover {
+    background: #104e8b;
+  }
+  .blue-nav__link span { /* Show the >> on mobile */
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: rgba(255, 255, 255, 0.7); /* Slightly faded */
+  }
+}

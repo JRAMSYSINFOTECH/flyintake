@@ -1,0 +1,188 @@
+.Duolingo-bas{
+    height: 246px;
+    padding-top:20px;
+    padding-left: 190px;
+    background-image: url("/public/assets/bg2.jpg");
+    box-shadow: 1px 2px 9px rgb(135, 132, 132);
+}
+.side-head{
+    padding-top: 10px;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    margin-left: -850px;
+    color: black;
+}
+.side-head:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.Duolingo-head{
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+    padding-top: 17px;
+    justify-content: center;
+}
+.Duolingo-mat{
+    font-size: var(--font-size-base);
+    padding-right: 250px;
+    color: black;
+}
+.Duolingo-body{
+    padding:30px 150px;
+    font-size: 18px;
+
+}
+.duolingo-container {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 50px auto;
+  border: 1px solid #58e6ff;
+}
+
+.duolingo-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #58cc02;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.duolingo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Poppins", sans-serif;
+}
+
+.duolingo-table thead {
+  background-color: #58cc02;
+  color: #fff;
+}
+
+.duolingo-table th,
+.duolingo-table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.duolingo-table tbody tr:hover {
+  background-color: #fafff5;
+}
+
+.duolingo-table a {
+  color: #58cc02;
+  text-decoration: none;
+}
+
+.duolingo-table a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .duolingo-container {
+    padding: 1rem;
+    margin: 20px;
+  }
+
+  .duolingo-heading {
+    font-size: 1.5rem;
+  }
+
+  .duolingo-table th,
+  .duolingo-table td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  .Duolingo-bas{
+    height: 220px;
+    padding-top:20px;
+    padding-left: 20px;
+    background-size: cover;
+  }
+  .side-head{
+    margin-left: 0;
+    font-size: var(--font-size-base);
+    padding-right: 220px; 
+  }
+  .Duolingo-head{
+    font-size: 28px;
+    margin-left: 0;
+    padding-left: 120px;
+    padding-right: 220px;
+  }
+  .Duolingo-mat{
+    font-size: 12px;
+    padding-right: 20px;
+    padding-left: 100px;
+  } 
+  .Duolingo-body { /* Added responsive padding for the body section */
+    padding: 20px;
+  }
+  .duolingo-table {
+    font-size: 14px;
+    height: auto; /* Allow table height to adjust to content */
+  }
+  .duolingo-table-wrapper {
+    height: auto; /* Allow wrapper height to adjust to content */
+    overflow-x: auto; /* Add horizontal scroll for tables if content overflows */
+  }
+}
+
+/* Specific adjustments for screens up to 480px wide, including the 400px-480px range */
+@media (max-width: 480px) {
+  .Duolingo-bas {
+    background-size: 490px; /* Further adjust background image size for very small screens */
+    padding: 15px 10px 25px 10px; /* Tighter padding for smaller viewports */
+    height: 160px; /* Ensure height adjusts */
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+  .side-head {
+    font-size: 12px; /* Smaller font size for better fit */
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0; /* Reset margin for small screens */
+    text-align: left; /* Ensure text aligns left */
+  }
+  .Duolingo-head {
+    font-size: 20px; /* Adjusted heading font size */
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: normal;
+    padding-top: 15px;
+    text-align: center; /* Center the heading for better presentation */
+    margin-left: 0; /* Reset margin for small screens */
+  }
+  .Duolingo-mat {
+    font-size: 12px; /* Adjusted text font size */
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: normal;
+    padding-top: 5px;
+    text-align: center; /* Center the text for better presentation */
+  }
+  .Duolingo-body {
+    padding: 15px 10px; /* Adjusted padding for the body */
+  }
+  .duolingo-container {
+    margin: 15px 10px; /* Adjusted margin for the container */
+    padding: 0.8rem; /* Adjusted padding for the container */
+  }
+  .duolingo-heading {
+    font-size: 1.2rem; /* Smaller heading for the table */
+  }
+  .duolingo-table th,
+  .duolingo-table td {
+    padding: 6px 8px; /* Reduced padding for table cells */
+    font-size: 0.7rem; /* Smaller font size for table content */
+  }
+  .duolingo-table {
+    font-size: 0.7rem; /* Ensure table font size is consistent */
+  }
+}

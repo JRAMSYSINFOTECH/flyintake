@@ -1,0 +1,260 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===============================
+   SECTION
+================================ */
+.destinations-sec {
+  padding: 3.5rem 0 4.5rem;
+  background: #fff;
+}
+
+.destinations-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ===============================
+   TITLE
+================================ */
+.dest-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* ===============================
+   GRID
+================================ */
+.dest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* Desktop 3-column layout */
+@media (min-width: 1024px) {
+  .dest-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===============================
+   CARD
+================================ */
+.dest-card {
+  position: relative;
+  height: 220px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   CENTER LABEL
+================================ */
+.dest-label {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.dest-label span {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* ===============================
+   HOVER OVERLAY
+================================ */
+.dest-hover {
+  position: absolute;
+  inset: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.35) 55%,
+    transparent
+  );
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.dest-card:hover .dest-hover,
+.dest-card:focus-within .dest-hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dest-card:hover .dest-label,
+.dest-card:focus-within .dest-label {
+  opacity: 0;
+}
+
+/* ===============================
+   HOVER TEXT
+================================ */
+.dest-hover p {
+  color: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.dest-btn {
+  align-self: flex-start;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.dest-btn:hover {
+  background: #1e40af;
+}
+
+.dest-btn:active {
+  transform: translateY(1px);
+}
+
+/* ===============================
+   TABLET
+================================ */
+@media (max-width: 1024px) {
+  .dest-title {
+    font-size: 1.7rem;
+  }
+
+  .dest-card {
+    height: 200px;
+  }
+
+  .dest-label span {
+    font-size: 1.3rem;
+  }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+  .destinations-sec {
+    padding: 2.8rem 0 3.5rem;
+  }
+
+  .dest-title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .dest-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .dest-card {
+    height: 185px;
+  }
+
+  .dest-hover p {
+    font-size: 0.9rem;
+  }
+
+  .dest-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE
+================================ */
+@media (max-width: 480px) {
+  .dest-title {
+    font-size: 1.3rem;
+  }
+
+  .dest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dest-card {
+    height: 165px;
+    border-radius: 12px;
+  }
+
+  .dest-label span {
+    font-size: 1.15rem;
+  }
+
+  .dest-hover p {
+    font-size: 0.85rem;
+  }
+
+  .dest-btn {
+    font-size: 0.85rem;
+    padding: 7px 14px;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL DEVICES
+================================ */
+@media (max-width: 380px) {
+  .dest-card {
+    height: 150px;
+  }
+
+  .dest-label span {
+    font-size: 1rem;
+  }
+
+  .dest-hover p {
+    font-size: 0.8rem;
+  }
+
+  .dest-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

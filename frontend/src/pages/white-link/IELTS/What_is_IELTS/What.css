@@ -1,0 +1,328 @@
+/* Styling for the main banner container. */
+.what-container {
+    padding-left: 180px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-image: url('/public/assets/WHAT.jpg');
+    background-repeat:no-repeat;
+    background-position: right; 
+    background-size: contain;
+    height: 250px;
+    max-width: 1800px;
+    background-color: black;
+    margin: 0 auto;
+    box-shadow: 1px 6px 7px rgb(18, 18, 18);
+
+}
+
+/* Styling for the breadcrumb text in the banner. */
+.wp {
+    margin-left: 12px;
+    font-size: 16px;
+    margin-bottom: 13px;
+    color: rgb(255, 255, 255);
+}
+
+/* Hover effect for the breadcrumb text. */
+.wp:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Styling for the secondary text in the banner. */
+.wr{
+     margin-left: 12px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 13px;
+}
+
+/* Styling for the main heading in the banner. */
+.wh {
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 12px;
+    margin-top: 18px;
+}
+
+/* Styling for the button in the banner. */
+.wb {
+    margin-top: var(--font-size-base);
+    margin-left: -14;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 12px 24px;
+}
+
+/* Hover effect for the banner button. */
+.wb:hover {
+    background-color: #0f1c2a;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Container for the main content area below the banner. */
+.mm{
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    padding-left: 100px;
+    padding-bottom: 30px;
+    align-items: left;
+    padding-right: 30px;
+    background-color: aliceblue;
+}
+
+/* Styling for the text content within the main area. */
+.matter {
+  padding-top: 60px;
+  max-width: 1900px;
+  margin-left: 30px;
+}
+
+/* Styling for subheadings on the page. */
+.h2 {
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+/* Flex container for the "Learn more" navigation boxes. */
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px 40px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Styling for a single navigation box. */
+.box {
+    flex: 1;
+    background-color: white;
+    border: 1px solid rgb(238, 238, 238);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 24px var(--font-size-base);
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: var(--font-size-base);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for the navigation boxes. */
+.box:hover {
+    box-shadow: rgb(199, 253, 255) 0px 0px 10px 2px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(50, 151, 252);
+    transform: translateY(-3px);
+}
+
+.box-container1 {
+    display: flex;
+    gap:250px;
+    margin-left: 250px;
+   
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.hmat {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 20px 80px 40px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styling for a single article card. */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover effect for the article cards. */
+.card:hover {
+    box-shadow: rgb(199, 253, 255) 0px 0px 10px 2px;
+    border-color: rgb(50, 151, 252);
+    transform: translateY(-3px);
+}
+
+/* Styling for the title within an article card. */
+.card-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+/* Styling for the description within an article card. */
+.card-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    color: #666;
+}
+@media (max-width: 768px) {
+    .what-container {
+        background-size: 250px;
+        background-position: right;
+        height: 220px;
+        padding: 20px;
+    }
+    .wp {
+        margin-left: -250px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .wr{
+        margin-left: 0px;
+        font-size: 14px;
+        padding-right: 220px;
+    }
+    .wh {
+        font-size: 22px;
+        padding-right: 220px;
+        padding-left: 520px;
+        line-height: normal;
+        padding-top: 15px;
+        margin-bottom: 10px;
+    }
+    .mm{
+        font-size: 15px;
+        line-height: normal;
+        padding-top: 5px
+    }
+}
+
+/* Adjustments for screens up to 480px wide (including 400px-480px) */
+@media (max-width: 480px) {
+    .what-container {
+        background-size: 200px; /* Further reduce background image size */
+        background-position: center right; /* Adjust position for better visibility */
+        height: 180px; /* Reduce height of the banner */
+        padding: 15px 10px; /* Tighter padding for smaller viewports */
+    }
+
+    .wp {
+        margin-left: 0; /* Reset margin-left */
+        font-size: 12px; /* Smaller font size for breadcrumb */
+        margin-bottom: 8px; /* Adjust margin-bottom */
+        padding-left: 10px; /* Consistent left padding */
+        padding-right: 10px; /* Consistent right padding */
+        text-align: left; /* Ensure text aligns left */
+    }
+
+    .wr {
+        margin-left: 0; /* Reset margin-left */
+        font-size: 12px; /* Smaller font size for secondary text */
+        margin-bottom: 8px; /* Adjust margin-bottom */
+        padding-left: 10px; /* Consistent left padding */
+        padding-right: 10px; /* Consistent right padding */
+        text-align: left; /* Ensure text aligns left */
+    }
+
+    .wh {
+        font-size: 24px; /* Smaller heading font size */
+        margin-left: 0; /* Reset margin-left */
+        margin-top: 10px; /* Adjust top margin */
+        margin-bottom: 10px; /* Adjust bottom margin */
+        padding-left: 10px; /* Consistent left padding */
+        padding-right: 10px; /* Consistent right padding */
+        line-height: 1.2; /* Adjust line height for readability */
+        text-align: center; /* Center the heading */
+    }
+
+    .wb {
+        margin-top: 10px; /* Adjust top margin for button */
+        margin-left: auto; /* Center button horizontally */
+        margin-right: auto; /* Center button horizontally */
+        display: block; /* Make button a block element to apply auto margins */
+        padding: 10px 20px; /* Adjust padding for button */
+        font-size: 0.9rem; /* Smaller font size for button text */
+    }
+
+    .mm {
+        padding-left: 15px; /* Reduced left padding */
+        padding-right: 15px; /* Reduced right padding */
+        padding-top: 15px; /* Adjusted top padding */
+        padding-bottom: 20px; /* Adjusted bottom padding */
+        font-size: 14px; /* Smaller font size for main content */
+        line-height: 1.6; /* Adjust line height for readability */
+        text-align: justify; /* Justify text for better appearance */
+    }
+
+    .matter {
+        padding-top: 20px; /* Adjusted top padding */
+        margin-left: 15px; /* Adjusted left margin */
+        margin-right: 15px; /* Adjusted right margin */
+        font-size: 14px; /* Smaller font size */
+        line-height: 1.6; /* Adjust line height */
+    }
+
+    .h2 {
+        padding-left: 15px; /* Adjusted left padding */
+        padding-right: 15px; /* Adjusted right padding */
+        font-size: 1.4rem; /* Smaller subheading font size */
+        margin-top: 25px; /* Adjusted top margin */
+        margin-bottom: 15px; /* Adjusted bottom margin */
+        text-align: center; /* Center the subheading */
+        margin-left: auto; /* Center horizontally */
+        margin-right: auto; /* Center horizontally */
+    }
+
+    .box-container {
+        flex-direction: column; /* Stack boxes vertically */
+        padding: 15px 10px; /* Adjust padding for the container */
+        gap: 10px; /* Reduce gap between boxes */
+    }
+
+    .box {
+        width: 100%; /* Make boxes take full width */
+        padding: 15px; /* Adjust padding for individual boxes */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr; /* Single column layout for cards */
+        padding: 15px 10px; /* Adjust padding for the grid */
+        gap: 15px; /* Adjust gap between cards */
+    }
+
+    .card {
+        padding: 15px; /* Adjust padding for individual cards */
+    }
+
+    .card-title {
+        font-size: 1rem; /* Smaller card title font size */
+        margin-bottom: 8px; /* Adjust margin */
+    }
+
+    .card-desc {
+        font-size: 0.85rem; /* Smaller card description font size */
+    }
+}

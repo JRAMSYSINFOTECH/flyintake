@@ -1,0 +1,115 @@
+.saved-courses-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.saved-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  display: flex;
+  align-items: center;
+}
+
+.underline {
+  display: inline-block;
+  width: 20px;
+  background-color: rgb(67, 225, 83);
+  border-radius: 2px;
+}
+
+.saved-description {
+  margin: 12px 0 30px;
+  color: #892a2a;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.save-box {
+  display: flex;
+  align-items: flex-start;
+  background-color: #bab36f;
+  padding: var(--font-size-base) 20px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.info-icon {
+  color: #0e0f10;
+  margin-top: 4px;
+}
+
+.save-text {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.save-link a {
+  color: #350a84;
+  text-decoration: underline;
+}
+
+.no-course-text {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #3a24a9;
+}
+
+.favorites-list {
+  margin-top: 30px;
+}
+
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.2s;
+}
+
+.favorite-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.favorite-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.remove-btn:hover {
+  background-color: #f8d7da;
+}
+
+.error-text {
+  color: #dc3545;
+  text-align: center;
+  margin-top: 20px;
+}

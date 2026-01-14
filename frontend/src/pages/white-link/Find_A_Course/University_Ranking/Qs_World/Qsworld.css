@@ -1,0 +1,189 @@
+/* Styling for the main banner container. */
+.Qs-container {
+  padding: 30px 20px; /* Adjusted padding */
+  background-image: url("/public/assets/ranking.jpg");
+  background-repeat: no-repeat;
+  background-size: 420px; 
+  background-position: right; 
+  height: 270px;
+  box-shadow: 12px 12px 15px rgb(234, 234, 234);
+  background-color: rgba(238, 218, 191);
+  box-shadow: 1px 5px 7px rgb(236, 236, 236);
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack content vertically */
+ 
+}
+
+/* Styling for the breadcrumb text in the banner. */
+.p11 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px; /* Adjusted margin */
+    margin-left: 0; /* Remove fixed margin */
+    text-align: left;
+    padding-left: 130px;
+}
+
+.Qs-container .p11{
+    color: black;
+}
+/* Styling for the main heading in the banner. */
+.h11 {
+    font-weight: bold;
+    font-size: 38px;
+    padding: 0 20px; /* Adjusted padding */
+    line-height: 1.3; /* Adjusted line height */
+    text-align: left;
+}   
+
+/* Styling for headings and paragraphs within the main content container. */
+.Qs-container2 h2{
+    padding-left: 160px;
+    padding-top: 20px;
+    line-height: 2.5rem;
+}
+.Qs-container2 p{
+    padding-left: 160px;
+    padding-top: 10px;
+    line-height: 1.8rem;
+    font-size: 18px;
+    padding-right: 180px;
+}
+
+/* Styling for the main content heading below the banner. */
+.mat {
+    padding-left: 140px;
+    padding-top: 40px;
+    line-height: 1.8rem;
+    font-size: 34px;
+}
+
+/* Styling for the QS rankings table. */
+.qs-table {
+    width: 80%;
+    margin: 30px 0 60px 160px; 
+    border-collapse: collapse;
+    background-color: #f7f7f7; 
+}
+
+/* Styling for table cells (header and data). */
+.qs-table th,
+.qs-table td {
+    padding: 14px var(--font-size-base);
+    border: 1.5px solid #5e5e5e;
+    text-align: left;
+    color: #000;
+}
+
+/* Styling specifically for table header cells. */
+.qs-table thead th {
+    font-weight: 700;
+    padding-left: 280px;
+}
+
+/* Styling for the heading of the table. */
+.thead {
+    padding-left: 160px;
+    padding-top: 40px;
+    font-size: 24px;
+    font-weight: 600;
+}
+@media (max-width: 768px) {
+    .Qs-container {
+        background-size: cover;
+        height: auto; /* Allow height to adjust to content */
+        padding: 20px;
+    }
+    .p11{
+        margin-left: 0; /* Reset for mobile */
+        margin-right: 0; /* Ensure no conflicting right margin */
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .h11 {
+        font-size: 28px;
+        padding: 15px 20px; /* Consistent padding for mobile */
+        text-align: center;
+        line-height: normal;
+    }
+
+    .Qs-container2 h2 {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .Qs-container2 p {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: justify; /* Justify text for better readability */
+        font-size: var(--font-size-base);
+    }
+
+    .mat {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .thead {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        font-size: 20px; /* Adjust font size for mobile */
+    }
+
+    .qs-table {
+        width: 95%; /* Make table almost full width */
+        margin: 20px auto; /* Center the table for mobile */
+    }
+    .qs-table th,
+    .qs-table td {
+        padding: 8px 10px; /* Reduce padding for smaller screens */
+        text-align: left; /* Keep text aligned left for better readability */
+        font-size: 14px;
+    }
+    .qs-table thead th {
+        padding-left: 10px; /* Reset padding for header cells to allow centering */
+    }
+}
+
+@media (max-width: 480px) {
+    .Qs-container {
+        padding: 15px 10px;
+    }
+    .p11 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .h11 {
+        font-size: 22px;
+        padding: 10px;
+    }
+    .Qs-container2 h2 {
+        font-size: 18px;
+    }
+    .Qs-container2 p {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .mat {
+        font-size: 20px;
+        padding: 15px 10px;
+    }
+    .thead {
+        font-size: var(--font-size-base);
+        padding: 15px 10px;
+    }
+    .qs-table th,
+    .qs-table td {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+    .qs-table thead th {
+        padding-left: 5px;
+    }
+}

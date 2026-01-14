@@ -1,0 +1,144 @@
+:root {
+  --accent: #007bff;
+  --text: #1f2937;
+  --muted: #495057;
+  --card-bg: #ffffff;
+  --max-width: 1200px;
+  --radius: 15px;
+}
+
+.insuranceContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.healthContainer {
+  background-color: #f8f9fa;
+  padding: 80px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.breadcrumb {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.mainHeading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 auto 1rem;
+  max-width: 800px;
+}
+
+.partner {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.partnerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.partnerCard {
+  background: var(--card-bg);
+  border: 1px solid #e9ecef;
+  border-radius: var(--radius);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.partnerCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.partnerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.partnerCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.partnerLogo {
+  height: 50px;
+  object-fit: contain;
+}
+
+.featureList {
+  margin: 20px 0;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.featureList li {
+  margin-bottom: 10px;
+}
+
+.destinationText {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 20px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  flex: 1;
+  padding: 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.buttonPrimary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.buttonSecondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.buttonPrimary:hover,
+.buttonSecondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .mainHeading {
+    font-size: 2.5rem;
+  }
+}

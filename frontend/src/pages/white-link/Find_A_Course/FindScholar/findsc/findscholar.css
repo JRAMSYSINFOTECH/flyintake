@@ -1,0 +1,258 @@
+/* Styling for the main banner section of the FindScholar page. */
+.find-scholar-banner {
+    position: relative;
+    background-image: url('/public/assets/scholars.jpg');
+    background-size: cover; /* Ensure background covers the area responsively by default */
+    background-position: center;
+    opacity: 1;
+    padding: 4rem 2rem;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 12px 5px 7px rgb(173, 173, 173);
+}
+
+
+/* Styling for the main heading in the banner. */
+.find-scholar-banner h1 {
+    font-size: 3rem;
+    color: rgb(255, 210, 8);
+    margin-bottom: 1rem;
+}
+
+/* Styling for the paragraph text in the banner. */
+.find-scholar-banner p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    color: whitesmoke;
+    margin: 0 auto;
+}
+
+/* Main container for the page content below the banner. */
+.find-scholar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Container for the search bar and filter dropdowns. */
+.search-filter-container {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid #dee2e6;
+}
+
+/* Styling for the search input bar. */
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    font-size: var(--font-size-base);
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* Flex container for the filter dropdowns. */
+.filter-options {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Styling for the select (dropdown) elements. */
+.filter-options select {
+    padding: 12px;
+    font-size: var(--font-size-base);
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+/* Styling for the text that shows the result summary (e.g., "Showing results 1-10 of 30"). */
+.results-summary {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Grid container for the scholarship result cards. */
+.scholarship-results {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Styling for a single scholarship result card. */
+.result-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover effect for the result card. */
+.result-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+}
+
+/* Styling for the header section of the result card. */
+.result-card-header h3 {
+    margin: 0 0 0.25rem 0;
+    color: #0056b3;
+    font-size: 1.25rem;
+}
+
+.result-card-header p {
+    margin: 0;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Styling for the main body of the result card where details are shown. */
+.result-card-body {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+}
+
+/* Styling for each detail item within the card body. */
+.result-detail {
+    font-size: 0.95rem;
+}
+
+/* Styling for the footer of the result card, containing the "View details" link. */
+.result-card-footer {
+    margin-top: auto;
+    text-align: right;
+}
+
+/* Styling for the "View details" link. */
+.view-details-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover effect for the "View details" link. */
+.view-details-link:hover {
+    text-decoration: underline;
+}
+
+/* Container for the pagination buttons. */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+/* Styling for the pagination buttons. */
+.pagination-container button {
+    padding: 8px var(--font-size-base);
+    border: 1px solid #dee2e6;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Styling for the currently active page button. */
+.pagination-container button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+/* Styling for disabled pagination buttons (e.g., "Previous" on the first page). */
+.pagination-container button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+@media (max-width: 768px) {
+    .find-scholar-banner {
+        padding: 2.5rem 1rem; /* Adjust banner padding for smaller screens */
+    }
+
+    .find-scholar-banner h1 {
+        font-size: 2.2px; /* Smaller font size for banner heading */
+    }
+
+    .find-scholar-banner p {
+        font-size: 1rem; /* Smaller font size for banner paragraph */
+    }
+
+    .find-scholar-container {
+        padding: 1rem; /* Adjust main container padding */
+    }
+
+    .search-filter-container {
+        padding: 1.5rem; /* Adjust search/filter container padding */
+    }
+
+    .filter-options {
+        flex-direction: column; /* Stack filter dropdowns vertically */
+        gap: 0.75rem; /* Adjust gap between stacked dropdowns */
+    }
+
+    .filter-options select {
+        width: 100%; /* Make select elements take full width when stacked */
+    }
+
+    .result-card-body {
+        grid-template-columns: 1fr; /* Ensure details stack on very small screens */
+    }
+
+    .pagination-container {
+        flex-wrap: wrap; /* Allow pagination buttons to wrap to the next line */
+        gap: 0.5rem; /* Adjust gap for wrapped pagination buttons */
+    }
+
+    .pagination-container button {
+        padding: 8px 14px; /* Adjust padding for pagination buttons */
+        font-size: 0.9rem; /* Adjust font size for pagination buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .find-scholar-banner {
+        padding: 2rem 0.5rem; /* Further adjust banner padding */
+    }
+    .find-scholar-banner h1 {
+        font-size: 2rem; /* Further reduce font size for banner heading */
+    }
+    .find-scholar-banner p {
+        font-size: 0.9rem; /* Further reduce font size for banner paragraph */
+    }
+    .find-scholar-container {
+        padding: 0.5rem; /* Further adjust main container padding */
+    }
+    .search-filter-container {
+        padding: 1rem; /* Further adjust search/filter container padding */
+    }
+    .search-bar,
+    .filter-options select {
+        padding: 10px; /* Smaller padding for inputs */
+        font-size: 14px; /* Smaller font size for inputs */
+    }
+    .results-summary {
+        font-size: 0.85rem; /* Smaller font for summary */
+    }
+    .result-card-header h3 {
+        font-size: 1.1rem; /* Smaller font for card title */
+    }
+    .result-card-header p {
+        font-size: 0.8rem; /* Smaller font for university name */
+    }
+    .result-detail {
+        font-size: 0.8rem; /* Smaller font for details */
+    }
+    .pagination-container button {
+        padding: 6px 10px; /* Smaller padding for pagination buttons */
+        font-size: 0.8rem; /* Smaller font size for pagination buttons */
+    }
+}

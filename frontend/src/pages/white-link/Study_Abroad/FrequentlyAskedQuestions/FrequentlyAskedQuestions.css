@@ -1,0 +1,90 @@
+.asked-questions{
+  background: #e0e9ea;
+  padding: 4rem;
+  border-radius: 10px;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+.accordion-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #23272b;
+  margin-bottom: 2.2rem;
+  position: relative;
+}
+.accordion-title::after {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 4px;
+  background: #ffb300;
+  border-radius: 2px;
+  margin-top: 0.4rem;
+}
+
+.accordion-list {
+  width: 100%;
+}
+
+.accordion-item {
+  width: 100%;
+}
+
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #23272b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.accordion-header:hover {
+  background: #f0f4f8;
+}
+
+.accordion-icon {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #23272b;
+  margin-left: 1.2rem;
+  line-height: 1;
+}
+
+.accordion-content {
+  padding: 0.7rem 0 1.2rem 0.2rem;
+  font-size: 1.07rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.accordion-content ul {
+  margin: 0.7rem 0 0.7rem 1.2rem;
+  padding-left: 1.2rem;
+}
+
+.accordion-divider {
+  border-bottom: 1.5px solid #e0e0e0;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .accordion-outer {
+    padding: 1.2rem 0.3rem;
+  }
+  .accordion-title {
+    font-size: 1.25rem;
+  }
+  .accordion-header {
+    font-size: 1.05rem;
+    padding: 0.8rem 0;
+  }
+}

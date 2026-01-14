@@ -1,0 +1,152 @@
+/* =========================
+   Container
+========================= */
+.oneac-container {
+  background-color: #cfeffff7;
+  width: 80%;
+  margin: 40px auto 30px;
+  padding: 30px 40px;
+  border-radius: 10px;
+  border: 1px solid #f0f0f0;
+}
+
+/* =========================
+   Heading
+========================= */
+.head1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+/* =========================
+   Content Row
+========================= */
+.oneac-mat {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   Paragraph
+========================= */
+.oneac-para {
+  flex: 1;
+  font-size: 19px;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* =========================
+   Buttons (Links)
+========================= */
+.oneac-btn,
+.oneac-btn1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-radius: 23px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Sign up */
+.oneac-btn {
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #e2e2e2;
+  width: 160px;
+  font-size: 15px;
+}
+
+.oneac-btn:hover {
+  background-color: #235aff;
+  color: #ffffff;
+}
+
+/* Sign in */
+.oneac-btn1 {
+  background-color: #235aff;
+  color: #ffffff;
+  border: 1px solid #235aff;
+  width: 140px;
+  font-size: 14px;
+}
+
+.oneac-btn1:hover {
+  background-color: #140d79;
+}
+
+/* =========================
+   Tablet (≤1024px)
+========================= */
+@media (max-width: 1024px) {
+  .oneac-container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .head1 {
+    font-size: 22px;
+  }
+
+  .oneac-para {
+    font-size: 17px;
+  }
+}
+
+/* =========================
+   Mobile (≤768px)
+========================= */
+@media (max-width: 768px) {
+  .oneac-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .head1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .oneac-mat {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .oneac-para {
+    font-size: var(--font-size-base);
+  }
+
+  .oneac-btn,
+  .oneac-btn1 {
+    width: 100%;
+    max-width: 260px;
+    margin-top: 15px;
+  }
+}
+
+/* =========================
+   Small Phones (≤480px)
+========================= */
+@media (max-width: 480px) {
+  .head1 {
+    font-size: 18px;
+  }
+
+  .oneac-para {
+    font-size: 15px;
+  }
+
+  .oneac-btn,
+  .oneac-btn1 {
+    height: 46px;
+    font-size: 14px;
+  }
+}

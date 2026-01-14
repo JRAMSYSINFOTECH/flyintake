@@ -1,0 +1,221 @@
+/* Styling for the main banner section. */
+.ma{
+    background-image: url(/public/assets/ielts1.jpg);
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: right;
+  
+    height: 230px;
+    opacity: 0.8;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 5px 9px rgb(219, 219, 219);
+}
+
+/* Styling for the breadcrumb text in the banner. */
+.pa{
+    padding-left: 130px;
+    font-size: 18px;
+    margin-left: -850px;
+    padding-top: 20px;
+    color: black;
+}
+
+/* Styling for the main heading in the banner. */
+.laa{
+    padding-left: 130px;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    padding-right: 400px;
+    padding-top: 10px;
+}
+
+/* Styling for the paragraph text in the banner. */
+.aa .p1{
+    color: black;
+}
+
+
+
+
+/* Styling for the main text block below the banner. */
+.mattt{
+    height: 219px;
+    margin-top: 40px;
+    height: auto;
+    font-size: 20px;
+    margin-left: 80px;
+    line-height: 1.9;
+    margin-right: 50px;
+
+}
+
+/* Styling for the "Learn more" section container. */
+.lr{
+    background-color: aliceblue;
+}
+
+/* Container for the IELTS details table. */
+.ielts_container {
+  padding: 20px;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading for the IELTS table. */
+.ielts_heading {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2b2b2b;
+}
+
+
+/* Main styling for the IELTS details table. */
+.ielts_table {
+  width: 60%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+}
+
+/* Styling for table cells (header and data). */
+.ielts_table th,
+.ielts_table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Styling specifically for table header cells. */
+.ielts_table th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Hover effect for table rows. */
+.ielts_table tr:hover {
+  background-color: #ecfdff;
+}
+
+/* Styling for links within the table. */
+.ielts_table a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.ielts_table a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for the navigation boxes (reused class). */
+.box{
+    text-decoration: none;
+}
+
+.box:hover{
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .ma {
+        background-size: 320px;
+        background-position: right ;
+        height: 220px;
+        background-repeat: no-repeat;
+        padding: 20px;
+    }
+
+    .laa {
+        font-size: 30px;
+        padding-right: 20px;
+        padding-top: 0px;
+        margin-left: -120px;
+        padding-right: 220px;
+    }
+
+    .pa {
+        margin-left: -220px;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .mattt {
+        margin-left: 20px;
+        font-size: 12px;
+        margin-right: 20px;
+    }
+}
+
+/* Specific adjustments for screens up to 480px wide, including the 400px-480px range */
+@media (max-width: 480px) {
+  .box-container{
+    flex-direction: column;
+    gap: 15px;
+  } 
+  .ma {
+        background-size: 220px; /* Further adjust background image size for very small screens */
+        padding: 15px 10px 25px 10px; /* Tighter padding for smaller viewports */
+        height: 160px; /* Ensure height adjusts */
+        background-position: center right;
+        background-repeat: no-repeat;
+    }
+
+    .pa {
+        font-size: 12px; /* Smaller font size for better fit */
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 0; /* Reset margin for small screens */
+        text-align: left; /* Ensure text aligns left */
+        padding-top: 10px;
+    }
+
+    .laa {
+        font-size: 20px; /* Adjusted heading font size */
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: normal;
+        padding-top: 5px;
+        text-align: center; /* Center the heading for better presentation */
+        margin-left: 0; /* Reset margin for small screens */
+    }
+
+    .mattt {
+        font-size: 12px; /* Adjusted text font size */
+        margin-left: 10px;
+        margin-right: 10px;
+        line-height: 1.6;
+        padding: 10px;
+    }
+
+    .ielts_container {
+        margin: 15px 10px; /* Adjusted margin for the container */
+        padding: 0.8rem; /* Adjusted padding for the container */
+    }
+ 
+    .ielts_heading {
+        font-size: 1.2rem; /* Smaller heading for the table */
+    }
+    
+    .lr {
+        padding: 20px 10px; /* Add padding to the learn more section */
+    }
+
+    .lr .h2 {
+        font-size: 1.5rem; /* Adjust heading size for small screens */
+        text-align: center; /* Center the heading */
+        margin-bottom: 15px; /* Add space below the heading */
+    }
+    
+    .ielts_table th,
+    .ielts_table td {
+        padding: 6px 8px; /* Reduced padding for table cells */
+        font-size: 0.7rem; /* Smaller font size for table content */
+    }
+    .ielts_table {
+        width: 100%; /* Ensure table takes full width */
+        font-size: 0.7rem; /* Ensure table font size is consistent */
+    }
+}

@@ -1,0 +1,183 @@
+.Toefl-bas{
+    height: 246px;
+    padding-top:20px;
+    padding-left: 150px;
+    background-image: url("/public/assets/bg1.jpg");
+    box-shadow: 8px 6px 11px rgb(135, 132, 132);
+}
+.sas{
+    padding-top: 20px;
+    font-size: 18px;
+    margin-left: -850px;
+    color: black;
+}
+.sas:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.Toefl-head{
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-top: 17px;
+  align-items: center;
+}
+.Toefl-mat{
+    font-size: 19px;
+    padding-right: 190px;
+    color: black;
+}
+.Toefl-body{
+    padding:30px 150px;
+    font-size: 18px;
+  
+}
+
+.Toefl-container {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 50px auto;
+  border: 1px solid #cbf6ff;
+}
+.Toefl-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.Toefl-table {
+  width: 100%;
+ 
+  font-family: "Poppins", sans-serif;
+}
+
+.Toefl-table thead {
+  background-color: #004aad;
+  color: #fff;
+}
+
+.Toefl-table th,
+.Toefl-table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #b0b0b0;
+}
+
+.Toefl-table tbody tr:hover {
+  background-color: #f7fbff;
+}
+
+.Toefl-table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.Toefl-table a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .Toefl-container {
+    padding: 1rem;
+    margin: 20px;
+    height: 620px;
+  }
+
+  .Toefl-heading {
+    font-size: 1.5rem;
+  }
+
+  .Toefl-table th,
+  .Toefl-table td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  .Toefl-bas{
+    background-position: center right; /* Adjust background position for better visibility on smaller screens */
+    background-size: 280px; /* Adjust background image size */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px 20px 40px 20px; /* More balanced padding for the base section */
+  }
+  .sas{
+    margin-left: 0;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px; /* Corrected problematic padding that was too large */
+    text-align: left; /* Ensure text aligns left */
+  }
+  .Toefl-head{
+    font-size: 28px;
+    padding-right: 20px;
+    padding-left: 20px; /* Corrected problematic padding that was too large */
+    line-height: normal;
+    padding-top: 15px;
+    text-align: center; /* Center the heading for better presentation */
+  }
+  .Toefl-mat{
+    padding-left: 20px; /* Corrected problematic padding that was too large */
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: normal;
+    padding-top: 5px;
+    text-align: center; /* Center the text for better presentation */
+  }
+  .Toefl-body{ /* Added responsive padding for the body section */
+    padding: 20px;
+  }
+  .Toefl-table{
+    font-size: 14px;
+    height: auto; /* Allow table height to adjust to content */
+  }
+  .Toefl-table-wrapper{
+    height: auto; /* Allow wrapper height to adjust to content */
+    overflow-x: auto; /* Add horizontal scroll for tables if content overflows */
+  }
+}
+
+/* Specific adjustments for screens up to 480px wide, including the 400px-480px range */
+@media (max-width: 480px) {
+  .Toefl-bas {
+    background-size: 220px; /* Further adjust background image size for very small screens */
+    padding: 15px 10px 25px 10px; /* Tighter padding for smaller viewports */
+  }
+  .sas {
+    font-size: 12px; /* Smaller font size for better fit */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .Toefl-head {
+    font-size: 20px; /* Adjusted heading font size */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .Toefl-mat {
+    font-size: 12px; /* Adjusted text font size */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .Toefl-body {
+    padding: 15px 10px; /* Adjusted padding for the body */
+  }
+  .Toefl-container {
+    margin: 15px 10px; /* Adjusted margin for the container */
+    padding: 0.8rem; /* Adjusted padding for the container */
+  }
+  .Toefl-heading {
+    font-size: 1.2rem; /* Smaller heading for the table */
+  }
+  .Toefl-table th,
+  .Toefl-table td {
+    padding: 6px 8px; /* Reduced padding for table cells */
+    font-size: 0.7rem; /* Smaller font size for table content */
+  }
+  .Toefl-table {
+    font-size: 0.7rem; /* Ensure table font size is consistent */
+  }
+}

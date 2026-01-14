@@ -1,0 +1,332 @@
+/* General page container */
+.admission-acceptance-page {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Header Section */
+.admission-acceptance-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.admission-acceptance-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.admission-acceptance-header p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Intake Overview Card */
+.intake-overview-card {
+  background: #f8f9fa; /* Light background for the card */
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 25px 30px;
+  max-width: 400px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.intake-overview-card h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intake-overview-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.intake-overview-card li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.intake-overview-card li span {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Key Improvement Suggestions Section */
+.improvement-suggestions-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.improvement-suggestions-section h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+.improvement-suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.suggestion-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  border-top: 4px solid #28a745; /* Green accent */
+}
+
+.suggestion-card:hover {
+  transform: translateY(-5px);
+}
+
+.suggestion-icon {
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.suggestion-card h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.suggestion-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.suggestion-card li {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.suggestion-card li::before {
+  content: "•"; /* Bullet point */
+  color: #28a745;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Priority Actions Checklist */
+.priority-actions-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.priority-actions-section h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.priority-actions-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.priority-actions-checklist li {
+  background: #f0f8ff; /* Light blue background */
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.priority-actions-checklist input[type="checkbox"] {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  accent-color: #007bff; /* Blue checkbox */
+}
+
+.priority-actions-checklist label {
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Intake-Based Tips Box */
+.intake-tips-box {
+  background: #fff3cd; /* Light yellow background */
+  border: 1px solid #ffeeba;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 700px;
+  margin: 60px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.intake-tips-box h2 {
+  font-size: 2rem;
+  color: #856404; /* Dark yellow text */
+  margin-bottom: 25px;
+}
+
+.intake-tips-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.intake-tips-box li {
+  font-size: 1.05rem;
+  color: #664d03;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.intake-tips-box li::before {
+  content: "✔"; /* Checkmark icon */
+  color: #28a745;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Soft Support CTA */
+.admission-acceptance-cta {
+  background: linear-gradient(135deg, #6c757d, #343a40); /* Grey gradient */
+  color: #fff;
+  padding: 55px 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.admission-acceptance-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.admission-acceptance-cta p {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.admission-acceptance-cta button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  color: #343a40; /* Dark text for button */
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.admission-acceptance-cta button:hover {
+  background: #e2e6ea;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .admission-acceptance-header h1 {
+    font-size: 2rem;
+  }
+  .admission-acceptance-header p {
+    font-size: 0.95rem;
+  }
+  .intake-overview-card {
+    padding: 20px;
+    margin: 30px auto;
+  }
+  .intake-overview-card h3 {
+    font-size: 1.3rem;
+  }
+  .improvement-suggestions-section h2,
+  .priority-actions-section h2,
+  .intake-tips-box h2,
+  .admission-acceptance-cta h2 {
+    font-size: 1.8rem;
+  }
+  .suggestion-card {
+    padding: 25px;
+  }
+  .suggestion-card h3 {
+    font-size: 1.2rem;
+  }
+  .priority-actions-list li { /* Updated class name */
+    padding: 12px 15px;
+    padding-left: 40px; /* Adjust padding for smaller screens */
+  }
+  .priority-actions-list li::before { /* Adjust icon position for smaller screens */
+    left: 10px;
+  }
+  .intake-tips-box {
+    padding: 25px;
+    margin: 40px auto;
+  }
+  .intake-tips-box li {
+    font-size: 1rem;
+  }
+  .admission-acceptance-cta {
+    padding: 40px 20px;
+  }
+  .admission-acceptance-cta p {
+    font-size: 0.95rem;
+  }
+  .admission-acceptance-cta button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admission-acceptance-page {
+    padding: 40px 15px;
+  }
+  .admission-acceptance-header h1 {
+    font-size: 1.8rem;
+  }
+  .improvement-suggestions-section h2,
+  .priority-actions-section h2,
+  .intake-tips-box h2,
+  .admission-acceptance-cta h2 {
+    font-size: 1.5rem;
+  }
+  .intake-overview-card {
+    max-width: 100%;
+  }
+  .priority-actions-list { /* Updated class name */
+    max-width: 100%;
+  }
+  .intake-tips-box {
+    max-width: 100%;
+  }
+}

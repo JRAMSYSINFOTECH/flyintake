@@ -1,0 +1,245 @@
+/* Styling for the main banner section. */
+.course-banner {
+    background-image: url('/public/assets/self.jpg');
+    background-size: 1700px;
+    background-position: center;
+
+    height: 370px;
+    display: flex;
+    opacity: 0.8px;
+    text-decoration: none;
+    box-shadow: 1px 6px 7px rgb(146, 146, 146);
+}
+
+/* Hover effect for the breadcrumb link. */
+.ula:hover{
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+/* Styling for the paragraph text in the banner (seems to have a typo, should be .ula). */
+.course-banner p1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding-left: 90px;
+    margin-top: 50px;
+}
+
+/* Styling for the main heading in the banner. */
+.course-banner h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+    font-size: 3.5rem;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 80px;
+}
+
+/* Styling for the descriptive paragraph in the banner. */
+.course-banner p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin: auto;
+    text-align: right to left;
+    padding-top: 40px;
+    padding-left: 80px;
+
+}
+
+/* Styling for the "Find Course" button in the banner. */
+.course-banner-button {
+    background-color: #128dff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-size: 40px;
+    border: none;
+    padding: 12px 39px 12px 32px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 19px;
+    margin-top: 20px;
+    margin-left: 80px;
+    display: flex;
+    padding-right: 20px;
+    align-items: center;
+}
+
+/* Hover effect for the banner button. */
+.course-banner-button:hover {
+    background-color: #2b6bb4;
+}
+
+.course-banner-text {
+    background-color: white;       
+    color: #000000;                
+    padding: 20px 30px;           
+    border-radius: 10px;          
+    display: inline-block;        
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding-left: 80px;
+    font-size: 18px;
+
+}
+
+/* Styling for the list of advice points. */
+.course-banner-list {
+    padding-left: 50px;
+    font-size: 19px;
+}
+
+/* Styling for the main paragraph in the content section. */
+.course-banner-para {
+    font-size: 19px;
+    padding-left: 50px;
+}
+
+/* Styling for other paragraphs in the content section. */
+.para {
+    font-size: 19px;
+    padding-left: 50px;
+}
+
+/* Styling for the "You may also like" link box. */
+.course-banner-box {
+    border: 1.5px solid #000000;
+    border-radius: 9px;
+    padding: 15px 40px;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 2px 3px 6px rgb(213, 213, 213);
+    margin-left: 30px;
+    margin-bottom: 40px;
+    background-color: #128dff;
+    font-size: 18px;
+    color: #f5f5f5;
+    cursor: pointer;
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+/* Styling for the orange underline on headings. */
+.course-banner-line {
+    text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #e65100;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+/* ===============================
+   Media Queries
+================================ */
+
+@media (max-width: 768px) {
+    .course-banner {
+        background-position: center;
+        background-size: cover; /* Ensure image covers the area */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 40px 20px; /* Add padding to the banner */
+    }
+
+    .course-banner-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content vertically */
+        text-align: center; /* Center text */
+    }
+
+    .ula {
+        padding-left: 0; /* Remove fixed padding */
+        text-align: center; /* Center text */
+        margin-top: 20px;
+    }
+
+    .course-banner h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+        padding-left: 0; /* Remove fixed padding */
+        padding-right: 20px; /* Add some right padding */
+        text-align: center;
+        max-width: 100%; /* Ensure it doesn't overflow */
+    }
+
+    .course-banner p {
+        font-size: 1rem; /* Adjust font size */
+        padding-left: 0; /* Remove fixed padding */
+        padding-right: 20px; /* Add some right padding */
+        text-align: center;
+        max-width: 100%; /* Ensure it doesn't overflow */
+        padding-top: 10px; /* Reduce top padding */
+    }
+
+    .course-banner-button {
+        margin-left: 0; /* Remove fixed margin */
+        padding: 10px 25px; /* Adjust button padding */
+        font-size: 0.9rem;
+        margin-top: 15px; /* Adjust top margin */
+    }
+
+    .course-banner-text {
+        padding: 20px; /* Adjust padding */
+        padding-left: 20px; /* Adjusted padding */
+        display: block; /* Ensure it takes full width */
+        width: auto; /* Allow width to adjust */
+    }
+
+    .course-banner-para,
+    .para,
+    .course-banner-list {
+        padding-left: 0; /* Remove fixed padding */
+        font-size: 17px;
+    }
+
+    .course-banner-list li {
+        margin-bottom: 15px;
+    }
+
+    .course-banner-box {
+        margin-left: 0; /* Remove fixed margin */
+        text-align: center;
+        margin: 20px auto; /* Center the box */
+    }
+
+    h1 .course-banner-line,
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-banner h1 {
+        font-size: 1.8rem; /* Further reduce font size */
+    }
+
+    .course-banner p {
+        font-size: 0.9rem; /* Further reduce font size */
+    }
+
+    .course-banner-button {
+        padding: 8px 20px; /* Further adjust button padding */
+        font-size: 0.8rem;
+    }
+
+    .course-banner-para,
+    .para,
+    .course-banner-list {
+        font-size: var(--font-size-base); /* Further reduce font size */
+    }
+
+    h1 .course-banner-line,
+    h1 {
+        font-size: 20px;
+    }
+
+    .course-banner-box {
+        padding: 10px 20px; /* Further adjust box padding */
+        font-size: var(--font-size-base);
+    }
+}

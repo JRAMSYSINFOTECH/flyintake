@@ -1,0 +1,176 @@
+/* ===== Services Section ===== */
+.services-section {
+  background-color: azure;
+  padding: 20px;
+
+
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.services-title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin: 1.25rem;
+  color: #1f2937;
+}
+
+/* ===== GRID ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* Desktop: exact 3 columns */
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== CARD (Desktop Default → Center Icon) ===== */
+
+.service-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgb(236, 236, 236);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.06);
+  transition: 0.2s ease;
+  
+  display: flex;
+  flex-direction: column;      /* Center layout */
+  align-items: center;         /* Center icon + text */
+  text-align: center;
+  gap: 1rem;
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 12px rgba(48, 172, 255, 0.15);
+  border: 1px solid #98b4ff;
+  transform: translateY(-4px);
+}
+
+/* ===== ICON ===== */
+.service-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4079f3;
+}
+
+.service-icon svg {
+  align-items: center;
+  width: 45px;
+  height: 45px;
+}
+
+.service-content {
+  flex: 1;
+}
+
+.service-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.service-desc {
+  margin-top: 0.5rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.75rem;
+  color: #1d4ed8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.service-link:hover {
+  text-decoration: underline;
+}
+
+.service-chevron {
+  color: #1d4ed8;
+  margin-top: 2px;
+}
+
+/* ===== Tablet View ===== */
+@media (max-width: 1024px) {
+  .services-title {
+    font-size: 1.8rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* ===== Mobile View (Icon LEFT) ===== */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 3rem 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .service-card {
+    flex-direction: row;      /* ICON LEFT */
+    align-items: flex-start;
+    text-align: left;         /* TEXT LEFT */
+    gap: 12px;
+  }
+
+  .service-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-content {
+    align-items: flex-start;
+  }
+
+  .service-desc {
+    display: none; /* hide long text */
+  }
+
+  .service-link {
+    display: none;
+  }
+
+  .service-chevron {
+    margin-left: auto; /* chevron right */
+  }
+}
+
+/* ===== Small Mobile ===== */
+@media (max-width: 480px) {
+  .services-title {
+    font-size: 1.4rem;
+  }
+
+  .service-card {
+    padding: 0.875rem;
+  }
+
+  .service-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .service-text {
+    font-size: 0.95rem;
+  }
+}

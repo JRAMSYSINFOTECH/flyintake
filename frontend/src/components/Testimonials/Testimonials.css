@@ -1,0 +1,148 @@
+
+.testimonials-section {
+  padding: 20px 24px;
+ 
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+  font-family:'Montserrat',sans-serif;
+}
+
+.underline-green {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #e65100;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.subtitle {
+  color:666 ;
+  font-weight: bold;
+  margin-bottom: 32px;
+  font-size: 1.15rem;
+  font-family:'Montserrat',sans-serif;
+}
+
+.testimonials-row {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #faf6f6;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  max-width: 340px; /* Default max-width for larger screens */
+  max-height: 560px;
+  position: relative; /* Changed from 'fixed' to 'relative' for correct layout behavior */
+  display: flex;
+  flex-direction: column;
+  margin: var(--font-size-base);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.color-marker {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px 0px 15px 0px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.color-marker ::before {
+  content: '"';
+  font-size: 30px;
+  font-weight: bold;
+display: flex;
+  color: white;
+  background: inherit;
+  font-style:oblique;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.green-quote .color-marker { background: #109c46; }
+.blue-quote .color-marker { background: #0060c0; }
+.orange-quote .color-marker { background: #eb7702; }
+ 
+.quote{
+   font-size: 1.00rem;
+   margin: 20px 0px;
+   line-height: 1.5;
+}
+
+.details {
+  font-size: 1.00rem;
+  margin-bottom: var(--font-size-base);
+  color: #444;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.student-area {
+  margin-top: auto;
+  padding-top: var(--font-size-base);
+}
+
+.student {
+  display: block;
+  font-weight:normal;
+  color: #333;
+  font-size: 0.97rem;
+  letter-spacing: 0.01em;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.role {
+  display: block;
+  font-size: 0.88rem;
+  color: #999;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin-top: 2px;
+}
+
+/* ============================= */
+/* Responsive Adjustments for Testimonials */
+/* ============================= */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 15px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .testimonials-row {
+    gap: var(--font-size-base); /* Keep gap for spacing between cards in the scroll view */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    justify-content: flex-start; /* Align cards to the start for scrolling */
+    flex-wrap: nowrap; /* Ensure cards stay in a single row for scrolling */
+    padding-bottom: 10px; /* Add some padding at the bottom for scrollbar */
+  }
+
+  .testimonials-row::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for a cleaner look */
+  }
+
+  .testimonial-card {
+    min-width: calc(100% - 32px); /* Ensure card takes full visible width, accounting for margins */
+    max-width: calc(100% - 32px); /* Ensure card takes full visible width, accounting for margins */
+    margin: 0 var(--font-size-base); /* Add horizontal margins for spacing within the scroll view */
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    scroll-snap-align: start; /* Snap to the start of each card */
+  }
+}

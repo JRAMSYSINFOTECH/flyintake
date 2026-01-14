@@ -1,0 +1,30 @@
+.stdabvid{
+    padding:3rem;
+    background-color: rgb(194, 209, 209);
+    
+}
+.vid{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    margin-top: 2rem;
+    border-radius: 20px;
+  
+}
+.vid-txt{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    padding:2rem;
+    
+}
+button:hover{
+    background-color: rgb(235, 235, 245);
+    color:black;
+}

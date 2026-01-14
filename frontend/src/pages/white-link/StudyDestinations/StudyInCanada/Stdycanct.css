@@ -1,0 +1,116 @@
+.std-can-container {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.7;
+  padding: 2rem;
+  background-color: #fdfdff;
+}
+
+.std-can-container > div {
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.std-can-container h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #1a237e;
+  text-align: center;
+}
+
+.std-can-container h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #0d47a1;
+  border-bottom: 3px solid #ffd600;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.std-can-container h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    color: #1565c0;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.std-can-container p, .std-can-container ul {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    margin-bottom: 1.5rem;
+}
+
+.std-can-container ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+.std-can-container li {
+    margin-bottom: 1rem;
+}
+
+.std-can-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.std-can-container th, .std-can-container td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: left;
+}
+
+.std-can-container th {
+  background-color: #1a237e;
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.std-can-container td {
+  background-color: #f9f9f9;
+}
+
+.std-can-container tr:nth-child(even) td {
+  background-color: #f1f5f9;
+}
+
+.std-can-container button {
+  display: inline-block;
+  margin: 2rem 0;
+  background: #ffd600;
+  color: #23272b;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.std-can-container button:hover {
+  background: #ffc107;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.15);
+}
+
+@media (max-width: 768px) {
+  .std-can-container {
+    padding: 1rem;
+  }
+  .std-can-container > div {
+    padding: 1.5rem;
+  }
+}
+

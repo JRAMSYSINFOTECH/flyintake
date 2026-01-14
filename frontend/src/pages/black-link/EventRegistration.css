@@ -1,0 +1,56 @@
+.reg-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.reg-title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.reg-subtitle {
+  margin-bottom: 20px;
+  color: #121010;
+}
+
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--font-size-base);
+}
+
+.reg-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  gap: 6px;
+}
+
+.reg-form input,
+.reg-form textarea {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.reg-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.reg-submit-btn {
+  margin-top: 10px;
+  padding: 10px var(--font-size-base);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #0c0c96;
+  color: white;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}

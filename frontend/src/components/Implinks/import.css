@@ -1,0 +1,141 @@
+.implik-section {
+  padding: 3rem 0 4rem;
+  background-color: azure;
+}
+
+.implik-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.implik-title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  color: #1f2937;
+}
+
+.implik-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+  .implik-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.implik-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgb(236, 236, 236);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.06);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.implik-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(48, 172, 255, 0.15);
+  border-color: #98b4ff;
+  cursor: pointer;
+}
+
+.implik-content {
+  flex: 1;
+}
+
+.implik-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.implik-desc {
+  margin-top: 0.5rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.implik-link {
+  margin-top: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.implik-link:hover {
+  text-decoration: underline;
+}
+
+.implik-chevron {
+  margin-top: 2px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .implik-title {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .implik-card {
+    padding: 1.25rem;
+  }
+
+  .implik-text {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .implik-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .implik-card {
+    align-items: center;
+    padding: 14px var(--font-size-base);
+  }
+
+  .implik-card:hover {
+    transform: none;
+  }
+
+  .implik-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .implik-desc,
+  .implik-link {
+    display: none;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .implik-title {
+    font-size: 1.4rem;
+  }
+
+  .implik-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .implik-text {
+    font-size: 0.9rem;
+  }
+}

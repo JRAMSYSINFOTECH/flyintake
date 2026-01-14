@@ -1,0 +1,251 @@
+/* =======================
+   Global Reset
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* =======================
+   Hero Section
+======================= */
+.MK {
+    background-image: url("/public/assets/englishT.jpg");
+    background-color: white;
+    background-size: 470px;
+    background-position: right;
+    background-repeat: no-repeat;
+    z-index: 1;
+    min-height: 230px;
+    display: flex;
+    box-shadow: 12px 12px 15px rgb(234, 234, 234);
+    flex-direction: column;
+    justify-content: center;
+}
+
+.si {
+  font-size: 0.95rem;
+  color: black;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.si a,
+.MK a {
+  color: #e0e7ff;
+  text-decoration: none;
+}
+
+.si a:hover {
+  text-decoration: underline;
+}
+
+.he {
+  font-size: 2.6rem;
+  font-weight: 700;
+text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* =======================
+   Body Section
+======================= */
+.bd {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3.5rem 3rem;
+}
+
+.ee {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+/* =======================
+   Section Headings
+======================= */
+.to {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.ul {
+  color: #0a1fff;
+  font-weight: 700;
+}
+
+/* =======================
+   Lists
+======================= */
+.Li {
+  padding-left: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.Li li {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.6rem;
+  color: #444;
+}
+
+/* =======================
+   Buttons
+======================= */
+.bu {
+  background: #0a1fff;
+  color: #fff;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bu:hover {
+  background: #081ee0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(10, 31, 255, 0.25);
+}
+
+/* =======================
+   Final Paragraph
+======================= */
+.ml {
+  max-width: 900px;
+  margin: 3rem auto 4rem;
+  padding: 2.5rem 3rem;
+  background: #ffffff;
+  border-radius: 14px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+/* =======================
+   Tablet (≤1024px)
+======================= */
+@media (max-width: 1024px) {
+  .MK {
+    padding: 3rem 2rem;
+  }
+
+  .he {
+    font-size: 2.2rem;
+  }
+
+  .bd {
+    padding: 3rem 2rem;
+  }
+
+  .ee {
+    font-size: 1rem;
+  }
+
+  .to {
+    font-size: 1.2rem;
+  }
+
+  .ml {
+    padding: 2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* =======================
+   Mobile (≤768px)
+======================= */
+@media (max-width: 768px) {
+  .MK {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .si {
+    font-size: 0.85rem;
+  }
+
+  .he {
+    font-size: 1.8rem;
+  }
+
+  .bd {
+    padding: 2rem 1.3rem;
+  }
+
+  .ee {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .to {
+    font-size: 1.1rem;
+  }
+
+  .Li {
+    padding-left: 1.2rem;
+  }
+
+  .bu {
+    width: 100%;
+    max-width: 260px;
+    display: block;
+    margin: 1rem auto 2rem;
+  }
+
+  .ml {
+    padding: 1.8rem 1.4rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* =======================
+   Small Phones (≤480px)
+======================= */
+@media (max-width: 480px) {
+  .he {
+    font-size: 1.6rem;
+    margin-top: 70px;
+  }
+
+  .ee {
+    font-size: 0.9rem;
+  }
+
+  .to {
+    font-size: 1rem;
+  }
+
+  .Li li {
+    font-size: 0.9rem;
+  }
+.MK{
+  background-size: 350px;
+  background-position: top right;
+  opacity: 0.9;
+}
+.si{
+  font-size: 0.9rem;
+  margin-top: -15px;
+  margin-bottom: 50px;
+}
+  .bu {
+    font-size: 0.9rem;
+    padding: 12px var(--font-size-base);
+  }
+}

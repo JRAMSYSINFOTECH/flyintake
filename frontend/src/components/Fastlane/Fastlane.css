@@ -1,0 +1,165 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===============================
+   SECTION
+================================ */
+.fastlane-section {
+  padding: 60px 20px;
+  background-color: #f9fafb;
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.fastlane-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 50px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   TEXT SECTION
+================================ */
+.fastlane-text {
+  flex: 1;
+}
+
+.fastlane-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 18px;
+}
+
+.fastlane-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.fastlane-button {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 13px 28px;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.fastlane-button:hover {
+  background-color: #1e40af;
+}
+
+.fastlane-button:active {
+  transform: translateY(1px);
+}
+
+/* ===============================
+   IMAGE SECTION
+================================ */
+.fastlane-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.fastlane-image img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 14px;
+}
+
+/* ===============================
+   TABLET
+================================ */
+@media (max-width: 1024px) {
+  .fastlane-container {
+    padding: 35px 30px;
+  }
+
+  .fastlane-title {
+    font-size: 2.2rem;
+  }
+
+  .fastlane-desc {
+    font-size: 1rem;
+  }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+  .fastlane-section {
+    padding: 45px 15px;
+  }
+
+  .fastlane-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .fastlane-desc {
+    max-width: 100%;
+    margin: 0 auto 26px;
+  }
+
+  .fastlane-button {
+    padding: 12px 34px;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE
+================================ */
+@media (max-width: 480px) {
+  .fastlane-section {
+    padding: 35px 10px;
+  }
+
+  .fastlane-container {
+    padding: 22px 15px;
+    gap: 24px;
+  }
+
+  .fastlane-title {
+    font-size: 1.7rem;
+  }
+
+  .fastlane-desc {
+    font-size: 0.95rem;
+  }
+
+  .fastlane-button {
+    font-size: 0.95rem;
+    padding: 11px 28px;
+  }
+}

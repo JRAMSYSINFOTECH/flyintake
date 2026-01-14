@@ -1,0 +1,132 @@
+:root {
+  --accent: #007bff;
+  --text: #1f2937;
+  --muted: #495057;
+  --light-bg: #f8f9fa;
+  --radius: 15px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.heroSection {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(45deg, rgba(0, 123, 255, 0.1), rgba(0, 210, 255, 0.1));
+  border-radius: var(--radius);
+}
+
+.breadcrumb {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  color: var(--text);
+  font-size: 3rem;
+  font-weight: 700;
+  max-width: 750px;
+  line-height: 1.3;
+  margin: 0 auto 1rem;
+}
+
+.heroText {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+}
+
+.banner {
+  margin: 40px 0;
+  background: var(--light-bg);
+  padding: 50px 30px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.bannerHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.bannerText {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.bannerBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: var(--font-size-base) 32px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.bannerBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+.optionsSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
+}
+
+.optionCard {
+  background: #fff;
+  padding: 40px;
+  border-radius: var(--radius);
+  border: 1px solid #e9ecef;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.optionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.optionDesc {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.optionBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.optionBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+}

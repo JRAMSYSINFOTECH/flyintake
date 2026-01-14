@@ -1,0 +1,195 @@
+/* Styling for the main banner section. */
+.prep {
+    padding-left: 90px;
+    padding-top: 20px;
+    background-image: url("/public/assets/prepie.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 380px;
+    height: 300px;
+    background-color: black;
+    box-shadow: 7px 6px 15px rgb(65, 65, 65);
+
+}
+
+/* Styling for the breadcrumb text in the banner. */
+.p1{
+    color: white;
+}
+
+/* Styling for the main heading in the banner. */
+.prep h1 {
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: -40px;
+    margin-bottom: 10px;
+}
+
+/* Styling for the introductory paragraph in the banner. */
+.p2 {
+    margin-top: 30px;
+    color: white;
+}
+
+/* Styling for the primary button in the banner. */
+.btn {
+    margin-left: 110px;
+    margin-top: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for the primary button. */
+.btn:hover {
+    background-color: #1528ff85;
+    color: white;
+   
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the main content area below the banner. */
+.prep1 {
+    padding-left: 190px;
+    padding-top: 20px;
+    background-color: #f5f5f5;
+    
+    font-size: 18px;
+    border-bottom: 2px solid rgb(231, 231, 231);
+}
+
+/* Styling for the main introductory paragraph in the content area. */
+.p3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    padding-right: 130px;
+}
+
+/* Styling for a specific line of text. */
+.line {
+    margin-left: -240px;
+    margin-bottom: -20px;
+}
+
+/* Styling for the unordered list of preparation materials. */
+.list {
+    line-height: 2.5;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+
+/* Styling for other paragraph text in the content area. */
+.line1 {
+    margin-left:7px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    margin-right: 200px;
+}
+@media (max-width: 768px) {
+    .prep {
+        background-size: 210px;
+        height: 230px;
+        background-position: right;
+    }
+    .prep h1 {
+        font-size: 32px;
+        margin-top: -70px;
+    }
+    .p2{
+        font-size: 12px;
+        margin-top: -20px;
+        padding-right: 220px;
+    }
+    .p1{
+        font-size: 13px;
+        margin-left: -210px;
+        padding-right: 20px;
+    }
+    .prep1 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .p3, .line1 {
+        padding-right: 0;
+        margin-left: 140px;
+        margin-right: 20px;
+        padding-right: 120px;
+    }
+    .line{
+        margin-left: 0;
+    }
+}
+
+/* Adjustments for screens up to 480px wide (including 400px-480px) */
+@media (max-width: 480px) {
+    .prep {
+        background-size: 180px; /* Smaller background image for very small screens */
+        height: 180px; /* Reduced height for the banner */
+        padding-left: 15px; /* Adjusted left padding */
+        padding-top: 10px; /* Adjusted top padding */
+        background-position: center right; /* Center background image horizontally */
+    }
+
+    .p1 {
+        font-size: 11px; /* Smaller font size for breadcrumb */
+        margin-left: 0; /* Reset margin-left */
+        padding-left: 15px; /* Consistent left padding */
+        padding-right: 15px; /* Consistent right padding */
+        text-align: center; /* Center the breadcrumb text */
+    }
+
+    .prep h1 {
+        font-size: 24px; /* Smaller heading font size */
+        margin-top: -50px; /* Adjusted top margin */
+        padding-left: 15px; /* Consistent left padding */
+        padding-right: 15px; /* Consistent right padding */
+        text-align: center; /* Center the heading */
+    }
+
+    .p2 {
+        font-size: 11px; /* Smaller paragraph font size */
+        margin-top: 15px; /* Adjusted top margin */
+        padding-right: 15px; /* Consistent right padding */
+        padding-left: 15px; /* Consistent left padding */
+        text-align: center; /* Center the paragraph text */
+    }
+
+    .btn {
+        margin-left: auto; /* Center button horizontally */
+        margin-right: auto; /* Center button horizontally */
+        display: block; /* Make button a block element to apply auto margins */
+        width: fit-content; /* Adjust button width to its content */
+        padding: 8px 15px; /* Smaller padding for the button */
+        font-size: 0.9rem; /* Smaller font size for the button text */
+    }
+
+    .prep1 {
+        padding-left: 15px; /* Consistent left padding for content area */
+        padding-right: 15px; /* Consistent right padding for content area */
+        padding-top: 15px; /* Adjusted top padding for content area */
+        font-size: 16px; /* Adjusted font size for content area */
+    }
+
+    .p3, .line1 {
+        padding-right: 15px; /* Consistent right padding */
+        margin-left: 0; /* Reset problematic margin */
+        margin-right: 0; /* Reset problematic margin */
+        padding-left: 15px; /* Consistent left padding */
+        text-align: justify; /* Justify text for better readability */
+    }
+
+    .line {
+        margin-left: 0; /* Ensure it's reset */
+        margin-bottom: -10px; /* Adjust margin */
+        padding-left: 15px; /* Consistent left padding */
+    }
+
+    .list {
+        padding-left: 35px; /* Adjust list padding */
+        line-height: 2; /* Adjust line height for better spacing */
+        font-size: 15px; /* Adjust font size for list items */
+    }
+}

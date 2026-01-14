@@ -1,0 +1,130 @@
+.idp-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.office-list-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.search-container {
+  margin-bottom: 25px;
+}
+
+.office-search-input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: var(--font-size-base);
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.office-search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.office-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.office-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 15px;
+  border-bottom: 1px solid #e5e7eb;
+  transition: all 0.2s;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.office-item:hover {
+  background-color: #f9fafb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.office-item-content {
+  flex: 1;
+}
+
+.office-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.office-address {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.office-details {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.office-contact {
+  font-size: 14px;
+  color: #4b5563;
+  margin: 6px 0;
+}
+
+.office-item .arrow {
+  font-size: 20px;
+  color: #2563eb;
+  transition: transform 0.2s;
+  margin-left: 15px;
+  flex-shrink: 0;
+}
+
+.office-item:hover .arrow {
+  transform: translateX(5px);
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding: 10px 0;
+}
+
+.nav-buttons button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-buttons button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.nav-buttons button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.nav-buttons span {
+  font-size: 15px;
+  color: #4b5563;
+}

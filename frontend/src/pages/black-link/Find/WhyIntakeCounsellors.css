@@ -1,0 +1,92 @@
+/* Section container */
+.why-idp-section {
+ 
+  padding: 60px 20px;
+  text-align: left;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* Title styling */
+.why-idp-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.why-idp-title span {
+  
+
+  padding-bottom: 4px;
+}
+
+/* Grid layout */
+.why-idp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Individual cards */
+.why-idp-card {
+  background-color: #fff;
+  border-radius: var(--font-size-base);
+  padding: 28px 22px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.why-idp-card:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Icons */
+.why-idp-icon {
+  font-size: 34px;
+  color: #5077cb;
+  margin-bottom: 14px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+}
+
+/* Card title */
+.why-idp-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+   display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+}
+
+/* Card description */
+.why-idp-card p {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+  
+  margin: 27px;
+ 
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .why-idp-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .why-idp-section {
+    padding: 40px 15px;
+  }
+
+  .why-idp-card {
+    text-align: center;
+  }
+}

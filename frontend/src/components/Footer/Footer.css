@@ -1,0 +1,134 @@
+.footer {
+  background-color:#404040;;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: rgb(229 229 229 / var(--tw-text-opacity, 1));
+}
+
+.footer-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+}
+
+.footer-column h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgb(215, 215, 215);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 6px;
+
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: rgb(203, 239, 255);
+  opacity: 0.8;
+
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  color:  rgb(229 229 229 / var(--tw-text-opacity, 1)) ;
+}
+.footer-row{
+     margin-top: 30px;
+     text-align: center;
+     
+}
+.footer-row ul li{
+    margin: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+   
+.footer-row ul li:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+  color: rgb(140, 140, 140);
+}
+
+    /*  Mobile devices (up to 600px) */
+@media (max-width: 600px) {
+  .footer-sections {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+   
+  }
+
+  .footer-column h2 {
+    font-size: var(--font-size-base);
+  }
+
+  .footer-row ul { /* Adjust gap for very small screens if needed */
+    gap: 10px;
+  }
+
+  /* Ensure separator for legal links is still there on small screens */
+  .footer-row:last-of-type ul li:not(:last-child)::after {
+    content: "|";
+    margin-left: 8px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+}
+
+/*  Tablets (601px to 900px) */
+@media (max-width: 900px) {
+  .footer-sections {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-column {
+    flex: 1 1 45%;
+    margin-bottom: 20px;
+  }
+
+  .footer-row ul li {
+    margin: 0 10px;
+  }
+  .footer-row ul li{align-self: start;}
+}
+
+/*  Larger screens (above 900px - optional for better spacing) */
+@media (min-width: 901px) {
+  .footer-sections {
+    justify-content: space-between;
+  }
+
+  .footer-column {
+    flex: 1 1 200px;
+  }
+}
+    
+  
+    

@@ -1,0 +1,251 @@
+/* General page container */
+.profile-assessment-page {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Header Section */
+.profile-assessment-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.profile-assessment-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.profile-assessment-header p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Main content area for strength meter and form */
+.profile-assessment-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* Profile Strength Meter */
+.profile-strength-meter {
+  background: #e8f5e9; /* Light green background */
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.profile-strength-meter h2 {
+  font-size: 1.8rem;
+  color: #28a745; /* Green color for strength */
+  margin-bottom: 15px;
+}
+
+.profile-strength-meter p {
+  font-size: 1rem;
+  color: #4CAF50;
+  margin-top: 15px;
+}
+
+.strength-bar-container {
+  background-color: #d4edda; /* Lighter green for empty bar */
+  border-radius: 10px;
+  height: 15px;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.strength-bar {
+  background-color: #28a745; /* Green for filled bar */
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Assessment Form */
+.assessment-form-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  max-width: 700px;
+  margin: 0 auto; /* Center the form */
+}
+
+.assessment-form-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.profile-assessment-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.submit-assessment-btn {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.submit-assessment-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #003f83);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* CTA Section (re-purposed) */
+.profile-assessment-cta {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  text-align: center;
+  padding: 55px 30px;
+  border-radius: 20px;
+  margin-top: 60px;
+}
+
+.profile-assessment-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.profile-assessment-cta p {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .profile-assessment-form {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .form-group:nth-child(1), /* Full Name */
+  .form-group:nth-child(2), /* Email */
+  .form-group:nth-child(3) { /* Mobile */
+    grid-column: span 2; /* Make these fields span full width on larger screens */
+  }
+  .submit-assessment-btn {
+    grid-column: span 2;
+    max-width: 400px; /* Limit width of submit button */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .profile-assessment-header h1 {
+    font-size: 2rem;
+  }
+  .profile-assessment-header p {
+    font-size: 0.95rem;
+  }
+  .profile-assessment-content {
+    gap: 30px;
+  }
+  .profile-strength-meter {
+    padding: 20px;
+  }
+  .profile-strength-meter h2 {
+    font-size: 1.5rem;
+  }
+  .strength-bar-container {
+    width: 95%;
+  }
+  .assessment-form-container {
+    padding: 25px;
+  }
+  .assessment-form-container h2 {
+    font-size: 1.7rem;
+  }
+  .form-group input,
+  .form-group select {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+  .submit-assessment-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+  .profile-assessment-cta {
+    padding: 40px 20px;
+  }
+  .profile-assessment-cta h2 {
+    font-size: 1.8rem;
+  }
+  .profile-assessment-cta p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-assessment-page {
+    padding: 40px 15px;
+  }
+  .profile-assessment-header h1 {
+    font-size: 1.8rem;
+  }
+  .profile-assessment-header p {
+    font-size: 0.9rem;
+  }
+  .profile-strength-meter h2 {
+    font-size: 1.3rem;
+  }
+  .assessment-form-container h2 {
+    font-size: 1.5rem;
+  }
+}

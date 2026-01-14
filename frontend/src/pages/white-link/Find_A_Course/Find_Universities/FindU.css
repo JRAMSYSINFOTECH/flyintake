@@ -1,0 +1,566 @@
+/* Styling for the main banner container. */
+.FindU-container {
+    padding: 35px 20px; /* Adjusted padding */
+    background-color: rgb(0, 0, 0);
+    box-shadow: 1px 5px 7px rgb(230, 230, 230);
+    background-image: url('/public/assets/UNIVERSITYF.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 400px; /* Cover the area */
+    height: 250px; /* Keep a base height */
+    display: flex; /* Use flexbox for content centering */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the breadcrumb text in the banner. */
+.Find-h {
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    padding-left: 0; /* Remove fixed padding */
+    text-align: center;
+}
+
+/* Hover effect for the breadcrumb text. */
+.Find-h:hover{
+    text-decoration: underline;
+}
+
+/* Styling for the main heading in the banner. */
+.FindU-t {
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    padding-left: 0; /* Remove fixed padding */
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Styling for a container of controls (seems to be an older or unused class). */
+.FindU-controls {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+/* Styling for a button (seems to be an older or unused class). */
+.FindU-b1 {
+    color: rgb(0, 0, 0);
+    padding: 20px 40px;
+    background-color: rgb(255, 255, 255);
+    border: 1.5px solid rgb(197, 197, 197);
+    border-radius: 8px;
+    margin-left: 50px;
+    padding-left: 40px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Container for the filter dropdowns and buttons. */
+.FindU-filter-panel {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+    padding: 25px 130px;
+    background-color: #f7f8f8;
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+}
+
+/* Styling for a section within the filter panel. */
+.FindU-filter-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for the heading of a filter section. */
+.FindU-filter-section h4 {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+    color: #333;
+}
+
+/* Styling for the select dropdowns. */
+.FindU-filter-section select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+/* Container for the filter action buttons. */
+.FindU-filter-buttons {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    height: 42px; /* Match select height */
+}
+
+/* Styling for the "Reset Filters" button. */
+.FindU-reset-btn {
+    padding: 10px 20px;
+    border-radius: var(--font-size-base);
+    border: 1px solid #d3d3d3;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    height: 40px; 
+}
+
+/* Hover effect for the reset button. */
+.FindU-reset-btn:hover {
+    background-color: #e44;
+    color: white;
+    border-color: #d33;
+}
+
+/* Styling for the "Filter" button. */
+.FindU-apply-btn {
+    padding: 10px 20px;
+    border-radius: var(--font-size-base);
+    border: 1px solid #2248d1;
+    background-color: #2248d1;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    height: 40px;
+}
+
+/* Hover effect for the apply button. */
+.FindU-apply-btn:hover {
+    background-color: #1a3aab;
+    border-color: #1a3aab;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Styling for the message displayed when no results are found. */
+.FindU-no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+}
+.FindU-no-results h3 {
+    margin: 0;
+    color: #333;
+}
+.FindU-no-results p {
+    color: #666;
+}
+
+/* Hover effect for the unused button class. */
+.FindU-b1:hover {
+       background-color: rgb(20, 50, 172);
+       color: rgb(255, 255, 255);
+
+}
+
+/* Styling for the "View All Courses" link within a card. */
+.FindU-detail {
+    color :black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Hover effect for the "View All Courses" link. */
+.FindU-detail:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+/* Grid container for the university cards. */
+.FindU-boxes {
+    margin: 30px auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    
+}
+
+/* Styling for a single university card. */
+.FindU-box1 {
+    margin: 0;
+    height: auto;
+    min-height: 520px;
+    background-color:  #f7f8f8;
+    font-size: 17px;
+    text-align: left;
+    border: 2px solid #eaeaea;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(130, 199, 255, 0.1);
+    padding: 23px;
+}
+
+/* Hover effect for the university card. */
+.FindU-box1:hover {
+    box-shadow: 5px 10px 20px rgba(11, 112, 244, 0.15);
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    border:1px solid #2248d1;
+}
+
+/* Header section of the card, containing the heart icon. */
+.FindU-card-header {
+    display: flex;
+    justify-content: flex-end; /* Changed to flex-end to move heart to the right */
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+/* Styling for the heart icon. */
+.FindU-heart-icon {
+    font-size: 27px;
+    color: #dd1f1f; /* Default color for unfavorited */
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+/* Styling for the favorited heart icon. */
+.FindU-heart-icon.favorited {
+    color: #ff0000; /* Red color for favorited */
+}
+
+/* Hover effect for the heart icon. */
+.FindU-heart-icon:hover {
+    color: #440505;
+}
+
+.FindU-University-logo {
+    
+    margin-bottom: 10px;
+}
+
+/* Styling for the university name displayed as a logo. */
+.FindU-logo-m {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 8px 12px;
+    border: 1px solid #d6d6d6;
+    border-radius: 6px;
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Styling for the university country text. */
+.FindU-University-name {
+    font-size: 13px;
+    color: #050303;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}
+
+/* Container for the list of program details. */
+.FindU-program-details {
+   margin: 20px 7px;
+   flex-grow: 1;
+}
+
+.FindU-detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #000000;
+}
+
+/* Styling for the icon next to each detail item. */
+.FindU-detail-icon {
+     margin-right: 10px;
+    font-size: var(--font-size-base);
+    width: 20px;
+    text-align: center;
+}
+
+/* Container for the action buttons at the bottom of the card. */
+.FindU-action-buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.FindU-btn {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border: 1px solid #d3d3d3;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Hover effect for the "View details" button. */
+.FindU-btn:hover {
+    border:1px solid #6bb5ff;
+    background-color: #2248d1;
+}
+
+/* Container for the pagination arrows. */
+.FIndU-Arrs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; 
+    padding-bottom: 50px; 
+}
+
+.FIndU-page-link {
+    min-width: 34px;
+    height: 34px;
+    margin: 0 4px;
+    padding: 0 5px; 
+    font-size: 20px;
+    font-weight: 500;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px; 
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Styling for the active page number link. */
+.FIndU-page-link.FIndU-active {
+    background-color: #e9ecef; 
+    color: #343a40; 
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Styling for the current page number (seems redundant with .FIndU-active). */
+.FIndU-page-link.FIndU-current {
+    background-color: #f7f7f7; 
+    color: #343a40;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+/* Styling for disabled pagination links. */
+.FIndU-page-link.FIndU-disabled {
+    color: #adb5bd; 
+    cursor: default;
+    pointer-events: none; 
+}
+.FIndU-page-link {
+    /* General styling for page links. */
+    background-color: transparent;
+    font-weight: 600;
+    padding: 0 6px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .FindU-boxes {
+        grid-template-columns: repeat(2, minmax(280px, 1fr));
+    }
+    .FindU-container{
+        background-size: 250px; /* Adjusted background size */
+        height: 180px; /* Adjusted height */
+        padding-left: 20px; /* Adjusted padding */
+    }
+    .FindU-t{
+        padding-left: 0; /* Remove fixed padding */
+        font-size: 28px; /* Adjusted font size */
+    }
+    .FindU-b1{
+        padding: 15px 30px;
+        margin-left: 30px;
+    }
+    .Find-h{
+        font-size: 14px; /* Adjusted font size */
+        margin-left: 0; /* Remove fixed margin */
+        padding-top: 10px; /* Adjusted padding */
+    }
+
+    /* Filter panel adjustments */
+    .FindU-filter-panel {
+        flex-direction: column; /* Stack vertically */
+        align-items: stretch; /* Stretch items to full width */
+        padding: 20px; /* Adjusted padding */
+        gap: 15px;
+    }
+
+    .FindU-filter-section select {
+        min-width: unset; /* Remove min-width */
+        width: 100%; /* Full width */
+    }
+
+    .FindU-filter-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        width: 100%;
+        height: auto;
+    }
+
+    .FindU-apply-btn, .FindU-reset-btn {
+        width: 100%; /* Full width buttons */
+        margin-top: 0;
+        height: 45px; /* Consistent height */
+    }
+
+    /* Pagination adjustments */
+    .FIndU-Arrs {
+        flex-wrap: wrap; /* Allow wrapping */
+        gap: 10px;
+        padding-bottom: 30px;
+        padding: 20px;
+    }
+    .FIndU-page-link {
+        font-size: var(--font-size-base);
+        min-width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .FindU-boxes {
+        grid-template-columns: 1fr; /* Single column layout */
+        padding: 20px 10px;
+    }
+    .FindU-container{
+        background-size: 180px; /* Further adjusted background size */
+        height: 150px; /* Further adjusted height */
+        padding: 15px 10px; /* Further adjusted padding */
+    }
+    .FindU-t{
+        font-size: 22px; /* Further adjusted font size */
+    }
+    .Find-h{
+        font-size: 12px; /* Further adjusted font size */
+    }
+    .FindU-filter-section h4 {
+        font-size: 14px;
+    }
+    .FindU-filter-section select {
+        font-size: 13px;
+        padding: 8px;
+    }
+    .FindU-apply-btn, .FindU-reset-btn {
+        font-size: 14px;
+        padding: 10px 0;
+        height: 40px;
+    }
+    .FindU-box1 {
+        min-height: 480px; /* Adjust min-height for smaller cards */
+        padding: 15px;
+    }
+    .FindU-logo-m {
+        font-size: 14px;
+    }
+    .FindU-program-title { /* Assuming this class exists, if not, it won't break anything */
+        font-size: var(--font-size-base);
+    }
+    .FindU-university-name, .FindU-detail-item {
+        font-size: 12px;
+    }
+    .FindU-detail-icon {
+        font-size: 14px;
+        width: 18px;
+    }
+    .FindU-btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+    .FIndU-page-link {
+        font-size: 14px;
+        min-width: 25px;
+        height: 25px;
+        margin: 0 2px;
+    }
+}
+
+/* Media query for screens up to 400px wide */
+@media (max-width: 400px) {
+    .FindU-container {
+        background-size: 150px; /* Further reduce background image size */
+        height: 120px; /* Further reduce height */
+        padding: 10px; /* Reduce padding */
+    }
+    .FindU-t {
+        font-size: 18px; /* Smaller heading */
+    }
+    .Find-h {
+        font-size: 10px; /* Smaller breadcrumb text */
+    }
+
+    .FindU-filter-panel {
+        padding: 15px; /* Reduce filter panel padding */
+        gap: 10px;
+    }
+    .FindU-filter-section h4 {
+        font-size: 13px; /* Smaller filter labels */
+    }
+    .FindU-filter-section select {
+        font-size: 12px; /* Smaller select font size */
+        padding: 6px;
+        min-width: unset; /* Ensure it takes full width */
+        width: 100%;
+    }
+    .FindU-apply-btn, .FindU-reset-btn {
+        font-size: 13px; /* Smaller button font size */
+        height: 35px; /* Smaller button height */
+        padding: 8px 0;
+    }
+
+    .FindU-boxes {
+        grid-template-columns: 1fr; /* Single column layout for very small screens */
+        padding: 15px 5px; /* Reduce padding around cards */
+        margin: 15px auto;
+    }
+    .FindU-box1 {
+        min-height: 400px; /* Adjust min-height for very small cards */
+        padding: 15px;
+    }
+    .FindU-logo-m {
+        font-size: 13px; /* Smaller university name in logo */
+        padding: 6px 10px;
+    }
+    .FindU-university-name {
+        font-size: 11px; /* Smaller country text */
+    }
+    .FindU-program-details {
+        margin: 15px 5px;
+    }
+    .FindU-detail-item {
+        font-size: 11px; /* Smaller detail items */
+        margin-bottom: 8px;
+    }
+    .FindU-detail-icon {
+        font-size: 12px;
+        width: 16px;
+    }
+    .FindU-btn {
+        font-size: 11px; /* Smaller button text */
+        padding: 6px 12px;
+    }
+    .FIndU-page-link {
+        font-size: 11px; /* Smaller pagination links */
+        min-width: 18px;
+        height: 18px;
+        margin: 0 1px;
+    }
+}

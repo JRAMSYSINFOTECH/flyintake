@@ -1,0 +1,128 @@
+.study-in-ireland-guide {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.7;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.study-in-ireland-guide > section {
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.study-in-ireland-guide h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #004c3f; /* Deep Irish Green */
+  text-align: center;
+}
+
+.study-in-ireland-guide h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #006400; /* Dark Green */
+  border-bottom: 3px solid #FFD700; /* Gold */
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.study-in-ireland-guide h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    color: #006400;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.study-in-ireland-guide p, 
+.study-in-ireland-guide ul,
+.study-in-ireland-guide ol {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    margin-bottom: 1.5rem;
+}
+
+.study-in-ireland-guide ul,
+.study-in-ireland-guide ol {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+.study-in-ireland-guide li {
+    margin-bottom: 1rem;
+}
+
+.study-in-ireland-guide table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.study-in-ireland-guide th, .study-in-ireland-guide td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: left;
+}
+
+.study-in-ireland-guide th {
+  background-color: #004c3f;
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.study-in-ireland-guide td {
+  background-color: #f9f9f9;
+}
+
+.study-in-ireland-guide tr:nth-child(even) td {
+  background-color: #f1f5f9;
+}
+
+.study-in-ireland-guide button {
+  display: inline-block;
+  margin: 2rem 0;
+  background: #FFD700; /* Gold */
+  color: #23272b;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.study-in-ireland-guide button:hover {
+  background: #ffc107;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.15);
+}
+
+.study-in-ireland-guide a {
+    color: #007a4d;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.study-in-ireland-guide a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .study-in-ireland-guide {
+    padding: 1rem;
+  }
+  .study-in-ireland-guide > section {
+    padding: 1.5rem;
+  }
+}

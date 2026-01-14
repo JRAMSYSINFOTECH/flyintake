@@ -1,0 +1,1059 @@
+/* Styling for the main banner section of the "Find a Course" page. */
+.FindC-1 {
+    background-color: #ffffff;
+    height: 260px;
+   box-shadow: 1px 5px 9px rgb(227, 227, 227);
+   border-bottom: 2px solid rgb(232, 232, 232);
+   background-image: url('/public/assets/findcourse.jpg');
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size: 320px;
+
+}
+
+/* Styling for the breadcrumb and descriptive text in the banner. */
+.FindC-div {
+    font-size: 19px;
+    padding-top: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Styling for the "Get Instant Offer" heading. */
+.FindC-get {
+    margin-left: 180px;
+    margin-top: 30px;
+    font-size: 900;
+}
+
+/* Styling for the main heading in the banner. */
+.FindC-a {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    padding: 0 20px;
+}
+.FindC-d{
+    font-size: 20px;
+    margin-top: 15px;
+    color: #333333;
+    text-align: center;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+/* --- Filter Dropdown Styles (seem to be for a more complex filter UI that is not currently used) --- */
+.FindC-filter-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 170px;
+}
+.FindC-filter-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    width: 320px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+    padding: 18px 20px var(--font-size-base);
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    max-height: 0;
+    overflow: auto;
+    transition: opacity 0.25s ease, transform 0.25s ease, max-height 0.25s ease;
+    z-index: 100;
+}
+.FindC-filter-dropdown.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    max-height: 420px;
+}
+.FindC-filter-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: var(--font-size-base);
+}
+.FindC-filter-title {
+    font-weight: 600;
+    color: #111827;
+    font-size: var(--font-size-base);
+}
+.FindC-filter-subtitle {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.4;
+}
+.FindC-filter-options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 220px;
+    border: 1px solid #f1f5f9;
+    border-radius: 10px;
+}
+.FindC-filter-options li + li {
+    border-top: 1px solid #f1f5f9;
+}
+.FindC-filter-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #1f2937;
+    cursor: pointer;
+}
+.FindC-filter-option input[type="checkbox"] {
+    width: var(--font-size-base);
+    height: var(--font-size-base);
+    accent-color: #0ea5e9;
+    cursor: pointer;
+}
+.FindC-filter-option:hover {
+    background: #f8fafc;
+}
+.FindC-filter-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--font-size-base);
+}
+.FindC-clear-btn {
+    background: none;
+    border: none;
+    color: #0ea5e9;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.FindC-clear-btn:hover:not(:disabled) {
+    background: rgba(14, 165, 233, 0.1);
+    color: #0284c7;
+}
+.FindC-clear-btn:disabled {
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+.FindC-empty-state {
+    margin: 40px auto;
+    max-width: 520px;
+    text-align: center;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--font-size-base);
+    padding: 30px 28px;
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.aa{
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+}
+.FindC-b1 {
+    padding: 20px 60px 20px 90px;
+    background-color: #0016a3;
+    margin: 25px;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width:80%;
+    margin-left: 180px;
+}
+
+.FindC-img {
+    position: relative;
+    margin-top: -200px;
+    margin-left: 1080px;
+    margin-right: auto;
+    padding-right: 90px;
+    display: block;
+    width: 480px;
+    height: 290px;
+    z-index: 1;
+}
+
+.see {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 18px;
+    color: white;
+}
+.FindC-button1 {
+    background-color: white;
+    color: #000000;
+    border-radius: 20px;
+    padding: 1px 20px 6px 20px;
+    font-weight: bold;
+    border: none;
+    padding-top: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Hover effect for the quiz button. */
+.FindC-button1:hover {
+    background-color: #2b478e;
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Grid container for the course cards. */
+.FindC-boxes {
+    margin: 20px auto;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    justify-content: center;
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* Styling for a single course card. */
+.FindC-box1 {
+    display: flex;
+    flex-direction: column;
+    margin: 0; 
+    height: auto;
+    min-height: 560px;
+    background-color: #f7f8f8;
+    font-size: 14px;
+    text-align: left;
+    border: 2px solid rgb(233, 233, 233);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(130, 199, 255, 0.1);
+    padding: 23px;
+    position: relative;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+/* Hover effect for the course card. */
+.FindC-box1:hover {
+    box-shadow: 2px 10px 20px rgba(82, 203, 239, 0.15);
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    border:1px solid #3e44ef;
+    color: linear-gradient(90deg, #ffffff, #91daf1);
+}
+
+.points {
+    text-decoration: none;
+    padding-left: -80px;
+    padding-top: 400px;
+}
+
+.FindC-card-header {
+    /* Header section of the card, containing the heart icon. */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.FindC-heart-icon {
+    font-size: 18px;
+    color: #ccc; /* Changed default color to light grey for a more distinct "turn to red" effect on click */
+    cursor: pointer; /* Ensure cursor indicates interactivity */
+    margin-top: 8px;
+    margin-left: auto; /* Pushes the icon to the right within its flex container */
+}
+
+/* Hover effect for the heart icon. */
+.FindC-heart-icon:hover {
+    color:rgb(133, 23, 23);
+    transform: translate(2px);
+    transition: all 0.3s ease;
+}
+
+/* Style for when the heart icon is "clicked" or active */
+.FindC-heart-icon.active {
+    color: red; /* Changes the heart to a full red color when the 'active' class is applied */
+}
+
+/* Container for the university logo/name. */
+.FindC-university-logo {
+    margin-bottom: 15px;
+}
+
+/* Styling for the university name displayed as a logo. */
+.FindC-logo-melbourne {
+    background-color: white;
+    color: #000000;
+    padding: 8px 12px;
+    border: 2px solid #e5e5e5;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Another style for a university logo (seems specific to Rivier University). */
+.FindC-logo-rivier {
+    background-color: white;
+    color: #000000;
+    padding: 8px 12px;
+    border: 2px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Styling for the course program title. */
+.FindC-program-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #313131;
+    margin: 10px 0;
+    line-height: 1.3;
+}
+
+/* Styling for the university name text below the program title. */
+.FindC-university-name {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}
+
+/* Container for the list of program details (ranking, degree, location, etc.). */
+.FindC-program-details {
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+/* Styling for a single detail item (e.g., "THE World Ranking: 39"). */
+.FindC-detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Styling for the icon next to each detail item. */
+.FindC-detail-icon {
+    margin-right: 10px;
+    font-size: var(--font-size-base);
+    width: 20px;
+    text-align: center;
+}
+
+/* Container for the action buttons at the bottom of the card. */
+.FindC-action-buttons {
+    margin-top: auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+/* Styling for the primary action button (not currently used in the JSX). */
+.FindC-primary-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the primary button. */
+.FindC-primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.FindC-secondary-btn {
+    /* Styling for the "View details" button. */
+    background-color: white;
+    color: #000000;
+    border: 1px solid #d7d7d7;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Hover effect for the secondary button. */
+.FindC-secondary-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #007bff;
+}
+
+/* Styling for the "More information" text section at the bottom of the page. */
+.FindC-more {
+    padding-left: 80px;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 20px;
+    font-size: var(--font-size-base);
+    color: #333;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+/* Styling for the "Related Searches" heading. */
+.FindC-related {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 90px;
+    margin: 0;
+    padding-top: 0;
+    color: #333;
+
+}
+
+/* Styling for the orange underline on headings. */
+.related {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #e65100;
+  font-family: inherit;
+  font-weight: inherit;
+  padding-bottom: 20px;
+}
+
+/* Grid container for the "Related Searches" points. */
+.FindC-points {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 20px;
+    font-size: 19px;
+    margin: 10px 40px 10px 40px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    grid-template-rows: auto auto; 
+    grid-auto-flow: column;
+    row-gap: 0px;
+    align-items: start;
+}
+
+/* Styling for the individual points/headings in the related searches section. */
+.points {
+    font-weight: bold;
+    text-decoration: underline rgb(224, 217, 217);
+    text-underline-position: under;
+    text-decoration-thickness: 3.5px;
+    display: block;
+    margin: 0;
+    line-height: 1.1;
+    padding-top: 2px; 
+    padding-left: 70px; 
+}
+
+/* Styling for the list of links under each related search point. */
+.FindC-line {
+    padding-top: 10px;
+    padding-left: 80px;
+    font-weight: 600;
+}
+
+/* Background color for the related searches section. */
+.FindC-bg {
+    background-color: #f9f9f9;
+    padding-bottom: 25px;
+}
+
+/* Hide mobile navigation links by default on larger screens */
+.mobile-find-course-nav {
+    display: none;
+}
+
+
+.course-cards-container {
+    /* Main container for the course cards grid. */
+    width: 100%;
+    clear: both;
+    overflow: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: none; 
+}
+.text-content-container {
+    /* Container for the text content at the bottom of the page. */
+    width: 100%;
+    clear: both;
+    margin-top: 40px;
+    background-color: #f9f9f9;
+}
+
+.pagination-container {
+    /* Styling for the pagination controls container. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pagination-container button {
+    /* Styling for the pagination buttons. */
+    background-color: #ffffff;
+    border: 1px solid #d7d7d7;
+    color: #333;
+    padding: 8px var(--font-size-base);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for pagination buttons. */
+.pagination-container button:hover:not(:disabled) {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+/* Styling for disabled pagination buttons. */
+.pagination-container button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.filter-section-findc {
+    /* Container for the filter dropdowns and buttons. */
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Styling for a group containing a label and a select dropdown. */
+.filter-group-findc {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for the filter labels. */
+.filter-group-findc label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Styling for the select dropdowns. */
+.filter-group-findc select {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    min-width: 250px;
+    font-size: var(--font-size-base);
+    background-color: white;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Styling for the "Filter" button. */
+.apply-filter-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    margin-top: 60px;
+    border-radius: 8px;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-end;
+    height: 50px;
+}
+
+/* Hover effect for the "Filter" button. */
+.apply-filter-btn:hover {
+    background-color: #003f83;
+    translate: translateY(-3px);
+    color: white;
+}
+
+/* Styling for the "Reset" button. */
+.reset-filter-btn {
+    background-color: #1b6fff;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px 30px;
+    margin-top: 60px;
+    border-radius: 8px;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-end;
+    height: 50px;
+}
+
+/* Hover effect for the "Reset" button. */
+.reset-filter-btn:hover {
+    background-color: #00508e;
+    translate: translateY(-3px);
+    color: white;
+}
+
+/* Aligns the filter buttons to the bottom of their container. */
+.filter-group-findc:has(.apply-filter-btn) {
+    justify-content: flex-end;
+}
+
+/* --- Quiz Modal Styles --- */
+.quiz-modal-overlay {
+    position: fixed;
+    /* Full-screen overlay for the quiz modal. */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.quiz-modal {
+    /* Styling for the quiz modal itself. */
+    background-color: rgb(251, 251, 251);
+    padding: 30px 25px;
+    border-radius: 12px;
+    width: 90%; /* Responsive width */
+    max-width: 450px; /* Max width for larger screens */
+    height: auto; /* Allow height to adjust */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin: auto; /* Center the modal horizontally and vertically */
+}
+
+/* Styling for the quiz question heading. */
+.quiz-modal h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Styling for the close button on the quiz modal. */
+.quiz-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #888;
+    cursor: pointer;
+}
+
+/* Hover effect for the quiz close button. */
+.quiz-close-btn:hover {
+    color: #333; /* Darken color on hover */
+    background-color: transparent;
+}
+
+/* Container for the quiz answer options. */
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Styling for the quiz answer buttons. */
+.quiz-options button {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease; 
+    display: flex;
+    align-items: center;
+    min-height: 50px; /* Ensures consistent height */
+    justify-content: center; /* Center text in button */
+}
+
+/* Hover effect for the quiz answer buttons. */
+.quiz-options button:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+/* Styling for the "Back" button in the quiz. */
+.quiz-back-btn {
+    margin-top: 30px;
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--font-size-base);
+}
+
+/* Hover effect for the quiz "Back" button. */
+.quiz-back-btn:hover {
+    background-color: none;
+    text-decoration: underline;
+    background-color: transparent; /* Remove blue background */
+    color: #007bff; /* Change color on hover */
+}
+
+.quiz-show-matches-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* --- Responsive Media Queries --- */
+@media (min-width: 1301px) {
+    .FindC-boxes {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .FindC-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    .FindC-filter-container {
+        margin-left: 40px;
+    }
+
+    .FindC-1 {
+        background-size: 250px; /* Adjust background image size */
+        background-position: top right;
+        height: auto; /* Allow height to adjust */
+        padding-bottom: 20px; /* Add some padding at the bottom */
+    }
+
+    .FindC-get {
+        margin-left: 20px; /* Adjust margin */
+    }
+
+    .FindC-a {
+        font-size: 32px; /* Adjust font size */
+    }
+
+    .FindC-d {
+        font-size: 18px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 900px) {
+    .FindC-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 10px;
+    }
+    .FindC-filter-container {
+        width: 100%;
+        margin-left: 0;
+    }
+    .FindC-filter-dropdown {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .FindC-1 {
+        background-size: 200px; /* Further adjust background image size */
+        height: auto; /* Allow height to adjust */
+        padding-bottom: 20px;
+    }
+
+    .FindC-a {
+        font-size: 28px;
+    }
+
+    .FindC-d {
+        font-size: var(--font-size-base);
+    }
+
+    .FindC-img {
+        display: none; /* Hide image on smaller screens */
+    }
+
+    .FindC-b1 {
+        width: 90%; /* Adjust width */
+        margin-left: 5%; /* Center it */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .FindC-get, .see {
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .FindC-1 {
+        background-size: 180px; /* Even smaller background image */
+        padding-bottom: 15px;
+    }
+    .FindC-a {
+        font-size: 26px;
+    }
+    .FindC-d {
+        font-size: 15px;
+        padding-right: 180px;
+        padding-left: 80px;
+    }
+
+    .filter-section-findc {
+        flex-direction: column; /* Stack filters vertically */
+        gap: 20px;
+        padding: 20px;
+        align-items: stretch; /* Stretch items to full width */
+    }
+
+    .filter-group-findc {
+        width: 100%; /* Make filter groups full width */
+    }
+
+    .filter-group-findc select {
+        min-width: unset; /* Remove min-width constraint */
+        width: 100%; /* Make select full width */
+    }
+
+    .apply-filter-btn, .reset-filter-btn {
+        width: 100%; /* Make buttons full width */
+        margin-top: 0; /* Remove top margin */
+        height: auto; /* Allow height to adjust */
+        padding: 12px 0; /* Adjust padding */
+    }
+
+    .filter-group-findc:has(.apply-filter-btn) {
+        justify-content: flex-start; /* Adjust alignment */
+    }
+
+    .quiz-modal-overlay {
+        top: 0; /* Align to top */
+        left: 0; /* Align to left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        margin-top: 0;
+        margin-left: 0;
+        align-items: center; /* Center vertically */
+    }
+
+    .quiz-modal {
+        width: 90%; /* Take 90% width */
+        max-width: 450px; /* Max width for modal */
+        height: auto; /* Auto height */
+        margin: auto; /* Center modal */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .quiz-modal h3 {
+        font-size: 20px; /* Adjust font size */
+    }
+
+    /* Changes for 480px and below */
+    .FindC-1 {
+        display: none; /* Hide the banner */
+    }
+    .FindC-div a { /* Breadcrumb link */
+        color: var(--primary-color);
+    }
+    .filter-group-findc label { /* Filter labels */
+        color: var(--primary-color);
+    }
+    .filter-group-findc select { /* Dropdown text */
+        color: var(--primary-color);
+    }
+}
+
+@media (max-width: 480px) {
+    /* ... existing styles ... */
+
+    /* Show and style mobile navigation links for screens 480px and below */
+    .mobile-find-course-nav {
+        display: flex; /* Show on small screens */
+        flex-direction: column; /* Stack links vertically */
+        padding: 15px 20px;
+        background-color: #f0f2f5; /* Light background */
+        border-bottom: 1px solid #e0e0e0;
+        gap: 10px; /* Space between links */
+        margin-bottom: 20px; /* Space below the nav */
+    }
+
+    .mobile-find-course-nav a {
+        color: #007bff; /* Primary link color */
+        text-decoration: none;
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        transition: background-color 0.2s ease;
+        text-align: center;
+        border: 1px solid #d7d7d7;
+        background-color: white;
+    }
+
+    .mobile-find-course-nav a:hover {
+        background-color: #e9f5ff; /* Light hover effect */
+        color: #0056b3;
+    }
+}
+
+@media (max-width: 600px) {
+    .FindC-boxes {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    .FindC-filter-dropdown {
+        width: calc(100vw - 40px);
+        left: 50%;
+        transform: translate(-50%, -8px);
+    }
+    .FindC-filter-dropdown.open {
+        transform: translate(-50%, 0);
+    }
+    .FindC-1 {
+        background-size: 150px; /* Further adjust background image size */
+        padding-bottom: 15px;
+    }
+    .FindC-a {
+        font-size: 24px;
+    }
+    .FindC-d {
+        font-size: 14px;
+    }
+    .FindC-b1 {
+        width: 95%; /* Adjust width for very small screens */
+        margin-left: 2.5%; /* Center it */
+        padding: 15px; /* Adjust padding */
+    }
+    .aa {
+        font-size: 24px;
+    }
+    .see {
+        font-size: var(--font-size-base);
+    }
+    .FindC-button1 {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .FindC-points {
+        grid-template-columns: 1fr; /* Stack related searches vertically */
+        padding: 0 20px; /* Adjust padding */
+        margin: 10px auto; /* Center the section */
+    }
+    .points {
+        padding-left: 0; /* Remove fixed padding */
+        text-align: center;
+    }
+    .FindC-line {
+        padding-left: 0; /* Remove fixed padding */
+        text-align: center;
+        margin-bottom: 15px; /* Add space between sections */
+    }
+    .FindC-more {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 20px 0;
+        text-align: justify; /* Justify text for better readability */
+    }
+    .FindC-related {
+        padding-left: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .related {
+        display: inline-block; /* Make it inline-block to center */
+        padding-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .FindC-1 {
+        background-size: 120px; /* Even smaller background image */
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .FindC-a {
+        font-size: 20px;
+    }
+    .FindC-d {
+        font-size: 12px;
+    }
+    .aa {
+        font-size: 20px;
+    }
+    .see {
+        font-size: 14px;
+    }
+    .FindC-button1 {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .quiz-modal h3 {
+        font-size: 18px;
+    }
+    .quiz-options button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    .quiz-back-btn {
+        font-size: 14px;
+    }
+
+    /* Ensure changes persist for 400px and below if 480px styles are overridden */
+    .FindC-1 {
+        display: none; /* Hide the banner */
+    }
+    .FindC-div a { /* Breadcrumb link */
+        color: var(--primary-color);
+    }
+    .filter-group-findc label { /* Filter labels */
+        color: var(--primary-color);
+    }
+    .filter-group-findc select { /* Dropdown text */
+        color: var(--primary-color);
+    }
+}

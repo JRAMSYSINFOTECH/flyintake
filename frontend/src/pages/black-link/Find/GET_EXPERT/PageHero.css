@@ -1,0 +1,72 @@
+.page-hero {
+  background: linear-gradient(135deg, var(--primary-color), #0059b3);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.page-hero-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.page-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.page-hero-btn {
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.page-hero-btn:hover {
+  background: #ffb700;
+}
+.light-bg {
+  background: #fafafa;
+}
+
+.feature-list,
+.process-list {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.feature-list li,
+.process-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.cta-section {
+  text-align: center;
+}
+
+.cta-btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background: #e65c00;
+}

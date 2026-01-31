@@ -1,12 +1,13 @@
 import React, { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import IntakeWrapper from './components/IntakeWrapper/IntakeWrapper'
+import './variables.css'
+import App from "./App";
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <IntakeWrapper/>
+    <App />
   </StrictMode>,
 )

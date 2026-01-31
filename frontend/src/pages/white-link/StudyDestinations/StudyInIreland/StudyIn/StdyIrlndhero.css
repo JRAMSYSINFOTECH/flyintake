@@ -1,56 +1,56 @@
-/* StdyIrlndhero.css */
-.aush-hero-bg {
-  width: 100%;
-  height: 60vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.unsplash.com/photo-1547823321-419a6d59ff3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Ireland-related image */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 0 1rem;
-}
-
-.aush-hero-content {
-  max-width: 800px;
-}
-
-.aush-hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.aush-hero-content h3 {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
-  font-weight: 400;
-  margin-bottom: 2rem;
-}
-
-.aush-hero-content button {
-  background-color: #ffd600;
-  color: #23272b;
-  border: none;
-  padding: 0.8rem 2.5rem;
-  border-radius: 50px;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.aush-hero-content button:hover {
-  background-color: #ffc107;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 768px) {
-  .aush-hero-bg {
-    height: 50vh;
-  }
-}
+/* Ireland Study Page Styles with Unique Class Names */
+:root{--irl-primary-blue:#0066A1;--irl-primary-orange:#F68B1F;--irl-dark-blue:#004d7a;--irl-light-blue:#e6f2f8;--irl-text-dark:#333;--irl-text-light:#666;--irl-white:#fff;--irl-gray-bg:#f8f9fa;--irl-green-accent:#009A44}
+*{margin:0;padding:0;box-sizing:border-box}
+.ireland-educational-platform-container{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:var(--irl-text-dark);line-height:1.6}
+.ireland-primary-hero-banner{position:relative;height:500px;background:linear-gradient(135deg,var(--irl-green-accent) 0%,var(--irl-primary-blue) 50%,var(--irl-primary-orange) 100%);overflow:hidden}
+.ireland-primary-hero-banner::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,106.7C96,117,192,139,288,138.7C384,139,480,117,576,133.3C672,149,768,203,864,213.3C960,224,1056,192,1152,165.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;background-size:cover}
+.ireland-hero-content-overlay{position:relative;height:100%;display:flex;align-items:center;justify-content:center;z-index:1}
+.ireland-hero-centered-text{text-align:center;color:var(--irl-white);padding:0 20px}
+.ireland-hero-primary-heading{font-size:3.5rem;font-weight:700;margin-bottom:20px;text-shadow:2px 2px 4px rgba(0,0,0,.3);animation:irl-fadeInUp 1s ease-out}
+.ireland-hero-supporting-description{font-size:1.3rem;font-weight:300;max-width:700px;margin:0 auto;animation:irl-fadeInUp 1s ease-out .3s backwards}
+@keyframes irl-fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.ireland-central-content-container{max-width:1200px;margin:0 auto;padding:0 20px}
+.ireland-overview-information-section{padding:80px 0;background:var(--irl-white)}
+.ireland-introductory-text-block p{font-size:1.1rem;line-height:1.8;color:var(--irl-text-light);text-align:center;max-width:900px;margin:0 auto}
+.ireland-key-benefits-showcase{padding:80px 0;background:var(--irl-gray-bg)}
+.ireland-featured-section-title{font-size:2.5rem;color:var(--irl-primary-blue);text-align:center;margin-bottom:20px;font-weight:700}
+.ireland-benefits-explanatory-text{text-align:center;max-width:900px;margin:0 auto 50px;font-size:1.1rem;color:var(--irl-text-light);line-height:1.8}
+.ireland-advantage-cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:50px}
+.ireland-single-advantage-item{background:var(--irl-white);padding:40px 30px;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:all .3s ease;text-align:center;position:relative;border:2px solid transparent}
+.ireland-single-advantage-item::before{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(135deg,var(--irl-green-accent) 0%,var(--irl-primary-blue) 50%,var(--irl-primary-orange) 100%);border-radius:15px;opacity:0;z-index:-1;transition:opacity .3s ease}
+.ireland-single-advantage-item:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 10px 30px rgba(0,154,68,.2);border-color:transparent}
+.ireland-single-advantage-item:hover::before{opacity:1}
+.ireland-advantage-visual-icon{font-size:3rem;margin-bottom:20px}
+.ireland-single-advantage-item h3{color:var(--irl-primary-blue);font-size:1.3rem;margin-bottom:15px;font-weight:600}
+.ireland-single-advantage-item p{color:var(--irl-text-light);line-height:1.6}
+.ireland-academic-framework-section{padding:80px 0;background:var(--irl-white)}
+.ireland-education-descriptive-content{max-width:900px;margin:0 auto;margin-top:30px}
+.ireland-education-descriptive-content p{font-size:1.1rem;line-height:1.8;color:var(--irl-text-light);margin-bottom:20px}
+.ireland-assistance-programs-section{padding:80px 0;background:linear-gradient(135deg,var(--irl-light-blue) 0%,var(--irl-white) 100%)}
+.ireland-service-offerings-layout{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;margin-top:50px}
+.ireland-individual-service-module{background:var(--irl-white);padding:40px 30px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:all .3s ease;position:relative;overflow:hidden}
+.ireland-individual-service-module::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,var(--irl-green-accent) 0%,transparent 70%);opacity:0;transition:opacity .5s ease}
+.ireland-individual-service-module:hover{transform:scale(1.03);box-shadow:0 8px 25px rgba(0,154,68,.2)}
+.ireland-individual-service-module:hover::before{opacity:.1}
+.ireland-service-sequential-number{position:absolute;top:15px;right:15px;background:linear-gradient(135deg,var(--irl-green-accent) 0%,var(--irl-primary-blue) 100%);color:var(--irl-white);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;box-shadow:0 4px 10px rgba(0,154,68,.3)}
+.ireland-individual-service-module h3{color:var(--irl-primary-blue);font-size:1.3rem;margin-bottom:15px;font-weight:600;padding-right:60px}
+.ireland-individual-service-module p{color:var(--irl-text-light);line-height:1.7}
+.ireland-application-journey-section{padding:80px 0;background:var(--irl-white)}
+.ireland-application-overview-paragraph{text-align:center;max-width:900px;margin:0 auto 50px;font-size:1.1rem;color:var(--irl-text-light);line-height:1.8}
+.ireland-sequential-steps-display{max-width:800px;margin:0 auto;position:relative}
+.ireland-sequential-steps-display::before{content:'';position:absolute;left:30px;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--irl-green-accent) 0%,var(--irl-primary-blue) 50%,var(--irl-primary-orange) 100%)}
+.ireland-individual-process-step{display:flex;gap:30px;margin-bottom:40px;position:relative}
+.ireland-step-circular-marker{flex-shrink:0;width:60px;height:60px;background:linear-gradient(135deg,var(--irl-green-accent) 0%,var(--irl-primary-blue) 100%);color:var(--irl-white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:700;box-shadow:0 4px 15px rgba(0,154,68,.4);z-index:1;border:5px solid var(--irl-white)}
+.ireland-step-textual-information{flex:1;padding-top:5px}
+.ireland-step-textual-information h3{color:var(--irl-primary-blue);font-size:1.3rem;margin-bottom:10px;font-weight:600}
+.ireland-step-textual-information p{color:var(--irl-text-light);line-height:1.6}
+.ireland-final-calltoaction-section{padding:100px 0;background:linear-gradient(135deg,var(--irl-green-accent) 0%,var(--irl-primary-blue) 50%,var(--irl-primary-orange) 100%);position:relative;overflow:hidden}
+.ireland-final-calltoaction-section::before{content:'';position:absolute;bottom:-40%;right:-15%;width:700px;height:700px;background:var(--irl-white);border-radius:50%;opacity:.08}
+.ireland-cta-textual-content{text-align:center;color:var(--irl-white);position:relative;z-index:1}
+.ireland-cta-textual-content h2{font-size:2.5rem;margin-bottom:20px;font-weight:700}
+.ireland-cta-textual-content p{font-size:1.2rem;margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto}
+.ireland-primary-cta-button{background:var(--irl-white);color:var(--irl-green-accent);border:3px solid var(--irl-white);padding:18px 50px;font-size:1.1rem;font-weight:600;border-radius:50px;cursor:pointer;transition:all .3s ease;box-shadow:0 4px 15px rgba(255,255,255,.3)}
+.ireland-primary-cta-button:hover{background:transparent;color:var(--irl-white);border-color:var(--irl-white);transform:translateY(-3px);box-shadow:0 6px 20px rgba(255,255,255,.4)}
+@media (max-width:1024px){.ireland-hero-primary-heading{font-size:3rem}.ireland-featured-section-title{font-size:2.2rem}.ireland-advantage-cards-grid,.ireland-service-offerings-layout{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}}
+@media (max-width:768px){.ireland-primary-hero-banner{height:400px}.ireland-hero-primary-heading{font-size:2.5rem}.ireland-hero-supporting-description{font-size:1.1rem}.ireland-featured-section-title{font-size:2rem}.ireland-overview-information-section,.ireland-key-benefits-showcase,.ireland-academic-framework-section,.ireland-assistance-programs-section,.ireland-application-journey-section{padding:60px 0}.ireland-final-calltoaction-section{padding:80px 0}.ireland-advantage-cards-grid,.ireland-service-offerings-layout{grid-template-columns:1fr;gap:20px}.ireland-sequential-steps-display::before{left:20px}.ireland-individual-process-step{gap:20px}.ireland-step-circular-marker{width:50px;height:50px;font-size:1.3rem}.ireland-cta-textual-content h2{font-size:2rem}.ireland-cta-textual-content p{font-size:1.1rem}}
+@media (max-width:480px){.ireland-primary-hero-banner{height:350px}.ireland-hero-primary-heading{font-size:2rem}.ireland-hero-supporting-description{font-size:1rem}.ireland-featured-section-title{font-size:1.8rem}.ireland-introductory-text-block p,.ireland-benefits-explanatory-text,.ireland-education-descriptive-content p,.ireland-application-overview-paragraph{font-size:1rem}.ireland-single-advantage-item,.ireland-individual-service-module{padding:30px 20px}.ireland-service-sequential-number{width:45px;height:45px;font-size:1.1rem;top:12px;right:12px}.ireland-individual-service-module h3{padding-right:50px}.ireland-primary-cta-button{padding:15px 40px;font-size:1rem}}

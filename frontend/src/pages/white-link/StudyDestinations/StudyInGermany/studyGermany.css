@@ -1,0 +1,54 @@
+/* Germany Study Page Styles with Unique Class Names */
+:root{--ge-primary-blue:#0066A1;--ge-primary-orange:#F68B1F;--ge-dark-blue:#004d7a;--ge-light-blue:#e6f2f8;--ge-text-dark:#333;--ge-text-light:#666;--ge-white:#fff;--ge-gray-bg:#f8f9fa}
+*{margin:0;padding:0;box-sizing:border-box}
+.germany-study-main-container{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:var(--ge-text-dark);line-height:1.6}
+.germany-banner-section{position:relative;height:500px;background:linear-gradient(135deg,var(--ge-dark-blue) 0%,var(--ge-primary-orange) 50%,var(--ge-primary-blue) 100%);overflow:hidden}
+.germany-banner-section::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,154.7C672,128,768,96,864,96C960,96,1056,128,1152,133.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;background-size:cover}
+.germany-banner-overlay-layer{position:relative;height:100%;display:flex;align-items:center;justify-content:center;z-index:1}
+.germany-banner-text-content{text-align:center;color:var(--ge-white);padding:0 20px}
+.germany-banner-main-title{font-size:3.5rem;font-weight:700;margin-bottom:20px;text-shadow:2px 2px 4px rgba(0,0,0,.3);animation:ge-fadeInUp 1s ease-out}
+.germany-banner-descriptive-subtitle{font-size:1.3rem;font-weight:300;max-width:700px;margin:0 auto;animation:ge-fadeInUp 1s ease-out .3s backwards}
+@keyframes ge-fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.germany-main-content-wrapper{max-width:1200px;margin:0 auto;padding:0 20px}
+.germany-intro-description-section{padding:80px 0;background:var(--ge-white)}
+.germany-intro-paragraph-text p{font-size:1.1rem;line-height:1.8;color:var(--ge-text-light);text-align:center;max-width:900px;margin:0 auto}
+.germany-advantages-section{padding:80px 0;background:var(--ge-gray-bg)}
+.germany-primary-section-heading{font-size:2.5rem;color:var(--ge-primary-blue);text-align:center;margin-bottom:20px;font-weight:700}
+.germany-advantages-intro-paragraph{text-align:center;max-width:900px;margin:0 auto 50px;font-size:1.1rem;color:var(--ge-text-light);line-height:1.8}
+.germany-benefits-display-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:50px}
+.germany-individual-benefit-card{background:var(--ge-white);padding:40px 30px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:all .3s ease;text-align:center;position:relative;overflow:hidden}
+.germany-individual-benefit-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--ge-primary-blue) 0%,var(--ge-primary-orange) 100%);transform:scaleX(0);transition:transform .3s ease}
+.germany-individual-benefit-card:hover{transform:translateY(-8px);box-shadow:0 8px 25px rgba(0,102,161,.2)}
+.germany-individual-benefit-card:hover::after{transform:scaleX(1)}
+.germany-benefit-emoji-icon{font-size:3rem;margin-bottom:20px}
+.germany-individual-benefit-card h3{color:var(--ge-primary-blue);font-size:1.3rem;margin-bottom:15px;font-weight:600}
+.germany-individual-benefit-card p{color:var(--ge-text-light);line-height:1.6}
+.germany-academic-structure-section{padding:80px 0;background:var(--ge-white)}
+.germany-academic-details-content{max-width:900px;margin:0 auto;margin-top:30px}
+.germany-academic-details-content p{font-size:1.1rem;line-height:1.8;color:var(--ge-text-light);margin-bottom:20px}
+.germany-support-offerings-section{padding:80px 0;background:linear-gradient(135deg,var(--ge-light-blue) 0%,var(--ge-gray-bg) 100%)}
+.germany-support-services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;margin-top:50px}
+.germany-single-service-card{background:var(--ge-white);padding:40px 30px 40px 40px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:all .3s ease;position:relative;border-left:5px solid var(--ge-primary-blue)}
+.germany-single-service-card:hover{transform:translateX(10px);box-shadow:0 8px 25px rgba(246,139,31,.2);border-left-color:var(--ge-primary-orange)}
+.germany-service-badge-number{position:absolute;top:-15px;left:30px;background:linear-gradient(135deg,var(--ge-primary-blue) 0%,var(--ge-primary-orange) 100%);color:var(--ge-white);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;box-shadow:0 4px 10px rgba(0,102,161,.3)}
+.germany-single-service-card h3{color:var(--ge-primary-blue);font-size:1.3rem;margin-bottom:15px;font-weight:600}
+.germany-single-service-card p{color:var(--ge-text-light);line-height:1.7}
+.germany-enrollment-process-section{padding:80px 0;background:var(--ge-white)}
+.germany-enrollment-intro-text{text-align:center;max-width:900px;margin:0 auto 50px;font-size:1.1rem;color:var(--ge-text-light);line-height:1.8}
+.germany-process-timeline-steps{max-width:800px;margin:0 auto;position:relative}
+.germany-process-timeline-steps::before{content:'';position:absolute;left:30px;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--ge-primary-blue) 0%,var(--ge-primary-orange) 100%)}
+.germany-timeline-single-step{display:flex;gap:30px;margin-bottom:40px;position:relative}
+.germany-timeline-step-indicator{flex-shrink:0;width:60px;height:60px;background:var(--ge-primary-blue);color:var(--ge-white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:700;box-shadow:0 4px 15px rgba(0,102,161,.3);z-index:1;border:4px solid var(--ge-white)}
+.germany-timeline-step-details{flex:1;padding-top:5px}
+.germany-timeline-step-details h3{color:var(--ge-primary-blue);font-size:1.3rem;margin-bottom:10px;font-weight:600}
+.germany-timeline-step-details p{color:var(--ge-text-light);line-height:1.6}
+.germany-action-call-section{padding:100px 0;background:linear-gradient(135deg,var(--ge-dark-blue) 0%,var(--ge-primary-orange) 50%,var(--ge-primary-blue) 100%);position:relative;overflow:hidden}
+.germany-action-call-section::before{content:'';position:absolute;top:-30%;right:-10%;width:600px;height:600px;background:var(--ge-white);border-radius:50%;opacity:.05}
+.germany-action-call-content-box{text-align:center;color:var(--ge-white);position:relative;z-index:1}
+.germany-action-call-content-box h2{font-size:2.5rem;margin-bottom:20px;font-weight:700}
+.germany-action-call-content-box p{font-size:1.2rem;margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto}
+.germany-action-primary-button{background:var(--ge-white);color:var(--ge-primary-blue);border:none;padding:18px 50px;font-size:1.1rem;font-weight:600;border-radius:50px;cursor:pointer;transition:all .3s ease;box-shadow:0 4px 15px rgba(255,255,255,.3)}
+.germany-action-primary-button:hover{background:var(--ge-primary-orange);color:var(--ge-white);transform:translateY(-3px);box-shadow:0 6px 20px rgba(246,139,31,.4)}
+@media (max-width:1024px){.germany-banner-main-title{font-size:3rem}.germany-primary-section-heading{font-size:2.2rem}.germany-benefits-display-grid,.germany-support-services-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}}
+@media (max-width:768px){.germany-banner-section{height:400px}.germany-banner-main-title{font-size:2.5rem}.germany-banner-descriptive-subtitle{font-size:1.1rem}.germany-primary-section-heading{font-size:2rem}.germany-intro-description-section,.germany-advantages-section,.germany-academic-structure-section,.germany-support-offerings-section,.germany-enrollment-process-section{padding:60px 0}.germany-action-call-section{padding:80px 0}.germany-benefits-display-grid,.germany-support-services-grid{grid-template-columns:1fr;gap:20px}.germany-process-timeline-steps::before{left:20px}.germany-timeline-single-step{gap:20px}.germany-timeline-step-indicator{width:50px;height:50px;font-size:1.3rem}.germany-action-call-content-box h2{font-size:2rem}.germany-action-call-content-box p{font-size:1.1rem}}
+@media (max-width:480px){.germany-banner-section{height:350px}.germany-banner-main-title{font-size:2rem}.germany-banner-descriptive-subtitle{font-size:1rem}.germany-primary-section-heading{font-size:1.8rem}.germany-intro-paragraph-text p,.germany-advantages-intro-paragraph,.germany-academic-details-content p,.germany-enrollment-intro-text{font-size:1rem}.germany-individual-benefit-card,.germany-single-service-card{padding:30px 20px}.germany-service-badge-number{width:45px;height:45px;font-size:1.1rem;left:20px}.germany-action-primary-button{padding:15px 40px;font-size:1rem}}

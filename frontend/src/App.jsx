@@ -5,7 +5,7 @@ import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Contact from "./components/Contact/Contact";
-import Services from "./components/Services/Services";
+import Services from "./components/services/Services";
 import Destinations from "./components/Destination/Destinations";
 import Hero from "./components/Hero/Hero";
 import Testimonials from "./components/Testimonials/Testimonials";
@@ -100,6 +100,8 @@ import Prep from "./pages/white-link/IELTS/IELTS_prep/Prep";
 import AskIntakeStudyAbroad from "./pages/white-link/Study_Abroad/AskIntake/AskIntake";
 import ExploreAbroadPrgms from "./pages/white-link/StudyDestinations/ExploreAbroadPrgms";
 import Studydestcnt from "./pages/white-link/StudyDestinations/Studydestcnt";
+
+
 import StdyAushero from "./pages/white-link/StudyDestinations/StudyInAustralia/StdyAushero";
 import StdyAustcnt from "./pages/white-link/StudyDestinations/StudyInAustralia/StdyAustcnt.jsx";
 import Stdycanhero from "./pages/white-link/StudyDestinations/StudyInCanada/Stdycanhero.jsx";
@@ -110,6 +112,10 @@ import StdyUsahero from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsa
 import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndcnt.jsx";
 import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
 import StudyDestinationsHero from "./pages/white-link/StudyDestinations/StudyDestinationsHero";
+
+//about and contact us pages
+import ContactUs from "./pages/ContactUs/ContactUs";
+import AboutUs from "./pages/AboutUs/AboutUs";
 
 // Footer Pages
 import IntakeCareers from "./pages/white-link/FooterPages/IntakeCareers";
@@ -132,6 +138,8 @@ import ProfileAssessment from "./components/services/servicesTypes/ProfileAssess
 import PreDeparture from "./components/services/servicesTypes/PreDeparture.jsx";
 import AdmissionAcceptance from "./components/services/servicesTypes/AdmissionAcceptance.jsx";
 import Profile from "./components/Profile/Profile.jsx";
+import StudyGermany from "./pages/white-link/StudyDestinations/StudyInGermany/StudyGermany.jsx";
+import StudyEurope from "./pages/white-link/StudyDestinations/StudyInEurope/StudyEurope.jsx";
 
 
 
@@ -154,17 +162,18 @@ export default function App() {
           element={
             <>
               <Navbar />
-              <Hero />
+              <Hero/>
               <Testimonials />
-              <Contact />
+              
               <Services />
               <Destinations />
               <StudySteps />
               <Import />
-              <Fastlane />
-              <INTAKE />
-              <Essentials />
-              <AboutIntake />
+              <Contact />
+              {/* <Fastlane /> */}
+              {/* <INTAKE /> */}
+              {/* <Essentials /> */}
+              {/* <AboutIntake /> */}
               <Footer />
             </>
           }
@@ -349,7 +358,7 @@ export default function App() {
             <WhiteLinkLayout>
               <StudyAbNavbar />
               <AfterOfferPage />
-              <NewAndA />
+              {/* <NewAndA /> */}
               <Contact />
             </WhiteLinkLayout>
           }
@@ -398,8 +407,6 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StdyAushero />
-              <StdyAustcnt />
-              <Contact />
             </WhiteLinkLayout>
           }
         />
@@ -408,8 +415,6 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <Stdycanhero />
-              <Stdycancnt />
-              <Contact />
             </WhiteLinkLayout>
           }
         />
@@ -418,8 +423,6 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StdyIrlndhero />
-              <StdyIrlndcnt />
-              <Contact />
             </WhiteLinkLayout>
           }
         />
@@ -428,8 +431,6 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StdyUkhero />
-              <Stdyinukcnt />
-              <Contact />
             </WhiteLinkLayout>
           }
         />
@@ -438,7 +439,22 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StdyUsahero />
-              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/study-destinations/germany"
+          element={
+            <WhiteLinkLayout>
+              <StudyGermany />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/study-destinations/europe"
+          element={
+            <WhiteLinkLayout>
+              <StudyEurope />
             </WhiteLinkLayout>
           }
         />
@@ -648,6 +664,30 @@ export default function App() {
           }
         />
 
+
+        {/* About Us and Contact Us Pages */}
+        <Route
+          path="/about-us"
+          element={
+            <>
+              <Navbar />
+              <AboutUs />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/contact-us"
+          element={
+            <>
+              <Navbar />
+              <ContactUs />
+              {/* <Contact /> */}
+              <Footer />
+            </>
+          }
+        />
 
         {/* 🎓 Student Essentials */}
         <Route

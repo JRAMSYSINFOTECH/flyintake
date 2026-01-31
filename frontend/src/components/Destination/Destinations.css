@@ -1,4 +1,24 @@
 /* ===============================
+   GOOGLE FONTS
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ===============================
+   CSS VARIABLES
+================================ */
+:root {
+  --primary-blue: #003D82;
+  --secondary-blue: #2563EB;
+  --primary-orange: #FF6B35;
+  --secondary-orange: #F97316;
+  --dark-navy: #001B3D;
+  --light-gray: #F8FAFC;
+  --text-dark: #1E293B;
+  --text-light: #64748B;
+  --white: #FFFFFF;
+}
+
+/* ===============================
    GLOBAL RESET
 ================================ */
 * {
@@ -7,33 +27,167 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
-
 /* ===============================
    SECTION
 ================================ */
 .destinations-sec {
-  padding: 3.5rem 0 4.5rem;
-  background: #fff;
+  position: relative;
+  padding: 100px 0 120px;
+  background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 50%, #F8FAFC 100%);
+  overflow: hidden;
 }
 
-.destinations-wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
+/* Animated background */
+.dest-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.dest-flight-path {
+  position: absolute;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--secondary-blue), transparent);
+  opacity: 0.3;
+  animation: flightPath 8s ease-in-out infinite;
+}
+
+.dest-flight-path.path-1 {
+  left: 15%;
+  height: 400px;
+  animation-delay: 0s;
+}
+
+.dest-flight-path.path-2 {
+  right: 20%;
+  height: 500px;
+  animation-delay: 2.5s;
+}
+
+.dest-flight-path.path-3 {
+  left: 60%;
+  height: 350px;
+  animation-delay: 5s;
+}
+
+@keyframes flightPath {
+  0%, 100% {
+    transform: translateY(-100%) rotate(5deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(100vh) rotate(5deg);
+  }
 }
 
 /* ===============================
-   TITLE
+   CONTAINER
 ================================ */
+.destinations-wrap {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.dest-header {
+  margin-bottom: 56px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dest-header-content {
+  max-width: 720px;
+}
+
+.dest-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  color: var(--white);
+  border-radius: 100px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(255, 107, 53, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.badge-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
 .dest-title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #1f2937;
-  margin-bottom: 2rem;
-  text-align: left;
+  font-family: 'Outfit', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--dark-navy);
+  margin-bottom: 18px;
+  letter-spacing: -1.5px;
+}
+
+.dest-title-highlight {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+}
+
+.dest-title-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary-orange), var(--secondary-orange));
+  border-radius: 100px;
+  opacity: 0.6;
+}
+
+.dest-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
 /* ===============================
@@ -41,15 +195,8 @@ body {
 ================================ */
 .dest-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
-}
-
-/* Desktop 3-column layout */
-@media (min-width: 1024px) {
-  .dest-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
 }
 
 /* ===============================
@@ -57,204 +204,520 @@ body {
 ================================ */
 .dest-card {
   position: relative;
-  height: 220px;
-  border-radius: 14px;
-  background-size: cover;
-  background-position: center;
+  height: 340px;
+  background: var(--white);
+  border-radius: 18px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: cardAppear 0.6s ease-out backwards;
+}
+
+.dest-card:nth-child(1) { animation-delay: 0.1s; }
+.dest-card:nth-child(2) { animation-delay: 0.2s; }
+.dest-card:nth-child(3) { animation-delay: 0.3s; }
+.dest-card:nth-child(4) { animation-delay: 0.4s; }
+.dest-card:nth-child(5) { animation-delay: 0.5s; }
+.dest-card:nth-child(6) { animation-delay: 0.6s; }
+.dest-card:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .dest-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(0, 61, 130, 0.12);
 }
 
 /* ===============================
-   CENTER LABEL
+   CARD IMAGE
 ================================ */
-.dest-label {
+.dest-card-image {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
-  transition: opacity 0.25s ease;
-  pointer-events: none;
+  overflow: hidden;
 }
 
-.dest-label span {
-  color: #ffffff;
-  font-size: 1.4rem;
-  font-weight: 800;
-  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.6);
+.dest-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dest-card:hover .dest-card-image img {
+  transform: scale(1.08);
+}
+
+.dest-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 27, 61, 0.1) 0%,
+    rgba(0, 27, 61, 0.4) 40%,
+    rgba(0, 27, 61, 0.95) 100%
+  );
+  transition: background 0.4s ease;
+}
+
+.dest-card:hover .dest-card-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 27, 61, 0.2) 0%,
+    rgba(0, 27, 61, 0.5) 30%,
+    rgba(0, 27, 61, 0.98) 100%
+  );
 }
 
 /* ===============================
-   HOVER OVERLAY
+   ACCENT BORDER
 ================================ */
-.dest-hover {
+.dest-card-border {
   position: absolute;
-  inset: 0;
-  padding: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.dest-card:hover .dest-card-border {
+  opacity: 1;
+}
+
+/* ===============================
+   FLIGHT ICON
+================================ */
+.dest-flight-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  color: var(--white);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.dest-flight-icon svg {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.4s ease;
+}
+
+.dest-card:hover .dest-flight-icon {
+  background: var(--accent-color);
+  transform: rotate(45deg) scale(1.1);
+}
+
+.dest-card:hover .dest-flight-icon svg {
+  transform: rotate(-45deg);
+}
+
+/* ===============================
+   CARD CONTENT
+================================ */
+.dest-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   gap: 12px;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.65),
-    rgba(0, 0, 0, 0.35) 55%,
-    transparent
-  );
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 2;
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.dest-card:hover .dest-hover,
-.dest-card:focus-within .dest-hover {
+.dest-card-country {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dest-card-country h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.dest-card-arrow {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  color: var(--white);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.dest-card:hover .dest-card-arrow {
   opacity: 1;
-  visibility: visible;
+  transform: scale(1);
+  background: var(--accent-color);
 }
 
-.dest-card:hover .dest-label,
-.dest-card:focus-within .dest-label {
+.dest-card-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.dest-card-info {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
   opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+.dest-card:hover .dest-card-info {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ===============================
-   HOVER TEXT
+   CARD LINK
 ================================ */
-.dest-hover p {
-  color: #ffffff;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  margin: 0;
-}
-
-/* ===============================
-   BUTTON
-================================ */
-.dest-btn {
-  align-self: flex-start;
-  background: #2563eb;
-  color: #ffffff;
-  padding: 9px 18px;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 600;
+.dest-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-orange));
+  color: var(--white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: background 0.2s ease, transform 0.1s ease;
+  border-radius: 100px;
+  align-self: flex-start;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(10px);
+  transition-delay: 0.15s;
 }
 
-.dest-btn:hover {
-  background: #1e40af;
+.dest-card:hover .dest-card-link {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.dest-btn:active {
-  transform: translateY(1px);
+.dest-card-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+}
+
+.dest-card-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.dest-card-link:hover svg {
+  transform: translateX(4px);
 }
 
 /* ===============================
-   TABLET
+   DECORATIVE CORNER
+================================ */
+.dest-card-corner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--accent-color) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+}
+
+.dest-card:hover .dest-card-corner {
+  opacity: 0.15;
+}
+
+/* ===============================
+   TABLET (1024px and below)
 ================================ */
 @media (max-width: 1024px) {
-  .dest-title {
-    font-size: 1.7rem;
-  }
-
-  .dest-card {
-    height: 200px;
-  }
-
-  .dest-label span {
-    font-size: 1.3rem;
-  }
-}
-
-/* ===============================
-   MOBILE
-================================ */
-@media (max-width: 768px) {
   .destinations-sec {
-    padding: 2.8rem 0 3.5rem;
+    padding: 80px 0 90px;
+  }
+
+  .dest-header {
+    margin-bottom: 48px;
   }
 
   .dest-title {
-    text-align: center;
-    font-size: 1.5rem;
+    font-size: 42px;
+  }
+
+  .dest-subtitle {
+    font-size: 16px;
   }
 
   .dest-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
   }
 
   .dest-card {
-    height: 185px;
+    height: 320px;
   }
 
-  .dest-hover p {
-    font-size: 0.9rem;
+  .dest-card-country h3 {
+    font-size: 26px;
   }
 
-  .dest-btn {
-    font-size: 0.9rem;
-    padding: 8px 16px;
+  .dest-card-content {
+    padding: 22px;
   }
 }
 
 /* ===============================
-   SMALL MOBILE
+   MOBILE (768px and below)
 ================================ */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .destinations-sec {
+    padding: 60px 0 70px;
+  }
+
+  .destinations-wrap {
+    padding: 0 20px;
+  }
+
+  .dest-header {
+    margin-bottom: 40px;
+  }
+
+  .dest-badge {
+    font-size: 12px;
+    padding: 7px 16px;
+  }
+
+  .badge-icon {
+    width: 16px;
+    height: 16px;
+  }
+
   .dest-title {
-    font-size: 1.3rem;
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .dest-title-highlight::after {
+    height: 4px;
+    bottom: -5px;
+  }
+
+  .dest-subtitle {
+    font-size: 15px;
   }
 
   .dest-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .dest-card {
-    height: 165px;
-    border-radius: 12px;
+    height: 300px;
   }
 
-  .dest-label span {
-    font-size: 1.15rem;
+  .dest-flight-icon {
+    width: 38px;
+    height: 38px;
+    top: 18px;
+    right: 18px;
   }
 
-  .dest-hover p {
-    font-size: 0.85rem;
+  .dest-flight-icon svg {
+    width: 20px;
+    height: 20px;
   }
 
-  .dest-btn {
-    font-size: 0.85rem;
-    padding: 7px 14px;
+  .dest-card-content {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .dest-card-country h3 {
+    font-size: 24px;
+  }
+
+  .dest-card-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  .dest-card-arrow svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .dest-card-info {
+    font-size: 13px;
+  }
+
+  .dest-card-link {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .dest-card-link svg {
+    width: 15px;
+    height: 15px;
   }
 }
 
 /* ===============================
-   EXTRA SMALL DEVICES
+   SMALL MOBILE (480px and below)
+================================ */
+@media (max-width: 480px) {
+  .destinations-sec {
+    padding: 50px 0 60px;
+  }
+
+  .destinations-wrap {
+    padding: 0 16px;
+  }
+
+  .dest-header {
+    margin-bottom: 36px;
+  }
+
+  .dest-badge {
+    font-size: 11px;
+    padding: 6px 14px;
+    margin-bottom: 18px;
+  }
+
+  .dest-title {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+
+  .dest-subtitle {
+    font-size: 14px;
+  }
+
+  .dest-card {
+    height: 280px;
+    border-radius: 16px;
+  }
+
+  .dest-flight-icon {
+    width: 36px;
+    height: 36px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .dest-flight-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dest-card-content {
+    padding: 18px;
+    gap: 9px;
+  }
+
+  .dest-card-country h3 {
+    font-size: 22px;
+  }
+
+  .dest-card-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .dest-card-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .dest-card-info {
+    font-size: 12px;
+  }
+
+  .dest-card-link {
+    padding: 9px 18px;
+    font-size: 12px;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL (380px and below)
 ================================ */
 @media (max-width: 380px) {
+  .dest-title {
+    font-size: 28px;
+  }
+
+  .dest-subtitle {
+    font-size: 13px;
+  }
+
   .dest-card {
-    height: 150px;
+    height: 270px;
   }
 
-  .dest-label span {
-    font-size: 1rem;
+  .dest-card-country h3 {
+    font-size: 20px;
   }
 
-  .dest-hover p {
-    font-size: 0.8rem;
+  .dest-card-info {
+    font-size: 11px;
   }
 
-  .dest-btn {
-    font-size: 0.8rem;
-    padding: 6px 12px;
+  .dest-card-link {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+}
+
+/* ===============================
+   REDUCED MOTION
+================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -1,58 +1,117 @@
-import React from "react";
-import "./Testimonials.css";
+import React from 'react';
+import './Testimonials.css';
+import { Link } from 'react-router-dom';
 
-const testimonials = [
-  {
-    quote: "My experience with INTAKE was really great! The guidance provided by Ms. Sujata Thaman really helped me through the application process to various universities in Canada as well as my VISA application!.",
-    details: "The staff were really easy to contact and responded very quickly to any problem I had with their experience and knowledge. I would definitely recommend and would be able to study at University of Waterloo in Canada",
-    student: "INTAKE Student India, Aashay Singh",
-    role: "Student",
-    colorClass: "green-quote"
-  },
-  {
-    quote: "The guidance from the INTAKE was more than helpful. I wouldn’t have successfully completed my application process without their kind service.",
-    details:"It is 100% safe and secure to connect with them for any needs for anyone’s abroad dream. Thank you to INTAKE Education - Study Abroad Consultants in Kochi for your help in making my goal success!",
-    student: "INTAKE Student India, Amin Abdul Lathaf",
-    role: "Student",
-    colorClass: "blue-quote"
-  },
-  {
-     quote:"INTAKE is Best! They turned my dream of studying abroad into a reality.",
-    details: "From selecting the right university to guiding me through the VISA process, support was exceptional. I felt confident and well-prepared at every step. I’m truly grateful for their expert guidance and genuine care.",
-    student: "INTAKE Student India, Nakin Barhana",
-    role: "Student",
-    colorClass: "orange-quote"
-  }
-];
+const Testimonials = () => {
+  return (
+    <section className="flyintake-about-section">
+      {/* Dynamic Background Elements */}
+      <div className="flyintake-bg-elements">
+        <div className="flyintake-bg-circle flyintake-bg-circle-1"></div>
+        <div className="flyintake-bg-circle flyintake-bg-circle-2"></div>
+        <div className="flyintake-bg-pattern"></div>
+      </div>
+      
+      <div className="flyintake-about-container">
+        {/* Section Header */}
+        <div className="flyintake-section-header">
+          <div className="flyintake-header-badge">
+            <span className="flyintake-badge-dot"></span>
+            <span>About Flyintake</span>
+          </div>
+          <h2 className="flyintake-section-title">
+            Your Trusted Partner in<br />
+            <span className="flyintake-title-gradient">Global Education Excellence</span>
+          </h2>
+        </div>
 
-const Testimonials = () => (
-  <section className="testimonials-section">
-    <h2>
-      <span className="underline-green">W</span>hy students trust INTAKE
-    </h2>
-    <p className="subtitle">
-      Hear from students who chose and trusted INTAKE to guide their study abroad journey.
-    </p>
-    <div className="testimonials-row">
-      {testimonials.map((item, idx) => (
-        <div
-          className={`testimonial-card ${item.colorClass} ${item.colorClass}-bg white-text`}
-          key={idx}
-        >
-          <span className="color-marker">
-            <span className="marker-quote"></span>
-          </span>
+        {/* Main Content Area */}
+        <div className="flyintake-about-content">
+          {/* Company Info */}
+          <div className="flyintake-info-section">
+            <h3 className="flyintake-company-name">FLYINTAKE Global Consulting Private Limited</h3>
 
-          <p className="quote">{item.quote}</p>
-          <p className="details">{item.details}</p>
-          <div className="student-area">
-            <span className="student">{item.student}</span>
-            <span className="role">{item.role}</span>
+            <div className="flyintake-about-text">
+              <p className="flyintake-text-main">
+                FLYINTAKE Global Consulting Private Limited is a trusted abroad education 
+                consulting firm offering comprehensive guidance and educational support 
+                services to students aspiring to study overseas. With a global outlook 
+                and technology-enabled processes, Flyintake simplifies international 
+                education journeys.
+              </p>
+              
+              <div className="flyintake-cta-buttons-inline">
+                <Link to="/about-us" className="flyintake-btn flyintake-btn-primary">
+                  <span>Explore More</span>
+                  
+                </Link>
+                <Link to="/contact-us" className="flyintake-btn flyintake-btn-secondary">
+                  
+                  <span>Free Counselling</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Key Highlights */}
+          <div className="flyintake-highlights-section">
+            <h3 className="flyintake-highlights-title">Why Choose Flyintake?</h3>
+            <div className="flyintake-highlights-grid">
+              <div className="flyintake-highlight-item">
+                <div className="flyintake-highlight-icon">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M16 10V16L20 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div className="flyintake-highlight-content">
+                  <h4>Transparent Process</h4>
+                  <p>Complete visibility and honest guidance at every step</p>
+                </div>
+              </div>
+
+              <div className="flyintake-highlight-item">
+                <div className="flyintake-highlight-icon">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L19 13L30 15L22 22L24 33L16 27L8 33L10 22L2 15L13 13L16 2Z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div className="flyintake-highlight-content">
+                  <h4>Expert Counselors</h4>
+                  <p>Certified professionals with proven global expertise</p>
+                </div>
+              </div>
+
+              <div className="flyintake-highlight-item">
+                <div className="flyintake-highlight-icon">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M4 16L12 24L28 8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div className="flyintake-highlight-content">
+                  <h4>End-to-End Support</h4>
+                  <p>Comprehensive assistance from application to arrival</p>
+                </div>
+              </div>
+
+              <div className="flyintake-highlight-item">
+                <div className="flyintake-highlight-icon">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <circle cx="16" cy="16" r="12" stroke="currentColor" strokeWidth="2.5"/>
+                    <path d="M16 4C16 4 24 10 24 16C24 22 16 28 16 28M16 4C16 4 8 10 8 16C8 22 16 28 16 28M4 16H28" stroke="currentColor" strokeWidth="2.5"/>
+                  </svg>
+                </div>
+                <div className="flyintake-highlight-content">
+                  <h4>Global Network</h4>
+                  <p>Partnerships with 100+ top universities worldwide</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      ))}
-    </div>
-  </section>
-);
+      </div>
+    </section>
+  );
+};
 
 export default Testimonials;

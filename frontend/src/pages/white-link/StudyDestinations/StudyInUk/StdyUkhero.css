@@ -1,56 +1,493 @@
-/* StdyUkhero.css */
-.aush-hero-bg {
-  width: 100%;
-  height: 60vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.unsplash.com/photo-1533929736458-ca58898168f2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* UK-related image */
+/* UK Study Page Styles */
+
+:root {
+  --uk-primary-blue: #0066A1;
+  --uk-primary-orange: #F68B1F;
+  --uk-dark-blue: #004d7a;
+  --uk-light-blue: #e6f2f8;
+  --uk-text-dark: #333333;
+  --uk-text-light: #666666;
+  --uk-white: #ffffff;
+  --uk-gray-bg: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.uk-study-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--uk-text-dark);
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.uk-hero-section {
+  position: relative;
+  height: 500px;
+  background: linear-gradient(135deg, var(--uk-dark-blue) 0%, var(--uk-primary-blue) 100%);
+  overflow: hidden;
+}
+
+.uk-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
   background-size: cover;
-  background-position: center;
+}
+
+.uk-hero-overlay {
+  position: relative;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+}
+
+.uk-hero-content {
   text-align: center;
-  color: white;
-  padding: 0 1rem;
+  color: var(--uk-white);
+  padding: 0 20px;
 }
 
-.aush-hero-content {
-  max-width: 800px;
-}
-
-.aush-hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+.uk-hero-title {
+  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: uk-fadeInUp 1s ease-out;
 }
 
-.aush-hero-content h3 {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
-  font-weight: 400;
-  margin-bottom: 2rem;
+.uk-hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: uk-fadeInUp 1s ease-out 0.3s backwards;
 }
 
-.aush-hero-content button {
-  background-color: #ffd600;
-  color: #23272b;
-  border: none;
-  padding: 0.8rem 2.5rem;
-  border-radius: 50px;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+@keyframes uk-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Content Wrapper */
+.uk-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Introduction Section */
+.uk-intro-section {
+  padding: 80px 0;
+  background: var(--uk-white);
+}
+
+.uk-intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--uk-text-light);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Why Study Section */
+.uk-why-section {
+  padding: 80px 0;
+  background: var(--uk-gray-bg);
+}
+
+.uk-section-title {
+  font-size: 2.5rem;
+  color: var(--uk-primary-blue);
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.uk-why-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: var(--uk-text-light);
+  line-height: 1.8;
+}
+
+.uk-reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.uk-reason-card {
+  background: var(--uk-white);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border-top: 4px solid var(--uk-primary-orange);
+}
+
+.uk-reason-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 102, 161, 0.2);
+}
+
+.uk-reason-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.uk-reason-card h3 {
+  color: var(--uk-primary-blue);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
   font-weight: 600;
+}
+
+.uk-reason-card p {
+  color: var(--uk-text-light);
+  line-height: 1.6;
+}
+
+/* Education System Section */
+.uk-education-system {
+  padding: 80px 0;
+  background: var(--uk-white);
+}
+
+.uk-system-content {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.uk-system-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--uk-text-light);
+  margin-bottom: 20px;
+}
+
+/* Services Section */
+.uk-services-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--uk-white) 0%, var(--uk-light-blue) 100%);
+}
+
+.uk-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.uk-service-card {
+  background: var(--uk-white);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-right: 5px solid var(--uk-primary-blue);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.uk-service-card:hover {
+  transform: translateX(-10px);
+  box-shadow: 0 8px 25px rgba(0, 102, 161, 0.2);
+}
+
+.uk-service-number {
+  position: absolute;
+  top: -15px;
+  left: 30px;
+  background: var(--uk-primary-blue);
+  color: var(--uk-white);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0, 102, 161, 0.3);
+}
+
+.uk-service-card h3 {
+  color: var(--uk-primary-blue);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.uk-service-card p {
+  color: var(--uk-text-light);
+  line-height: 1.7;
+}
+
+/* Application Section */
+.uk-application-section {
+  padding: 80px 0;
+  background: var(--uk-white);
+}
+
+.uk-application-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: var(--uk-text-light);
+  line-height: 1.8;
+}
+
+.uk-application-steps {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.uk-application-steps::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--uk-primary-blue);
+}
+
+.uk-step {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.uk-step-number {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--uk-primary-orange);
+  color: var(--uk-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(246, 139, 31, 0.3);
+  z-index: 1;
+}
+
+.uk-step-content {
+  flex: 1;
+  padding-top: 5px;
+}
+
+.uk-step-content h3 {
+  color: var(--uk-primary-blue);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.uk-step-content p {
+  color: var(--uk-text-light);
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.uk-cta-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--uk-dark-blue) 0%, var(--uk-primary-blue) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.uk-cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: var(--uk-primary-orange);
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.uk-cta-content {
+  text-align: center;
+  color: var(--uk-white);
+  position: relative;
+  z-index: 1;
+}
+
+.uk-cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.uk-cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.uk-cta-button {
+  background: var(--uk-primary-orange);
+  color: var(--uk-white);
+  border: none;
+  padding: 18px 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(246, 139, 31, 0.3);
 }
 
-.aush-hero-content button:hover {
-  background-color: #ffc107;
+.uk-cta-button:hover {
+  background: #e67d0f;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(246, 139, 31, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .uk-hero-title {
+    font-size: 3rem;
+  }
+  
+  .uk-section-title {
+    font-size: 2.2rem;
+  }
+  
+  .uk-reasons-grid,
+  .uk-services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
 }
 
 @media (max-width: 768px) {
-  .aush-hero-bg {
-    height: 50vh;
+  .uk-hero-section {
+    height: 400px;
+  }
+  
+  .uk-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .uk-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .uk-section-title {
+    font-size: 2rem;
+  }
+  
+  .uk-intro-section,
+  .uk-why-section,
+  .uk-education-system,
+  .uk-services-section,
+  .uk-application-section {
+    padding: 60px 0;
+  }
+  
+  .uk-cta-section {
+    padding: 80px 0;
+  }
+  
+  .uk-reasons-grid,
+  .uk-services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .uk-application-steps::before {
+    left: 20px;
+  }
+  
+  .uk-step {
+    gap: 20px;
+  }
+  
+  .uk-step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+  
+  .uk-cta-content h2 {
+    font-size: 2rem;
+  }
+  
+  .uk-cta-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .uk-hero-section {
+    height: 350px;
+  }
+  
+  .uk-hero-title {
+    font-size: 2rem;
+  }
+  
+  .uk-hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .uk-section-title {
+    font-size: 1.8rem;
+  }
+  
+  .uk-intro-text p,
+  .uk-why-intro,
+  .uk-system-content p,
+  .uk-application-intro {
+    font-size: 1rem;
+  }
+  
+  .uk-reason-card,
+  .uk-service-card {
+    padding: 30px 20px;
+  }
+  
+  .uk-service-number {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    left: 20px;
+  }
+  
+  .uk-cta-button {
+    padding: 15px 40px;
+    font-size: 1rem;
   }
 }

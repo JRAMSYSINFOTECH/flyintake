@@ -1,56 +1,511 @@
-/* Stdycanhero.css */
-.aush-hero-bg {
-  width: 100%;
-  height: 60vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.unsplash.com/photo-1543384299-467393l4-1.5_3.5&q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Canada-related image */
+/* Canada Study Page Styles */
+
+:root {
+  --canada-primary-blue: #0066A1;
+  --canada-primary-orange: #F68B1F;
+  --canada-dark-blue: #004d7a;
+  --canada-light-blue: #e6f2f8;
+  --canada-text-dark: #333333;
+  --canada-text-light: #666666;
+  --canada-white: #ffffff;
+  --canada-gray-bg: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.canada-study-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--canada-text-dark);
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.canada-hero-section {
+  position: relative;
+  height: 500px;
+  background: linear-gradient(120deg, var(--canada-primary-blue) 0%, var(--canada-primary-orange) 100%);
+  overflow: hidden;
+}
+
+.canada-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,160L48,170.7C96,181,192,203,288,192C384,181,480,139,576,133.3C672,128,768,160,864,165.3C960,171,1056,149,1152,133.3C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
   background-size: cover;
-  background-position: center;
+}
+
+.canada-hero-overlay {
+  position: relative;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+}
+
+.canada-hero-content {
   text-align: center;
-  color: white;
-  padding: 0 1rem;
+  color: var(--canada-white);
+  padding: 0 20px;
 }
 
-.aush-hero-content {
-  max-width: 800px;
-}
-
-.aush-hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+.canada-hero-title {
+  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: canada-fadeInUp 1s ease-out;
 }
 
-.aush-hero-content h3 {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
-  font-weight: 400;
-  margin-bottom: 2rem;
+.canada-hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: canada-fadeInUp 1s ease-out 0.3s backwards;
 }
 
-.aush-hero-content button {
-  background-color: #ffd600;
-  color: #23272b;
-  border: none;
-  padding: 0.8rem 2.5rem;
-  border-radius: 50px;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+@keyframes canada-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Content Wrapper */
+.canada-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Introduction Section */
+.canada-intro-section {
+  padding: 80px 0;
+  background: var(--canada-white);
+}
+
+.canada-intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--canada-text-light);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Why Study Section */
+.canada-why-section {
+  padding: 80px 0;
+  background: var(--canada-gray-bg);
+}
+
+.canada-section-title {
+  font-size: 2.5rem;
+  color: var(--canada-primary-blue);
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.canada-why-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: var(--canada-text-light);
+  line-height: 1.8;
+}
+
+.canada-reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.canada-reason-card {
+  background: var(--canada-white);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.canada-reason-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--canada-primary-blue) 0%, var(--canada-primary-orange) 100%);
+}
+
+.canada-reason-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(246, 139, 31, 0.2);
+}
+
+.canada-reason-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.canada-reason-card h3 {
+  color: var(--canada-primary-blue);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
   font-weight: 600;
+}
+
+.canada-reason-card p {
+  color: var(--canada-text-light);
+  line-height: 1.6;
+}
+
+/* Education System Section */
+.canada-education-system {
+  padding: 80px 0;
+  background: var(--canada-white);
+}
+
+.canada-system-content {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.canada-system-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--canada-text-light);
+  margin-bottom: 20px;
+}
+
+/* Services Section */
+.canada-services-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--canada-light-blue) 0%, var(--canada-gray-bg) 100%);
+}
+
+.canada-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.canada-service-card {
+  background: var(--canada-white);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  border-bottom: 5px solid var(--canada-primary-blue);
+}
+
+.canada-service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 102, 161, 0.2);
+  border-bottom-color: var(--canada-primary-orange);
+}
+
+.canada-service-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--canada-primary-blue) 0%, var(--canada-primary-orange) 100%);
+  color: var(--canada-white);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0, 102, 161, 0.3);
+}
+
+.canada-service-card h3 {
+  color: var(--canada-primary-blue);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  padding-right: 60px;
+}
+
+.canada-service-card p {
+  color: var(--canada-text-light);
+  line-height: 1.7;
+}
+
+/* Application Section */
+.canada-application-section {
+  padding: 80px 0;
+  background: var(--canada-white);
+}
+
+.canada-application-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: var(--canada-text-light);
+  line-height: 1.8;
+}
+
+.canada-application-steps {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.canada-application-steps::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--canada-primary-blue) 0%, var(--canada-primary-orange) 100%);
+}
+
+.canada-step {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.canada-step-number {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--canada-primary-blue) 0%, var(--canada-primary-orange) 100%);
+  color: var(--canada-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0, 102, 161, 0.3);
+  z-index: 1;
+}
+
+.canada-step-content {
+  flex: 1;
+  padding-top: 5px;
+}
+
+.canada-step-content h3 {
+  color: var(--canada-primary-blue);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.canada-step-content p {
+  color: var(--canada-text-light);
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.canada-cta-section {
+  padding: 100px 0;
+  background: linear-gradient(120deg, var(--canada-primary-blue) 0%, var(--canada-primary-orange) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.canada-cta-section::before {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: var(--canada-white);
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.canada-cta-content {
+  text-align: center;
+  color: var(--canada-white);
+  position: relative;
+  z-index: 1;
+}
+
+.canada-cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.canada-cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.canada-cta-button {
+  background: var(--canada-white);
+  color: var(--canada-primary-blue);
+  border: none;
+  padding: 18px 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
-.aush-hero-content button:hover {
-  background-color: #ffc107;
+.canada-cta-button:hover {
+  background: #f0f0f0;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .canada-hero-title {
+    font-size: 3rem;
+  }
+  
+  .canada-section-title {
+    font-size: 2.2rem;
+  }
+  
+  .canada-reasons-grid,
+  .canada-services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
 }
 
 @media (max-width: 768px) {
-  .aush-hero-bg {
-    height: 50vh;
+  .canada-hero-section {
+    height: 400px;
+  }
+  
+  .canada-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .canada-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .canada-section-title {
+    font-size: 2rem;
+  }
+  
+  .canada-intro-section,
+  .canada-why-section,
+  .canada-education-system,
+  .canada-services-section,
+  .canada-application-section {
+    padding: 60px 0;
+  }
+  
+  .canada-cta-section {
+    padding: 80px 0;
+  }
+  
+  .canada-reasons-grid,
+  .canada-services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .canada-application-steps::before {
+    left: 20px;
+  }
+  
+  .canada-step {
+    gap: 20px;
+  }
+  
+  .canada-step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+  
+  .canada-cta-content h2 {
+    font-size: 2rem;
+  }
+  
+  .canada-cta-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .canada-hero-section {
+    height: 350px;
+  }
+  
+  .canada-hero-title {
+    font-size: 2rem;
+  }
+  
+  .canada-hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .canada-section-title {
+    font-size: 1.8rem;
+  }
+  
+  .canada-intro-text p,
+  .canada-why-intro,
+  .canada-system-content p,
+  .canada-application-intro {
+    font-size: 1rem;
+  }
+  
+  .canada-reason-card,
+  .canada-service-card {
+    padding: 30px 20px;
+  }
+  
+  .canada-service-number {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .canada-service-card h3 {
+    padding-right: 50px;
+  }
+  
+  .canada-cta-button {
+    padding: 15px 40px;
+    font-size: 1rem;
   }
 }

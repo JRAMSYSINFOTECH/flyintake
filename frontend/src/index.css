@@ -10,14 +10,11 @@
 html {
     scroll-behavior: smooth;
     scrollbar-width: none;
-    /* Firefox */
     -ms-overflow-style: none;
-    /* IE and Edge */
 }
 
 html::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari, Opera */
 }
 
 body {
@@ -25,67 +22,20 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
-    color: #333;
     scrollbar-width: none;
-    /* Firefox */
     -ms-overflow-style: none;
-  
 }
 
 body::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari, Opera */
 }
+
+/* REMOVED: a, h1-h6, button default styles that were conflicting */
+/* Let Tailwind handle these instead */
 
 a {
     text-decoration: none;
-    color: inherit;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0 0 1rem 0;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-button {
-    padding: 15px;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-}
-
-/* Global responsive utilities */
-.container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 0 0.75rem;
-    }
-}
-
-/* Prevent horizontal scroll */
-.app {
-    overflow-x: hidden;
-    min-height: 100vh;
-}
-
-/* Button base styles */
-button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    font-family: inherit;
-}
-
 
 /* Focus styles for accessibility */
 button:focus-visible,
@@ -100,44 +50,19 @@ img {
     height: auto;
 }
 
-/* Smooth transitions for interactive elements */
-button,
-a,
-.service-card,
-.dest-card {
-    transition: all 0.3s ease;
-}
-
-/* Mobile-first approach - base styles are for mobile */
-@media (min-width: 768px) {
-    .container {
-        padding: 0 1.5rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .container {
-        padding: 0 2rem;
-    }
-}
-
 li {
-    text-decoration: none;
     list-style: none;
 }
 
 .scroll-container {
     overflow: auto;
-    /* or scroll */
-
-    /* Hide scrollbar - Chrome, Edge, Safari */
     scrollbar-width: none;
-    /* Firefox */
     -ms-overflow-style: none;
-    /* IE & old Edge */
 }
 
 .scroll-container::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari */
 }
+
+/* Only keep container if you need it for other pages */
+/* For About/Contact pages, Tailwind's container is used instead */

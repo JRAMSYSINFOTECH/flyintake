@@ -80,6 +80,8 @@ import ArticleDetail from "./pages/Related_Articles/ArticleDetail";
 import FindH from "./pages/black-link/Find/FindH";
 import FindCountryPage from "./pages/black-link/Find/FindCountryPage";
 import InfoSection from "./pages/black-link/Find/InfoSection";
+import Trainings from "./pages/Trainings/Trainings";
+
 //Find a course and IELTS 
 
 import CourseA from "./pages/white-link/Find_A_Course/CourseAdvice/CourseAdvice";
@@ -369,7 +371,8 @@ export default function App() {
             <WhiteLinkLayout>
               <StudyAbNavbar />
               <PrepareToDepartPage />
-              <NewAndA />
+              
+              {/* <NewAndA /> */}
               <Contact />
             </WhiteLinkLayout>
           }
@@ -380,7 +383,7 @@ export default function App() {
             <WhiteLinkLayout>
               <StudyAbNavbar />
               <ArriveAndThrivePage />
-              <NewAndA />
+              {/* <NewAndA /> */}
               <Contact />
             </WhiteLinkLayout>
           }
@@ -580,6 +583,15 @@ export default function App() {
           }
         />
 
+        <Route
+          path="/pages/Trainings"
+          element={
+            <WhiteLinkLayout>
+              <Trainings />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
         <Route
           path="/pages/IELTSPage"
           element={

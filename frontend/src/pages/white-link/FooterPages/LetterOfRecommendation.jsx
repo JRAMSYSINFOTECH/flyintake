@@ -1,5 +1,6 @@
 import React from "react";
 import "./FooterPage.css";
+import { Link } from "react-router-dom";
 
 export default function LetterOfRecommendation() {
   return (
@@ -25,7 +26,9 @@ export default function LetterOfRecommendation() {
             <li>Mentors or coaches</li>
             <li>People who know you well and can speak to your strengths</li>
           </ul>
-          <button className="footer-page-btn">Get LOR Guidance</button>
+          <Link to="/pages/white-link/Avail" className="footer-page-btn">
+            Contact Us for LOR Assistance
+          </Link>
         </div>
       </div>
     </section>

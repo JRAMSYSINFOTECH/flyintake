@@ -109,7 +109,7 @@
 /* Styling for a single navigation box. */
 .box {
     flex: 1;
-    background-color: white;
+    background-color: rgb(237, 214, 199);
     border: 1px solid rgb(238, 238, 238);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;

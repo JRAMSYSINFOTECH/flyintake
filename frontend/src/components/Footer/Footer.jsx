@@ -1,92 +1,78 @@
-
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-import './Footer.css'; // Import external CSS
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-sections">
-        <div className="footer-column">
-          <h2>About INTAKE</h2>
+    <footer className="flyintake-footer">
+      {/* Main Footer Content Sections */}
+      <div className="flyintake-footer-sections">
+        {/* English Tests Section - First */}
+        <div className="flyintake-footer-column">
+          <h2>English Tests</h2>
           <ul>
-            <li><Link to="/">About us</Link></li>
-            <li><Link to="/study-abroad/why-study-abroad">Study abroad counselling</Link></li>
-            <li><Link to="/INTAKE-careers">INTAKE Careers</Link></li>
+            <li><Link to="/Pages/Toefl">TOEFL</Link></li>
+            <li><Link to="/Pages/IeltsPage">IELTS</Link></li>
+            <li><Link to="/Pages/Duolingo">Duolingo English Test</Link></li>
           </ul>
         </div>
-        <div className="footer-column">
+
+        {/* Study Abroad Section */}
+        <div className="flyintake-footer-column">
+          <h2>Study Abroad</h2>
+          <ul>
+            <li><Link to="/study-abroad/why-study-abroad">Why Study Abroad</Link></li>
+            <li><Link to="/study-abroad/where-to-study">Where to Study</Link></li>
+            <li><Link to="/study-abroad/how-to-apply">How to Apply</Link></li>
+            <li><Link to="/study-abroad/after-offer">After Receiving an Offer</Link></li>
+            <li><Link to="/study-abroad/prepare-to-depart">Preparing to Depart</Link></li>
+            <li><Link to="/study-abroad/arrive-and-thrive">After Arrival</Link></li>
+          </ul>
+        </div>
+
+        {/* Useful Links Section */}
+        <div className="flyintake-footer-column">
           <h2>Useful Links</h2>
           <ul>
-            <li><Link to="/find-a-course">Find a course</Link></li>
-            <li><Link to="/find-scholarships">Find scholarships</Link></li>
-            <li><Link to="/find-universities">Find a university</Link></li>
-            <li><Link to="/ask-idp">Ask INTAKE</Link></li>
-            <li><Link to="/cost-of-living">Cost of living</Link></li>
             <li><Link to="/statement-of-purpose">Statement of Purpose</Link></li>
             <li><Link to="/letter-of-recommendation">Letter of Recommendation</Link></li>
+            <li><Link to="/pages/Trainings">IT & Management Trainings</Link></li>
+            <li><Link to="/about-us">About Us</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
-        <div className="footer-column">
-          <h2>IELTS</h2>
-          <ul>
-            <li><Link to="/IELTS/What_is_IELTS/What">What is IELTS?</Link></li>
-            <li><Link to="/ielts/what-is-ielts">Why take IELTS with INTAKE?</Link></li>
-            <li><Link to="/ielts/IELTS_prep/Prep">IELTS Preparation</Link></li>
-       
+
+        {/* Social Media Section */}
+        <div className="flyintake-footer-column">
+          <h2>Connect With Us</h2>
+          <ul className="social-links">
+            <li>
+              <a href="https://www.facebook.com/flyintake" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faFacebook} /> Facebook
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://www.instagram.com/flyintake" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faInstagram} /> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/flyintake" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+              </a>
+            </li>
           </ul>
         </div>
-        <div className="footer-column">
-          <h2>Connect with INTAKE</h2>
-          <ul>
-            <li><Link to="/pages/Events">Events</Link></li>
-            <li><Link to="/corporate-responsibility">Corporate responsibility</Link></li>
-            <li><Link to="/pages/black-link/Find/Find">Our offices</Link></li>
-            <li><Link to="/customer-grievances">Customer support</Link></li>
-          </ul>
-        </div>
-      </div>
-      <div className="footer-row">
-        <ul>
-          <li>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faFacebook} />
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-          </li>
-        </ul>
       </div>
 
-      <div className="footer-bottom">
-        <p>© 2025 INTAKE Education</p>
-        <p>IELTS is jointly owned by INTAKE: IELTS Australia, British Council and Cambridge English.</p>
-        <p>Cambridge English is part of Cambridge University Press & Assessment.</p>
-      </div>
-      <div className="footer-row">
-
-        <ul>
-          <li><Link to="/investors">Investors</Link></li>
-          <li><Link to="/terms-of-use">Terms of use</Link></li>
-          <li><Link to="/privacy-policy">Privacy policy</Link></li>
-          <li><Link to="/disclaimer">Disclaimer</Link></li>
-        </ul>
+      {/* Footer Bottom - Copyright Only */}
+      <div className="flyintake-footer-bottom">
+        <p>© 2025 FlyInTake Global Consulting Private Limited</p>
+        <p>Technology Consulting & Educational Support Services</p>
       </div>
     </footer>
   );

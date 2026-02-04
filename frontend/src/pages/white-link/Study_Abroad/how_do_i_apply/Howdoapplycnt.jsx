@@ -19,8 +19,8 @@ const Howdoapplycnt = () => {
         Book an IELTS Test
       </Link>
 
-      <Link to="/pages/white-link/Sign_Up" className="apply-btn" style={{ marginLeft: '15px' }}>
-        Sign Up for Counselling
+      <Link to="/pages/white-link/Avail" className="apply-btn" style={{ marginLeft: '15px' }}>
+        Free for Counselling
       </Link>
     </div>
   );

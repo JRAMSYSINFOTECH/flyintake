@@ -107,6 +107,12 @@ const Navbar = () => {
     }
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setMobileOpenDropdown(null);
+    setMobileOpenSubmenu(null);
+  };
+
   const toggleMobileDropdown = (key, e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -180,7 +186,7 @@ const Navbar = () => {
       <nav className="main-navbar">
         <div className="navbar-container">
           <Link to="/" className="logo-link">
-            <img src="/assets/rebook.svg" alt="FlyIntake Global Consulting" className="logo" />
+            <img src="/assets/flyintake LOGO.jpeg" alt="FlyIntake Global Consulting" className="logo" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -249,6 +255,12 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
+
+              <li className="nav-item">
+                <Link to="/pages/Trainings" className="nav-link">
+                  IT & Management Trainings
+                </Link>
+              </li>
               
               <li className="nav-item">
                 <Link to="/about-us" className="nav-link">
@@ -264,162 +276,189 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Right Side */}
-          <div className="navbar-right">
-            <Link to="/pages/white-link/Avail" className="counselling-btn">
-              Avail Free Counselling
-            </Link>
+          {/* Mobile Menu Button */}
+          <button 
+            className="mobile-menu-btn" 
+            onClick={toggleMobileMenu}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          >
+            <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
+          </button>
+        </div>
+      </nav>
 
-            <button 
-              className="mobile-menu-btn" 
-              onClick={toggleMobileMenu}
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            >
-              <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
-            </button>
+      {/* Mobile Sidebar */}
+      <div className={`mobile-sidebar ${isMobileMenuOpen ? "open" : ""}`}>
+        {/* Mobile Top Bar - Inside Sidebar */}
+        <div className="mobile-top-bar">
+          <div className="mobile-contact-info">
+            <a href="tel:+919121767948" className="mobile-contact-item">
+              <FontAwesomeIcon icon={faPhone} />
+              <span>+91 9121767948</span>
+            </a>
+            <a href="mailto:officeflyintake@gmail.com" className="mobile-contact-item">
+              <FontAwesomeIcon icon={faEnvelope} />
+              <span>officeflyintake@gmail.com</span>
+            </a>
+          </div>
+          
+          <div className="mobile-social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon">
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
           </div>
         </div>
 
-        {/* Mobile Sidebar */}
-        <div className={`mobile-sidebar ${isMobileMenuOpen ? "open" : ""}`}>
-          <div className="mobile-sidebar-header">
-            <img src="/assets/flyintake LOGO.jpeg" alt="FlyIntake" className="mobile-logo" />
-            <button 
-              className="mobile-close-btn" 
-              onClick={toggleMobileMenu}
-              aria-label="Close menu"
-            >
-              <FontAwesomeIcon icon={faTimes} />
-            </button>
-          </div>
+        {/* Mobile Menu Content */}
+        <div className="mobile-sidebar-content">
+          <ul className="mobile-links">
+            {Object.entries(dropdownData).map(([key, data]) => ( 
+              <li key={key} className="mobile-nav-item">
+                <div className="mobile-nav-header">
+                  <Link
+                    to={data.path}
+                    className="mobile-nav-link"
+                    onClick={closeMobileMenu}
+                  >
+                    {formatMenuLabel(key)}
+                  </Link>
+                  <button 
+                    className="mobile-dropdown-toggle"
+                    onClick={(e) => toggleMobileDropdown(key, e)}
+                    aria-label={`Toggle ${formatMenuLabel(key)} menu`}
+                    aria-expanded={mobileOpenDropdown === key}
+                  >
+                    <FontAwesomeIcon 
+                      icon={faChevronDown} 
+                      className={`mobile-chevron ${mobileOpenDropdown === key ? 'rotate' : ''}`}
+                    />
+                  </button>
+                </div>
 
-          <div className="mobile-sidebar-content">
-            <ul className="mobile-links">
-              {Object.entries(dropdownData).map(([key, data]) => ( 
-                <li key={key} className="mobile-nav-item">
-                  <div className="mobile-nav-header">
-                    <Link
-                      to={data.path}
-                      className="mobile-nav-link"
-                      onClick={toggleMobileMenu}
-                    >
-                      {formatMenuLabel(key)}
-                    </Link>
-                    <button 
-                      className="mobile-dropdown-toggle"
-                      onClick={(e) => toggleMobileDropdown(key, e)}
-                      aria-label={`Toggle ${formatMenuLabel(key)} menu`}
-                      aria-expanded={mobileOpenDropdown === key}
-                    >
-                      <FontAwesomeIcon 
-                        icon={faChevronDown} 
-                        className={`mobile-chevron ${mobileOpenDropdown === key ? 'rotate' : ''}`}
-                      />
-                    </button>
-                  </div>
+                {mobileOpenDropdown === key && (
+                  <ul className="mobile-dropdown">
+                    {data.items.map((item, idx) => (
+                      <li key={idx} className="mobile-dropdown-item">
+                        {submenuData[item.label] ? (
+                          <>
+                            <div className="mobile-dropdown-header">
+                              <Link
+                                to={item.path}
+                                className="mobile-dropdown-link"
+                                onClick={closeMobileMenu}
+                              >
+                                {item.label}
+                              </Link>
+                              <button 
+                                className="mobile-submenu-toggle"
+                                onClick={(e) => toggleMobileSubmenu(item.label, e)}
+                                aria-label={`Toggle ${item.label} submenu`}
+                                aria-expanded={mobileOpenSubmenu === item.label}
+                              >
+                                <FontAwesomeIcon 
+                                  icon={faChevronDown} 
+                                  className={`mobile-chevron ${mobileOpenSubmenu === item.label ? 'rotate' : ''}`}
+                                />
+                              </button>
+                            </div>
 
-                  {mobileOpenDropdown === key && (
-                    <ul className="mobile-dropdown">
-                      {data.items.map((item, idx) => (
-                        <li key={idx} className="mobile-dropdown-item">
-                          {submenuData[item.label] ? (
-                            <>
-                              <div className="mobile-dropdown-header">
-                                <Link
-                                  to={item.path}
-                                  className="mobile-dropdown-link"
-                                  onClick={toggleMobileMenu}
-                                >
-                                  {item.label}
-                                </Link>
-                                <button 
-                                  className="mobile-submenu-toggle"
-                                  onClick={(e) => toggleMobileSubmenu(item.label, e)}
-                                  aria-label={`Toggle ${item.label} submenu`}
-                                  aria-expanded={mobileOpenSubmenu === item.label}
-                                >
-                                  <FontAwesomeIcon 
-                                    icon={faChevronDown} 
-                                    className={`mobile-chevron ${mobileOpenSubmenu === item.label ? 'rotate' : ''}`}
-                                  />
-                                </button>
-                              </div>
-
-                              {mobileOpenSubmenu === item.label && (
-                                <ul className="mobile-submenu">
-                                  {submenuData[item.label].map((sub, sIdx) => (
-                                    <li key={sIdx} className="mobile-submenu-item">
-                                      <Link
-                                        to={sub.path}
-                                        className="mobile-submenu-link"
-                                        onClick={toggleMobileMenu}
-                                      >
-                                        {sub.label}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                              )}
-                            </>
-                          ) : (
-                            <Link
-                              to={item.path}
-                              className="mobile-dropdown-link"
-                              onClick={toggleMobileMenu}
-                            >
-                              {item.label}
-                            </Link>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-              
-              <li className="mobile-nav-item">
-                <Link
-                  to="/about-us"
-                  className="mobile-nav-link"
-                  onClick={toggleMobileMenu}
-                >
-                  About Us
-                </Link>
+                            {mobileOpenSubmenu === item.label && (
+                              <ul className="mobile-submenu">
+                                {submenuData[item.label].map((sub, sIdx) => (
+                                  <li key={sIdx} className="mobile-submenu-item">
+                                    <Link
+                                      to={sub.path}
+                                      className="mobile-submenu-link"
+                                      onClick={closeMobileMenu}
+                                    >
+                                      {sub.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </>
+                        ) : (
+                          <Link
+                            to={item.path}
+                            className="mobile-dropdown-link"
+                            onClick={closeMobileMenu}
+                          >
+                            {item.label}
+                          </Link>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
+            ))}
 
-              <li className="mobile-nav-item">
-                <Link
-                  to="/contact-us"
-                  className="mobile-nav-link"
-                  onClick={toggleMobileMenu}
-                >
-                  Contact Us
-                </Link>
-              </li>
+            <li className="mobile-nav-item">
+              <Link
+                to="/pages/Trainings"
+                className="mobile-nav-link" 
+                onClick={closeMobileMenu}
+              >
+                IT & Management Trainings
+              </Link>
+            </li>
+            
+            <li className="mobile-nav-item">
+              <Link
+                to="/about-us"
+                className="mobile-nav-link"
+                onClick={closeMobileMenu}
+              >
+                About Us
+              </Link>
+            </li>
 
-              <li className="mobile-nav-item mobile-cta-item">
-                <Link 
-                  to="/pages/white-link/Avail" 
-                  className="counselling-btn-mobile"
-                  onClick={toggleMobileMenu}
-                >
-                  Avail Free Counselling
-                </Link>
-              </li>
-            </ul>
-          </div>
+            <li className="mobile-nav-item">
+              <Link
+                to="/contact-us"
+                className="mobile-nav-link"
+                onClick={closeMobileMenu}
+              >
+                Contact Us
+              </Link>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        {isMobileMenuOpen && (
+      {/* Mobile Overlay */}
+      {isMobileMenuOpen && (
+        <>
           <div 
             className="mobile-menu-overlay" 
-            onClick={toggleMobileMenu}
+            onClick={closeMobileMenu}
             role="button"
             tabIndex={0}
             aria-label="Close menu"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                closeMobileMenu();
+              }
+            }}
           />
-        )}
-      </nav>
+          
+          {/* Close Button - Fixed in navbar area */}
+          <button 
+            className="mobile-close-btn-top" 
+            onClick={closeMobileMenu}
+            aria-label="Close menu"
+          >
+            <FontAwesomeIcon icon={faTimes} />
+          </button>
+        </>
+      )}
     </>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import "./FooterPage.css";
+import { Link } from "react-router-dom";
 
 export default function StatementOfPurpose() {
   return (
@@ -26,7 +27,9 @@ export default function StatementOfPurpose() {
             <li>Discuss your career goals</li>
             <li>Proofread carefully</li>
           </ul>
-          <button className="footer-page-btn">Get SOP Writing Help</button>
+          <Link to="/pages/white-link/Avail" className="footer-page-btn">
+            Get Expert SOP Writing Assistance
+          </Link>
         </div>
       </div>
     </section>

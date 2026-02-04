@@ -1,37 +1,257 @@
-.hdap {
-  background: #ffffff;
-  padding: 2.5rem 1.5rem;
-  border-radius: 14px;
-  max-width: 100%;
-  margin: 4rem ;
-  box-shadow: 0 2px var(--font-size-base) rgba(44, 62, 80, 0.07);
-  font-family: 'Segoe UI', Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* ============================================
+   VARIABLES
+   ============================================ */
+:root {
+  --brand-blue: #0047FF;
+  --brand-orange: #FF6B00;
+  --color-black: #1a1a1a;
+  --color-gray: #6b7280;
+  --color-gray-light: #f5f5f5;
+  --color-white: #ffffff;
+  --font-main: 'Outfit', sans-serif;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+  --radius: 20px;
+  --transition: all 0.3s ease;
 }
 
-.hdap h2 {
-  margin-top: 2rem;
-  margin-bottom: 0.7rem;
-  font-size: 1.3rem;
-  font-weight: 600;
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-.hdap p {
-  color: #222;
-  font-size: 1.07rem;
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
+/* ============================================
+   WRAPPER & CONTAINER
+   ============================================ */
+.aov-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff 0%, #fff5f0 100%);
+  font-family: var(--font-main);
+  padding: 3rem 1.5rem;
 }
 
+.aov-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-@media (max-width: 700px) {
-  .hdap {
-    padding: 1.2rem 0.5rem;
-    font-size: 0.98rem;
+/* ============================================
+   HEADER
+   ============================================ */
+.aov-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.aov-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--color-black);
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   VIDEO SECTION
+   ============================================ */
+.aov-video-section {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 3rem;
+  background: var(--color-black);
+}
+
+.aov-video-section::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-orange));
+  border-radius: var(--radius);
+  z-index: -1;
+}
+
+.aov-video-section iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================
+   CONTENT
+   ============================================ */
+.aov-content {
+  background: var(--color-white);
+  padding: 3rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2.5rem;
+}
+
+.aov-content p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-gray);
+  font-weight: 400;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.aov-cta-section {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-orange));
+  padding: 3.5rem 3rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.aov-cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  .vid iframe {
-    width: 100% !important;
-    height: 220px !important;
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.aov-cta-section h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.aov-cta-section p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.aov-cta-section button {
+  background: var(--color-white);
+  color: var(--brand-blue);
+  font-family: var(--font-main);
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 1.125rem 3rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+  position: relative;
+  z-index: 1;
+}
+
+.aov-cta-section button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.aov-cta-section button:active {
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .aov-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .aov-header {
+    margin-bottom: 2rem;
+  }
+
+  .aov-video-section {
+    margin-bottom: 2rem;
+    border-radius: 16px;
+  }
+
+  .aov-video-section::before {
+    border-radius: 16px;
+  }
+
+  .aov-content {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+  }
+
+  .aov-content p {
+    font-size: 1.0625rem;
+  }
+
+  .aov-cta-section {
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+  }
+
+  .aov-cta-section button {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aov-wrapper {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .aov-content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .aov-content p {
+    font-size: 1rem;
+  }
+
+  .aov-cta-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .aov-cta-section button {
+    font-size: 1rem;
   }
 }

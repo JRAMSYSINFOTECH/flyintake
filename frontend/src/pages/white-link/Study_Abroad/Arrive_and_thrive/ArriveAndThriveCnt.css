@@ -1,10 +1,101 @@
-.arrive-thrive-container {
-    padding: 2rem;
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* ============================================
+   VARIABLES
+   ============================================ */
+:root {
+  --brand-blue: #0047FF;
+  --brand-orange: #FF6B00;
+  --color-black: #1a1a1a;
+  --color-gray: #6b7280;
+  --color-white: #ffffff;
+  --font-main: 'Outfit', sans-serif;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --radius: 20px;
 }
 
-.arrive-thrive-section {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
+/* ============================================
+   RESET
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   WRAPPER
+   ============================================ */
+.atc-wrapper {
+  background: linear-gradient(135deg, #f0f4ff 0%, #fff5f0 100%);
+  font-family: var(--font-main);
+  padding: 4rem 1.5rem;
+}
+
+.atc-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.atc-header {
+  text-align: center;
+  background: var(--color-white);
+  padding: 3rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+.atc-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--color-black);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.atc-header p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-gray);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .atc-wrapper {
+    padding: 3rem 1rem;
+  }
+
+  .atc-header {
+    padding: 2.5rem 2rem;
+  }
+
+  .atc-header p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .atc-wrapper {
+    padding: 2rem 0.75rem;
+  }
+
+  .atc-header {
+    padding: 2rem 1.5rem;
+  }
+
+  .atc-header p {
+    font-size: 1.0625rem;
+  }
 }

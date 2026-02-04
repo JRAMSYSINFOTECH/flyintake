@@ -13,18 +13,8 @@ const allArticles = [
     description: "A complete roadmap for students planning to study overseas.",
     url: "https://www.topuniversities.com/student-info/studying-abroad",
   },
-  {
-    id: 2,
-    title: "Top Scholarships for International Students",
-    description: "Discover fully funded and partial scholarships worldwide.",
-    url: "https://www.britishcouncil.org/study-work-abroad/scholarships",
-  },
-  {
-    id: 3,
-    title: "Navigating Student Visa Applications",
-    description: "Step-by-step guidance on student visa processes.",
-    url: "https://www.qs.com/student-guides/student-visa-guide/",
-  },
+  
+  
   {
     id: 4,
     title: "Study in Canada: Complete Guide",
@@ -37,30 +27,15 @@ const allArticles = [
     description: "Proven strategies to score high in IELTS.",
     url: "https://takeielts.britishcouncil.org/take-ielts/prepare",
   },
-  {
-    id: 6,
-    title: "Post Study Work Opportunities",
-    description: "Work options available after completing studies abroad.",
-    url: "https://www.internationalstudent.com/study-abroad/work-abroad/",
-  },
+ 
   {
     id: 7,
     title: "Choosing the Right University",
     description: "How to select the best university for your career goals.",
     url: "https://www.topuniversities.com/student-info/choosing-university",
   },
-  {
-    id: 8,
-    title: "Cost of Studying Abroad",
-    description: "Understand tuition fees and living expenses.",
-    url: "https://www.internationalstudent.com/study-abroad/cost-of-study/",
-  },
-  {
-    id: 9,
-    title: "Accommodation Options for International Students",
-    description: "Find the best housing options overseas.",
-    url: "https://www.britishcouncil.org/study-work-abroad/study-abroad/accommodation",
-  },
+ 
+ 
   {
     id: 10,
     title: "Health Insurance for International Students",
@@ -136,7 +111,7 @@ const NewAndA = () => {
                   className="read-more-btn"
                   onClick={() => openArticle(article.url)}
                 >
-                  Read Full Article →
+                  Read Full Article
                 </button>
               </article>
             ))

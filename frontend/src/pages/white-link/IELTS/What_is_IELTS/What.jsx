@@ -44,7 +44,7 @@ export default function What() {
         {/* This container holds navigation boxes to other pages. */}
         <div className="box-container">
         {/* A navigation link to the "Why take IELTS with INTAKE?" page. */}
-        <Link to="https://r.search.yahoo.com/_ylt=Awr1UUr0cj9p_QEAP6S7HAx.;_ylu=Y29sbwNzZzMEcG9zAzMEdnRpZAMEc2VjA3Ny/RV=2/RE=1766975476/RO=10/RU=https%3a%2f%2ftakeielts.britishcouncil.org%2ftake-ielts%2fprepare%2ffree-ielts-english-practice-tests/RK=2/RS=F6WbIT.5xDo_0P4igBJl6XheRI8-" style={{ textDecoration: 'none' }}>
+        <Link to="https://takeielts.britishcouncil.org/take-ielts/prepare/free-ielts-english-practice-tests" style={{ textDecoration: 'none' }}>
           <p className="box">Sample Online test</p>
         </Link>
         {/* A navigation link to the "How to Prepare for IELTS" page. */}
@@ -52,7 +52,7 @@ export default function What() {
           <p className="box">How to Prepare for IELTS</p>
         </Link>
         {/* An external link to book an IELTS test. */}
-        <a href="https://r.search.yahoo.com/rdclks/dWU9M2ZoNmdnNWtqdXNuayZ1dD0xNzY1NzY1ODc2MTY5JnVvPTgyODA3MzQ3NDYyMTMzJmx0PTImcz0xJmVzPUNrQ3BNS1dmQ1ZVUC4xekQxSXBzcE14WFRDRDBHa3pkS3J4TjlGVWxoT0FBQXltSVlFVWlHSkdnTmxOMU9CSWVfRUtVOGVCLldyNGpONU0t/RV=2/RE=1768357876/RO=14/RU=https%3a%2f%2fwww.bing.com%2faclick%3fld%3de8Ea5g7lkR4xrwLmwzV5XzazVUCUwTWj-oRUwuMZsTeZTJTmfVl8GhigjGtL8m2VBDVPp_2fKCE3wqQWpjiqYWWT8ma2yxzxcEpbfVpHOON9KSw5fYUEUeVyNUB39cPWGS_HnyQjmzFHuN5YjhlIwbWM27azLj0eJABXWEhc4Nazh6XJ_lPlgNAJ6jSl5AcfJIIqdgiGO83gzdtsX9dmo5c2O2B4Y%26u%3daHR0cHMlM2ElMmYlMmZ3d3cudWRlbXkuY29tJTJmY291cnNlJTJmaWVsdHMtcHJlcGFyYXRpb24tY291cnNlJTJmJTNmdXRtX2NhbXBhaWduJTNkQkctU2VhcmNoX0tleXdvcmRfR2FtbWFfTm9uUF9sYS5FTl9jYy5JbmRpYSUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHBhaWQtc2VhcmNoJTI2cG9ydGZvbGlvJTNkQmluZy1JbmRpYSUyNnV0bV9hdWRpZW5jZSUzZG14JTI2dXRtX3RhY3RpYyUzZG5iJTI2dXRtX3Rlcm0lM2RpZWx0cyUyNTIwcHJlcGFyYXRpb24lMjUyMHRlc3QlMjZ1dG1fY29udGVudCUzZG8lMjZmdW5uZWwlM2QlMjZ0ZXN0JTNkJTI2bXNjbGtpZCUzZDk2NDBhZjNhYjQxMzE3YzkwMDk0YzYwNWM2ZTc2ODk0%26rlid%3d9640af3ab41317c90094c605c6e76894/RK=2/RS=STWTXG0BJgB3oYtNTPcc8G4lEEY-;_ylt=Awr1UUr0cj9p_QEAIKS7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA292LXRvcA--;_ylc=X3IDMgRydAMw?IG=0af5514ae5d14bb29411587c5dac5b63" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+        <a href="https://takeielts.britishcouncil.org/take-ielts/prepare/courses" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
           <p className="box">IELTS courses</p>
         </a>
         </div>

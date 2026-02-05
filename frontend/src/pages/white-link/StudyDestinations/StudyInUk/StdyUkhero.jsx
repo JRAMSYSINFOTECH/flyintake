@@ -1,5 +1,5 @@
 import React from 'react';
-import './StdyUKhero.css';
+import './StdyUkhero.css';
 
 const StdyUKhero = () => {
   return (

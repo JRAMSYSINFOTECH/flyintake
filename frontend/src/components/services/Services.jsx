@@ -88,12 +88,12 @@ const Services = () => {
                   ))}
                 </div>
 
-                <button className="compact-btn">
-                  <span>Learn More</span>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M3 8h10m-3-3l3 3-3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
+                  {/* <button className="compact-btn">
+                    <span>Learn More</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M3 8h10m-3-3l3 3-3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button> */}
               </div>
             </div>
           ))}

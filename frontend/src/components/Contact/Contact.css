@@ -13,9 +13,10 @@
   margin: 0 auto;
 }
 
-/* ===== Left Section (Form) ===== */
+/* ===== Left Section ===== */
 .contact-left {
   flex: 1;
+  min-width: 0;
 }
 
 .contact-header h1 {
@@ -24,16 +25,22 @@
   margin-bottom: 10px;
 }
 
-
-
+.g-accent {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #e65100;
+  font-family: inherit;
+  font-weight: inherit;
+}
 
 .contact-subtitle {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-base, 14px);
   color: #4a5568;
   margin-bottom: 25px;
 }
 
-/* ===== Form Styling ===== */
+/* ===== Form ===== */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -49,43 +56,189 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-width: 0;
+}
+
+.form-field.full-width {
+  flex: 1;
 }
 
 .form-field label {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 6px;
+  color: #374151;
 }
 
-.form-field input,
+.form-field input[type="text"],
+.form-field input[type="email"],
 .form-field select {
   padding: 10px 12px;
   border: 1px solid #d1d5db;
   border-radius: 6px;
   font-size: 14px;
+  color: #111827;
+  background: #fff;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Mobile group (country code + phone) */
-.mobile-group {
+.form-field input[type="text"]:focus,
+.form-field input[type="email"]:focus,
+.form-field select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* ===== Custom Phone Field ===== */
+.phone-field {
+  position: relative;
   display: flex;
+  align-items: center;
+  height: 42px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  overflow: visible;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.country-code {
-  width: 60px;
-  text-align: center;
+.phone-field:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Flag + dial code button */
+.phone-flag-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px 0 12px;
+  height: 100%;
   background: #f3f4f6;
-  border: 1px solid #d1d5db;
-  border-radius: 6px 0 0 6px;
+  border: none;
+  border-right: 1px solid #d1d5db;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s;
 }
 
-.mobile-number {
+.phone-flag-btn:hover {
+  background: #e9eaeb;
+}
+
+.phone-flag-emoji {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.phone-dial-code {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.phone-chevron {
+  font-size: 8px;
+  color: #9ca3af;
+  margin-left: 2px;
+}
+
+/* Vertical divider (handled by border-right on button) */
+.phone-divider {
+  display: none;
+}
+
+/* Number input */
+.phone-number-input {
   flex: 1;
-  border: 1px solid #d1d5db;
-  border-left: none;
-  border-radius: 0 6px 6px 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #111827;
+  background: transparent;
+  min-width: 0;
 }
 
-/* Checkbox */
+.phone-number-input::placeholder {
+  color: #9ca3af;
+}
+
+/* ===== Phone Dropdown ===== */
+.phone-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 260px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+.phone-country-list {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.phone-country-list::-webkit-scrollbar { width: 5px; }
+.phone-country-list::-webkit-scrollbar-track { background: #f3f4f6; }
+.phone-country-list::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+
+.phone-country-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.phone-country-item:hover,
+.phone-country-item.active {
+  background: #eff6ff;
+  color: #3c4f85;
+}
+
+.phone-country-name {
+  flex: 1;
+}
+
+.phone-country-dial {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.phone-no-result {
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* ===== Checkbox ===== */
 .form-checkbox {
   display: flex;
   align-items: center;
@@ -95,18 +248,32 @@
   font-size: 14px;
   color: #374151;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-.checkbox-label input {
-  margin-right: 8px;
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+  flex-shrink: 0;
 }
 
-/* Submit Button */
+.terms-text {
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ===== Submit Button ===== */
 .submit-button {
   background: var(--primary-color);
   color: white;
   padding: 14px 24px;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-base, 15px);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -123,7 +290,7 @@
   cursor: not-allowed;
 }
 
-/* Message */
+/* ===== Message ===== */
 .message {
   padding: 10px;
   border-radius: 6px;
@@ -162,8 +329,7 @@
   z-index: 2;
 }
 
-/* Decorative Shapes */
-.background-.shapes {
+.background-shapes {
   position: absolute;
   top: -20px;
   left: -20px;
@@ -188,24 +354,8 @@
   left: -10%;
 }
 
-.g-accent{
-  
-  text-decoration: underline;
-  text-underline-position: under;
-  text-decoration-thickness: 4px;
-  text-decoration-color: #e65100;
-  font-family: inherit;
-  font-weight: inherit;
-  
-}
 .shape-orange {
-  width: 80px;.message {
-  padding: 10px;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  text-align: center;
-}
+  width: 80px;
   height: 80px;
   background: #f97316;
   bottom: 20%;
@@ -231,11 +381,192 @@
     flex-direction: column;
   }
 
-  .contact-left, .contact-right {
+  .contact-left,
+  .contact-right {
     width: 100%;
   }
 
   .contact-right {
     margin-top: 30px;
   }
+}
+/* =====================================================
+   ADDITIONS TO Contact.css — Real Flags + Search Bar
+   Paste these at the end of your existing Contact.css
+   ===================================================== */
+
+/* ── Real flag image sizing (flag-icons library) ── */
+.phone-flag-icon {
+  width: 24px !important;
+  height: 17px !important;
+  background-size: cover !important;
+  border-radius: 2px;
+  flex-shrink: 0;
+  display: inline-block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* ── Keep .phone-flag-btn but replace emoji with real flag ── */
+.phone-flag-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px 0 12px;
+  height: 100%;
+  background: #f3f4f6;
+  border: none;
+  border-right: 1px solid #d1d5db;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.phone-flag-btn:hover { background: #e9eaeb; }
+
+/* ── Dropdown now has a search bar on top ── */
+.phone-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 280px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+  z-index: 1000;
+  overflow: hidden;
+  animation: dropInContact .15s ease;
+}
+
+@keyframes dropInContact {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Search wrap: relative so icon + clear btn can be absolutely positioned ── */
+.phone-search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #f9fafb;
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* Magnifier icon inside the input on the left */
+.phone-search-icon {
+  position: absolute;
+  left:12rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.phone-search-input {
+  width: 100%;
+  padding: 9px 32px 9px 32px; /* left: room for magnifier; right: room for × */
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #374151;
+  background: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+}
+
+.phone-search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+}
+
+.phone-search-input::placeholder {
+  position: relative;
+  left: 20px;
+  color: #b0b7c3;
+  font-size: 13px;
+}
+
+/* ── Clear (×) button inside search ── */
+.phone-search-clear {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  font-size: 20px;
+  line-height: 1;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+  z-index: 1;
+}
+
+.phone-search-clear:hover { color: #9ebcf0; }
+
+/* ── Country list ── */
+.phone-country-list {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  max-height: 210px;
+  overflow-y: auto;
+}
+
+.phone-country-list::-webkit-scrollbar { width: 5px; }
+.phone-country-list::-webkit-scrollbar-track { background: #f3f4f6; }
+.phone-country-list::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+.phone-country-list::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+.phone-country-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.phone-country-item:hover,
+.phone-country-item.active {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.phone-country-name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.phone-country-dial {
+  font-size: 12px;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+/* ── No results ── */
+.phone-no-result {
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #9ca3af;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .phone-dropdown { width: 100%; left: 0; right: 0; }
 }

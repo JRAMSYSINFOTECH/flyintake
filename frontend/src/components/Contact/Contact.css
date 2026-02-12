@@ -390,12 +390,7 @@
     margin-top: 30px;
   }
 }
-/* =====================================================
-   ADDITIONS TO Contact.css — Real Flags + Search Bar
-   Paste these at the end of your existing Contact.css
-   ===================================================== */
 
-/* ── Real flag image sizing (flag-icons library) ── */
 .phone-flag-icon {
   width: 24px !important;
   height: 17px !important;

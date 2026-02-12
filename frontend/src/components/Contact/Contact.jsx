@@ -2,15 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "./Contact.css";
 import contactImg from "/public/assets/prep1.jpg";
 
-/*
-  Uses "flag-icons" library (MIT license) — real SVG country flags.
-  Add this to your index.html <head>:
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
 
-  Usage: <span className="fi fi-gb" /> renders the UK flag, fi-us = USA, etc.
-*/
-
-// Full country list with real iso2 codes for flag-icons
 const COUNTRIES = [
   { code: "af", dial: "+93",   label: "Afghanistan" },
   { code: "al", dial: "+355",  label: "Albania" },

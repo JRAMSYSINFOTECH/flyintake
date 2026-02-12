@@ -3,10 +3,6 @@ import { Mail, Phone, MapPin, Send, Clock, MessageCircle, User, Shield, CheckCir
 import "./ContactUs.css";
 import { Link } from "react-router-dom";
 
-/*
-  Requires "flag-icons" (MIT) in index.html <head>:
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
-*/
 
 export default function ContactUs() {
   const [formData, setFormData] = React.useState({

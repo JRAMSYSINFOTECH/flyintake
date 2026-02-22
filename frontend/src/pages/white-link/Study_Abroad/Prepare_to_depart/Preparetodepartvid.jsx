@@ -21,16 +21,7 @@ function Preparetodepartvid() {
           </p>
         </div>
 
-        {/* Video Section */}
-        <div className="ptd-video-section">
-          <iframe
-            src="https://www.youtube.com/embed/eN2hKOynBIY"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
+        
 
         {/* CTA Section */}
         <div className="aov-cta-section">

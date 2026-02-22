@@ -1,6 +1,6 @@
 import React from 'react';
 import StudyAbroadHero from './StudyAbroadHero';
-import StdyAbVid from './WhyStudyAbrd/StdyAbVid';
+
 import StdyAbcnt from './WhyStudyAbrd/StdyAbcnt';
 
 const WhyStudyAbroadPage = () => {
@@ -12,7 +12,7 @@ const WhyStudyAbroadPage = () => {
                 imageUrl="https://tse3.mm.bing.net/th/id/OIP.LTkGshUbm5gaBmtjd0zs_AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
                 imageAlt="Girl studying with open book"
             />
-            <StdyAbVid />
+            
             <StdyAbcnt />
         </>
     );

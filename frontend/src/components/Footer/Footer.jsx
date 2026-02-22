@@ -39,7 +39,7 @@ const Footer = () => {
           <ul>
             <li><Link to="/statement-of-purpose">Statement of Purpose</Link></li>
             <li><Link to="/letter-of-recommendation">Letter of Recommendation</Link></li>
-            <li><Link to="/pages/Trainings">IT & Management Trainings</Link></li>
+            <li><Link to="/pages/TechServices">TechServices</Link></li>
             <li><Link to="/about-us">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>

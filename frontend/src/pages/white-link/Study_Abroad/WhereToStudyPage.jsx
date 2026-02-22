@@ -1,6 +1,7 @@
 import React from 'react';
 import StudyAbroadHero from './StudyAbroadHero';
 import WhereToStudyCnt from './Where_to_study_abroad/WhereToStudyCnt';
+import WhereStdycnt from './Where_to_study_abroad/WhereStdycnt';
 
 const WhereToStudyPage = () => {
     return (
@@ -11,7 +12,7 @@ const WhereToStudyPage = () => {
                   imageUrl="https://tse3.mm.bing.net/th/id/OIP.LTkGshUbm5gaBmtjd0zs_AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
                 imageAlt="Globe with graduation cap"
             />
-            <WhereToStudyCnt />
+            <WhereStdycnt />
         </>
     );
 };

@@ -15,16 +15,7 @@ function Arriveandthrivevid() {
           </p>
         </div>
 
-        {/* Video Section */}
-        <div className="atv-video-section">
-          <iframe
-            src="https://www.youtube.com/embed/3HL2l6ZCzEg"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
+        
 
         {/* Contact CTA Section */}
         <div className="atv-cta-section">

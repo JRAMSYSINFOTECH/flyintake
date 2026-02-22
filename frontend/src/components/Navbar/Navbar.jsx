@@ -169,13 +169,13 @@ const Navbar = () => {
           </div>
           
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
+            <a href="https://www.facebook.com/share/1CBT99eDFS/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
+            <a href="https://www.instagram.com/flyintake_global_consulting?igsh=b3FrcHo3b3B3ZzY5" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/flyintake-global-consulting-private-limited/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </div>

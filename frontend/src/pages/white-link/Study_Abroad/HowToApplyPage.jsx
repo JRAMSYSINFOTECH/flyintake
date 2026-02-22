@@ -1,6 +1,6 @@
 import React from 'react';
 import StudyAbroadHero from './StudyAbroadHero';
-import Howdoaplyvid from './how_do_i_apply/howdoaplyvid';
+
 import Howdoapplycnt from './how_do_i_apply/Howdoapplycnt';
 
 const HowToApplyPage = () => {
@@ -12,7 +12,7 @@ const HowToApplyPage = () => {
                 imageUrl="https://tse3.mm.bing.net/th/id/OIP.LTkGshUbm5gaBmtjd0zs_AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
                 imageAlt="Girl studying with open book"
             />
-            <Howdoaplyvid />
+          
             <Howdoapplycnt />
         </>
     );

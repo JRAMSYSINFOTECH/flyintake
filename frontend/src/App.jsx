@@ -1,5 +1,6 @@
 import React from "react";
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 // Common Components
 import Navbar from "./components/Navbar/Navbar";
@@ -80,7 +81,7 @@ import ArticleDetail from "./pages/Related_Articles/ArticleDetail";
 import FindH from "./pages/black-link/Find/FindH";
 import FindCountryPage from "./pages/black-link/Find/FindCountryPage";
 import InfoSection from "./pages/black-link/Find/InfoSection";
-import Trainings from "./pages/Trainings/Trainings";
+import TechServices from "./pages/TechServices/TechServices.jsx";
 
 //Find a course and IELTS 
 
@@ -157,6 +158,7 @@ const WhiteLinkLayout = ({ children }) => (
 export default function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Routes>
         {/* 🏠 Home Page */}
         <Route
@@ -165,10 +167,11 @@ export default function App() {
             <>
               <Navbar />
               <Hero/>
+              <Destinations />
               <Testimonials />
               
               <Services />
-              <Destinations />
+              
               <StudySteps />
               <Import />
               <Contact />
@@ -398,9 +401,7 @@ export default function App() {
                 subtitle="Explore top universities and programs across the globe."
                 backgroundImage="/assets/abroad.jpg"
               />
-              <ExploreAbroadPrgms />
-              <Studydestcnt />
-              <AskIntakeStudyAbroad />
+              <Destinations />
               <Contact />
             </WhiteLinkLayout>
           }
@@ -584,10 +585,10 @@ export default function App() {
         />
 
         <Route
-          path="/pages/Trainings"
+          path="/pages/TechServices"
           element={
             <WhiteLinkLayout>
-              <Trainings />
+              <TechServices />
               <Contact />
             </WhiteLinkLayout>
           }

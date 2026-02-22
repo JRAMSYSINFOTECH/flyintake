@@ -257,8 +257,8 @@ const Navbar = () => {
               ))}
 
               <li className="nav-item">
-                <Link to="/pages/Trainings" className="nav-link">
-                  IT & Management Trainings
+                <Link to="/pages/TechServices" className="nav-link">
+                 TechServices
                 </Link>
               </li>
               
@@ -402,11 +402,11 @@ const Navbar = () => {
 
             <li className="mobile-nav-item">
               <Link
-                to="/pages/Trainings"
+                to="/pages/TechServices"
                 className="mobile-nav-link" 
                 onClick={closeMobileMenu}
               >
-                IT & Management Trainings
+                TechServices
               </Link>
             </li>
             

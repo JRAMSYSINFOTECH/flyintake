@@ -4,41 +4,55 @@ import "./ExploreAbroadPrgms.css";
 
 const programs = [
   {
-    title: "Study Abroad in Australia",
-    path: "/study-destinations/australia",
-    img: "https://www.earthsattractions.com/wp-content/uploads/2018/08/sydney_opera-unsplash.jpg",
-    desc: "Australia offers world-class education, vibrant student life, and unique cultural experiences. Discover top universities, scholarships, and expert guidance for your study abroad journey."
+    slug: "uk",
+    name: "United Kingdom",
+    img: "https://tse2.mm.bing.net/th/id/OIP.aqXrnWXh3IZI7ode4D_p1QHaE7?pid=Api&P=0&h=180",
+    info: "World-class unis, shorter degrees and strong global recognition.",
+    color: "#F97316"
   },
+
   {
-    title: "Study Abroad in the UK",
-    path: "/study-destinations/uk",
-    img: "https://tse2.mm.bing.net/th/id/OIP.SXxeQoxZ-UVPMnJVQGKaBAHaE7?pid=Api&P=0&h=180",
-    desc: "The UK is renowned for its historic universities, diverse culture, and excellent academic standards. Explore opportunities and support for your study abroad adventure."
-  },
-  {
-    title: "Study Abroad in Ireland",
-    path: "/study-destinations/ireland",
+    slug: "usa",
+    name: "United States",
     img: "https://a.cdn-hotels.com/gdcs/production79/d567/927124e0-6bc6-4123-b007-e2b235afab1a.jpg",
-    desc: "Ireland combines rich heritage with innovative education. Find out about top institutions, scholarships, and student life in Ireland."
+    info: "Cutting-edge research, diverse campuses and vast course options.",
+    color: "#003D82"
   },
   {
-    title: "Study Abroad in New Zealand",
-    path: "/coming-soon", // Path for New Zealand
-    img: "https://tse2.mm.bing.net/th/id/OIP.aqXrnWXh3IZI7ode4D_p1QHaE7?pid=Api&P=0&h=180",
-    desc: "New Zealand offers stunning landscapes and high-quality education. Learn about universities, scholarships, and student support."
-  },
-  {
-    title: "Study Abroad in the USA",
-    path: "/study-destinations/usa",
+    slug: "canada",
+    name: "Canada",
     img: "https://tse2.mm.bing.net/th/id/OIP.WRgVC8BkTAuUaiseSKwnigHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
-    desc: "The USA is home to top-ranked universities and diverse programs. Discover your options for studying in America."
+    info: "High quality education, welcoming culture and PR pathways.",
+    color: "#FF6B35"
   },
   {
-    title: "Study Abroad in Canada",
-    path: "/study-destinations/canada",
-    img: "https://tse2.mm.bing.net/th/id/OIP.aqXrnWXh3IZI7ode4D_p1QHaE7?pid=Api&P=0&h=180",
-    desc: "Canada is known for its welcoming environment and excellent education. Explore Canadian universities, scholarships, and student life."
+    slug: "australia",
+    name: "Australia",
+    img: "https://www.earthsattractions.com/wp-content/uploads/2018/08/sydney_opera-unsplash.jpg",
+    info: "Top universities, great lifestyle and strong post-study work rights.",
+    color: "#2563EB"
   },
+  {
+    slug: "germany",
+    name: "Germany",
+    img: "https://tse2.mm.bing.net/th/id/OIP.SXxeQoxZ-UVPMnJVQGKaBAHaE7?pid=Api&P=0&h=180",
+    info: "Engineering excellence, affordable education and innovation hub.",
+    color: "#FF8C42"
+  },
+  {
+    slug: "ireland",
+    name: "Ireland",
+    img: "https://images.adsttc.com/media/images/5bd6/fd00/f197/ccaa/4a00/027c/large_jpg/shutterstock_1116656705.jpg?1540816099",
+    info: "Ranked high for safety & quality of life with a vibrant tech scene.",
+    color: "#0052A5"
+  },
+  {
+    slug: "europe",
+    name: "Europe",
+    img: "https://tse2.mm.bing.net/th/id/OIP.WRgVC8BkTAuUaiseSKwnigHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
+    info: "Diverse cultures, historic institutions and Schengen mobility.",
+    color: "#FF6B35"
+  }
 ];
 
 function ExploreAbroadPrgms() {

@@ -16,17 +16,7 @@ function AfterOfferVid() {
       </div>
 
       <div className="vid">
-        <div style={{ margin: "2rem 0" }}>
-         <iframe
-  width="315"
-  height="560"
-  src="https://www.youtube.com/embed/cPxlJrNZE2A"
-  title="After Receiving Your Offer Letter"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
-        </div>
+        
         <div className="vid-txt">
           <h2>One account for all your study abroad needs</h2>
           <h3>

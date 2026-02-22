@@ -99,10 +99,7 @@ import Cug from "./pages/white-link/Find_A_Course/C_U_G/Cug";
 
 import What from "./pages/white-link/IELTS/What_is_IELTS/What";
 import Prep from "./pages/white-link/IELTS/IELTS_prep/Prep";
-// Study Destinations
-import AskIntakeStudyAbroad from "./pages/white-link/Study_Abroad/AskIntake/AskIntake";
-import ExploreAbroadPrgms from "./pages/white-link/StudyDestinations/ExploreAbroadPrgms";
-import Studydestcnt from "./pages/white-link/StudyDestinations/Studydestcnt";
+
 
 
 import StdyAushero from "./pages/white-link/StudyDestinations/StudyInAustralia/StdyAushero";

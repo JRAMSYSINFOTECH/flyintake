@@ -50,18 +50,18 @@ const Footer = () => {
           <h2>Connect With Us</h2>
           <ul className="social-links">
             <li>
-              <a href="https://www.facebook.com/flyintake" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/share/1CBT99eDFS/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faFacebook} /> Facebook
               </a>
             </li>
             
             <li>
-              <a href="https://www.instagram.com/flyintake" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/flyintake_global_consulting?igsh=b3FrcHo3b3B3ZzY5" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faInstagram} /> Instagram
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/company/flyintake" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/flyintake-global-consulting-private-limited/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
               </a>
             </li>

@@ -33,11 +33,11 @@ const dropdownData = {
   "Study-destinations": {
     path: "/study-destinations",
     items: [
+      { label: "Study in UK", path: "/study-destinations/uk" },
+      { label: "Study in USA", path: "/study-destinations/usa" },
       { label: "Study in Australia", path: "/study-destinations/australia" },
       { label: "Study in Canada", path: "/study-destinations/canada" },
       { label: "Study in Ireland", path: "/study-destinations/ireland" },
-      { label: "Study in UK", path: "/study-destinations/uk" },
-      { label: "Study in USA", path: "/study-destinations/usa" },
       { label: "Study in Germany", path: "/study-destinations/germany" },
       { label: "Study in Europe", path: "/study-destinations/europe" },
     ],

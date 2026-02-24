@@ -408,6 +408,7 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StdyAushero />
+              <Contact />
             </WhiteLinkLayout>
           }
         />
@@ -416,6 +417,7 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <Stdycanhero />
+              <Contact />
             </WhiteLinkLayout>
           }
         />
@@ -424,6 +426,7 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StdyIrlndhero />
+              <Contact />
             </WhiteLinkLayout>
           }
         />
@@ -432,6 +435,7 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StdyUkhero />
+              <Contact />
             </WhiteLinkLayout>
           }
         />
@@ -440,6 +444,7 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StdyUsahero />
+              <Contact />
             </WhiteLinkLayout>
           }
         />
@@ -448,6 +453,7 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StudyGermany />
+              <Contact />
             </WhiteLinkLayout>
           }
         />
@@ -456,6 +462,7 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StudyEurope />
+              <Contact />
             </WhiteLinkLayout>
           }
         />

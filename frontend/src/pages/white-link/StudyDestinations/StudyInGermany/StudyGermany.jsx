@@ -1,225 +1,236 @@
 import React from 'react';
 import './studyGermany.css';
+import { Link } from 'react-router-dom';
+
+/* ─────────────────────────────────────────────
+   ALL HD Unsplash images — Germany specific
+   Zero overlap with AUS / CAN / EUR pages
+───────────────────────────────────────────── */
+
+const geReasonCards = [
+  {
+    img: 'https://images.unsplash.com/photo-1580537659466-0a9bfa916a54?auto=format&fit=crop&w=600&q=80',
+    title: 'Free / Low Tuition Fees',
+    desc: 'Most German public universities charge zero tuition — only a small semester fee of €150–€350. World-class education at almost no cost.',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=600&q=80',
+    title: 'Engineering Excellence',
+    desc: 'Home to TU Munich, RWTH Aachen, and KIT — globally ranked among the finest engineering and technology institutions.',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80',
+    title: 'Cutting-Edge Research',
+    desc: 'Access to world-leading research facilities, Fraunhofer institutes, and generous DFG and DAAD research funding.',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=600&q=80',
+    title: 'Europe\'s Strongest Economy',
+    desc: 'Germany is Europes largest economy — top employers like BMW, Siemens, SAP, and Bosch actively recruit from German universities.',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1616763355548-1b606f439f86?auto=format&fit=crop&w=600&q=80',
+    title: '18-Month Job Search Visa',
+    desc: 'Stay and search for employment for up to 18 months after graduation — one of the most generous post-study work allowances in Europe.',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80',
+    title: 'Central European Location',
+    desc: 'Perfectly placed in the heart of Europe — Paris, Prague, Amsterdam and Vienna are all just hours away by train.',
+  },
+];
+
+const geDegreeImgs = [
+  'https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1543269664-7eef42226a21?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1554475901-4538ddfbccc2?auto=format&fit=crop&w=600&q=80',
+];
+
+const geServiceImgs = [
+  'https://images.unsplash.com/photo-1555431189-0fabf2667795?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?auto=format&fit=crop&w=600&q=80',
+];
+
+const geServiceCards = [
+  { n: '01', title: 'Language Preparation',       desc: 'German language coaching and TestDaF / DSH exam preparation for German-taught programmes and visa requirements.' },
+  { n: '02', title: 'University Selection',        desc: 'Expert guidance across TU9 universities, universities of excellence, and Fachhochschulen for your specific goals.' },
+  { n: '03', title: 'Application Management',      desc: 'End-to-end support with Uni-Assist applications, direct university portals, and document preparation.' },
+  { n: '04', title: 'Visa & Blocked Account',      desc: 'Full guidance on the German student visa application and setting up the required blocked account (Sperrkonto).' },
+  { n: '05', title: 'DAAD Scholarship Guidance',   desc: 'Expert advice on DAAD, Deutschlandstipendium, and university-specific scholarships to fund your studies.' },
+  { n: '06', title: 'Relocation & Settlement',     desc: 'Support with accommodation, city registration (Anmeldung), health insurance, and settling into German life.' },
+];
+
+const geSteps = [
+  { n: '01', title: 'Profile Assessment',           desc: 'We evaluate your academics, language level, and career goals to identify the best German universities and programmes.' },
+  { n: '02', title: 'Program & University Match',   desc: 'Shortlist the ideal institution — TU9, university of excellence, or Fachhochschule — matched to your ambitions.' },
+  { n: '03', title: 'Document Preparation',         desc: 'All documents gathered, translated, and certified — transcripts, SOP, motivation letter, and language certificates.' },
+  { n: '04', title: 'Application Submission',       desc: 'Applications submitted via Uni-Assist or directly to universities with all required supporting materials.' },
+  { n: '05', title: 'Visa & Departure',             desc: 'We guide you through the blocked account setup, student visa application, and pre-departure preparations.' },
+];
 
 const studyGermany = () => {
   return (
-    <div className="germany-study-main-container">
-      <section className="germany-banner-section">
-        <div className="germany-banner-overlay-layer">
-          <div className="germany-banner-text-content">
-            <h1 className="germany-banner-main-title">Study in Germany</h1>
-            <p className="germany-banner-descriptive-subtitle">
-              World-class education with tuition-free opportunities in Europe's economic powerhouse
+    <div className="ge-study-container">
+
+      {/* ── HERO — Germany Flag ── */}
+      <section className="ge-hero-section">
+        <div className="ge-hero-overlay">
+          <div className="ge-hero-content">
+            <div className="ge-hero-eyebrow">Trusted Abroad Education Consultancy</div>
+            <h1 className="ge-hero-title">
+              Study in Germany
+              <em>World-Class Education, Zero Tuition</em>
+            </h1>
+            <p className="ge-hero-subtitle">
+              Europe's engineering powerhouse offers free public university education, 
+              cutting-edge research, and an 18-month post-study job search visa.
             </p>
+            <div className="ge-hero-actions">
+              <Link to="/contact-us" className="ge-btn-primary">Contact Us</Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="germany-intro-description-section">
-        <div className="germany-main-content-wrapper">
-          <div className="germany-intro-paragraph-text">
+      {/* ── INTRO ── */}
+      <section className="ge-intro-section">
+        <div className="ge-intro-inner">
+          <div className="ge-intro-left">
+            <h2>Why Germany is the <span>Smart Choice</span></h2>
+            <p>Tuition-free education, engineering prestige, and Europe's strongest economy — all in one destination.</p>
+          </div>
+          <div className="ge-intro-divider" />
+          <div className="ge-intro-right">
             <p>
-              Germany is one of the most sought-after study destinations, offering high-quality 
-              education at public universities with little to no tuition fees. Known for its 
-              engineering excellence, strong economy, and rich cultural heritage, Germany provides 
-              students with world-class education and excellent career opportunities. With its 
-              central location in Europe, studying in Germany opens doors to exploring the entire continent.
+              Germany is one of the world's most sought-after study destinations — offering 
+              high-quality education at public universities with little to no tuition fees. 
+              Known for engineering excellence, strong industry partnerships, and world-leading 
+              research, Germany provides graduates with exceptional career prospects. Its central 
+              location in Europe means students enjoy both academic rigour and the freedom 
+              to explore an entire continent.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="germany-advantages-section">
-        <div className="germany-main-content-wrapper">
-          <h2 className="germany-primary-section-heading">Why Study in Germany</h2>
-          <p className="germany-advantages-intro-paragraph">
-            Germany is renowned for its quality education, innovative research, and strong industry 
-            connections. With affordable or free tuition, excellent post-study work opportunities, 
-            and a thriving job market, Germany is an ideal destination for ambitious students.
+      {/* ── WHY STUDY ── */}
+      <section className="ge-why-section">
+        <div className="ge-content-wrapper">
+          <h2 className="ge-section-title">Why Study in <span>Germany</span></h2>
+          <p className="ge-section-subtitle">
+            From zero-tuition universities to an 18-month job search visa — Germany 
+            offers the most complete package for ambitious international students.
           </p>
-          
-          <div className="germany-benefits-display-grid">
-            <div className="germany-individual-benefit-card">
-              <div className="germany-benefit-emoji-icon">💶</div>
-              <h3>Low/No Tuition Fees</h3>
-              <p>Most public universities offer free or very affordable education</p>
-            </div>
-            
-            <div className="germany-individual-benefit-card">
-              <div className="germany-benefit-emoji-icon">🏭</div>
-              <h3>Engineering Excellence</h3>
-              <p>World-leading programs in engineering, technology, and sciences</p>
-            </div>
-            
-            <div className="germany-individual-benefit-card">
-              <div className="germany-benefit-emoji-icon">🔬</div>
-              <h3>Research Opportunities</h3>
-              <p>Access to cutting-edge research facilities and funding</p>
-            </div>
-            
-            <div className="germany-individual-benefit-card">
-              <div className="germany-benefit-emoji-icon">💼</div>
-              <h3>Strong Economy</h3>
-              <p>Europe's largest economy with excellent job prospects</p>
-            </div>
-            
-            <div className="germany-individual-benefit-card">
-              <div className="germany-benefit-emoji-icon">🌍</div>
-              <h3>Central Location</h3>
-              <p>Easy access to explore all of Europe during your studies</p>
-            </div>
-            
-            <div className="germany-individual-benefit-card">
-              <div className="germany-benefit-emoji-icon">🎯</div>
-              <h3>18-Month Job Search Visa</h3>
-              <p>Extended time to find employment after graduation</p>
-            </div>
+          <div className="ge-reasons-grid">
+            {geReasonCards.map(({ img, title, desc }, i) => (
+              <div className="ge-reason-card" key={i}>
+                <img src={img} alt={title} className="ge-reason-img" loading="lazy" />
+                <div className="ge-reason-body">
+                  <h3>{title}</h3>
+                  <p>{desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="germany-academic-structure-section">
-        <div className="germany-main-content-wrapper">
-          <h2 className="germany-primary-section-heading">Education System in Germany</h2>
-          <div className="germany-academic-details-content">
-            <p>
-              German universities offer bachelor's degrees (3-4 years), master's programs (1-2 years), 
-              and doctoral programs (3-5 years). The education system emphasizes practical application, 
-              research, and industry collaboration. Many programs are offered in English, particularly 
-              at the master's level.
-            </p>
-            <p>
-              The academic year consists of two semesters: winter (October to March) and summer (April 
-              to September). German education is known for its rigorous standards, focus on independent 
-              learning, and strong connections with industry through internships and research projects. 
-              Universities also partner closely with companies, providing excellent networking opportunities.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="germany-support-offerings-section">
-        <div className="germany-main-content-wrapper">
-          <h2 className="germany-primary-section-heading">How We Can Help You</h2>
-          <div className="germany-support-services-grid">
-            <div className="germany-single-service-card">
-              <div className="germany-service-badge-number">01</div>
-              <h3>Language Preparation</h3>
-              <p>
-                German language courses and TestDaF/DSH preparation for 
-                German-taught programs
-              </p>
-            </div>
-            
-            <div className="germany-single-service-card">
-              <div className="germany-service-badge-number">02</div>
-              <h3>University Selection</h3>
-              <p>
-                Guidance on TU9, universities of excellence, and program 
-                selection
-              </p>
-            </div>
-            
-            <div className="germany-single-service-card">
-              <div className="germany-service-badge-number">03</div>
-              <h3>Application Process</h3>
-              <p>
-                Support with Uni-Assist applications and direct university 
-                applications
-              </p>
-            </div>
-            
-            <div className="germany-single-service-card">
-              <div className="germany-service-badge-number">04</div>
-              <h3>Visa & Blocked Account</h3>
-              <p>
-                Assistance with student visa and blocked account requirements
-              </p>
-            </div>
-            
-            <div className="germany-single-service-card">
-              <div className="germany-service-badge-number">05</div>
-              <h3>Scholarship Guidance</h3>
-              <p>
-                Information on DAAD scholarships and other funding opportunities
-              </p>
-            </div>
-            
-            <div className="germany-single-service-card">
-              <div className="germany-service-badge-number">06</div>
-              <h3>Relocation Support</h3>
-              <p>
-                Help with accommodation, registration, and settling in Germany
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="germany-enrollment-process-section">
-        <div className="germany-main-content-wrapper">
-          <h2 className="germany-primary-section-heading">Application Process for Germany</h2>
-          <p className="germany-enrollment-intro-text">
-            Our consultants provide comprehensive support for studying in Germany, from university 
-            selection to visa approval and beyond.
+      {/* ── EDUCATION SYSTEM ── */}
+      <section className="ge-education-section">
+        <div className="ge-content-wrapper">
+          <h2 className="ge-section-title">Germany's <span>Education System</span></h2>
+          <p className="ge-section-subtitle">
+            A dual-structured system combining rigorous academic university programmes with 
+            career-focused Fachhochschulen — both globally respected and employer-valued.
           </p>
-          
-          <div className="germany-process-timeline-steps">
-            <div className="germany-timeline-single-step">
-              <div className="germany-timeline-step-indicator">1</div>
-              <div className="germany-timeline-step-details">
-                <h3>Profile Assessment</h3>
-                <p>Evaluate academic background and language proficiency</p>
+          <div className="ge-degree-grid">
+            {[
+              { title: "Bachelor's Degree",    dur: '3 – 4 Years', desc: 'Comprehensive undergraduate programmes with strong research and industry integration — often available in English at the master\'s level.' },
+              { title: "Master's Degree",      dur: '1 – 2 Years', desc: 'Advanced specialisation across engineering, sciences, business, and humanities. Many programmes fully English-taught.' },
+              { title: 'Doctoral Degree (PhD)', dur: '3 – 5 Years', desc: 'Access to world-leading supervisors, Fraunhofer institutes, and DFG-funded research projects at elite German universities.' },
+            ].map((d, i) => (
+              <div className="ge-degree-card" key={i}>
+                <img src={geDegreeImgs[i]} alt={d.title} className="ge-degree-img" loading="lazy" />
+                <div className="ge-degree-body">
+                  <h3>{d.title}</h3>
+                  <div className="ge-degree-dur">{d.dur}</div>
+                  <p>{d.desc}</p>
+                </div>
               </div>
-            </div>
-            
-            <div className="germany-timeline-single-step">
-              <div className="germany-timeline-step-indicator">2</div>
-              <div className="germany-timeline-step-details">
-                <h3>Program & University Selection</h3>
-                <p>Identify suitable programs and institutions</p>
-              </div>
-            </div>
-            
-            <div className="germany-timeline-single-step">
-              <div className="germany-timeline-step-indicator">3</div>
-              <div className="germany-timeline-step-details">
-                <h3>Document Preparation</h3>
-                <p>Prepare and translate all required documents</p>
-              </div>
-            </div>
-            
-            <div className="germany-timeline-single-step">
-              <div className="germany-timeline-step-indicator">4</div>
-              <div className="germany-timeline-step-details">
-                <h3>Application Submission</h3>
-                <p>Submit applications via Uni-Assist or directly to universities</p>
-              </div>
-            </div>
-            
-            <div className="germany-timeline-single-step">
-              <div className="germany-timeline-step-indicator">5</div>
-              <div className="germany-timeline-step-details">
-                <h3>Visa & Travel Arrangements</h3>
-                <p>Complete visa process and prepare for departure to Germany</p>
-              </div>
-            </div>
+            ))}
+          </div>
+          <div className="ge-edu-note">
+            The academic year runs in two semesters: <strong>Winter (October – March)</strong> and <strong>Summer (April – September)</strong>. 
+            Most international students begin in the <strong>Winter semester</strong>.
           </div>
         </div>
       </section>
 
-      <section className="germany-action-call-section">
-        <div className="germany-main-content-wrapper">
-          <div className="germany-action-call-content-box">
-            <h2>Begin Your German Education Journey!</h2>
-            <p>
-              Discover affordable world-class education in Germany. Contact us for expert 
-              guidance on your study abroad journey.
-            </p>
-            <button className="germany-action-primary-button">Inquire Now</button>
+      {/* ── SERVICES ── */}
+      <section className="ge-services-section">
+        <div className="ge-content-wrapper">
+          <h2 className="ge-section-title">How We <span>Help You</span></h2>
+          <p className="ge-section-subtitle">
+            Our Germany specialists guide you through every step — from language preparation 
+            to the moment you register at your German university.
+          </p>
+          <div className="ge-services-grid">
+            {geServiceCards.map((s, i) => (
+              <div className="ge-service-card" key={i}>
+                <img src={geServiceImgs[i]} alt={s.title} className="ge-service-img" loading="lazy" />
+                <div className="ge-service-body">
+                  <div className="ge-service-num">{s.n}</div>
+                  <h3>{s.title}</h3>
+                  <p>{s.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* ── PATH TO GERMANY — Horizontal badge track ── */}
+      <section className="ge-path-section">
+        <div className="ge-content-wrapper">
+          <h2 className="ge-section-title">Your <span>Path to Germany</span></h2>
+          <p className="ge-section-subtitle">
+            A clear five-step process — we walk alongside you from your first enquiry 
+            to your first day on a German campus.
+          </p>
+          <div className="ge-path-track">
+            {geSteps.map((step, i) => (
+              <div className="ge-path-card" key={i}>
+                <div className="ge-path-num">{step.n}</div>
+                <h3>{step.title}</h3>
+                <p>{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      {/* <section className="ge-cta-section">
+        <div className="ge-content-wrapper">
+          <div className="ge-cta-content">
+            <div className="ge-cta-eyebrow">Free Consultation Available</div>
+            <h2>Begin Your German Education Journey Today</h2>
+            <p>
+              Ready to study tuition-free at one of the world's greatest universities? 
+              Our experts are here to guide every step of your journey to Germany.
+            </p>
+            <Link to="/contact" className="ge-cta-button">
+              Get Free Consultation
+            </Link>
+
+          </div>
+        </div>
+      </section> */}
+
     </div>
   );
 };

@@ -1,511 +1,699 @@
-/* Canada Study Page Styles */
+/* =============================================
+   CANADA STUDY PAGE — PREMIUM REBUILD
+   Prefix: can-  (zero overlap with aus-)
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --canada-primary-blue: #0066A1;
-  --canada-primary-orange: #F68B1F;
-  --canada-dark-blue: #004d7a;
-  --canada-light-blue: #e6f2f8;
-  --canada-text-dark: #333333;
-  --canada-text-light: #666666;
-  --canada-white: #ffffff;
-  --canada-gray-bg: #f8f9fa;
+  --can-red:         #F47B20;
+  --can-red-dark:      #D4620A;
+  --can-red-mid:      #b66235;
+  --can-red-light:    #FDECEA;
+  --can-maple:        #ca6c39;
+  --can-blue:         #0066A1;
+  --can-blue-dark:    #004D7A;
+  --can-blue-light:   #E3F0FA;
+  --can-navy:         #001830;
+  --can-white:        #FFFFFF;
+  --can-cream:        #FAF8F5;
+  --can-warm-gray:    #F3F0EA;
+  --can-text-dark:    #0F1923;
+  --can-text-mid:     #4A5568;
+  --can-border:       rgba(0, 77, 122, 0.12);
+
+  --can-font-display: 'Cormorant Garamond', Georgia, serif;
+  --can-font-body:    'Outfit', sans-serif;
+
+  --can-shadow-sm:  0 2px 8px rgba(0,24,48,0.08);
+  --can-shadow-md:  0 8px 32px rgba(0,24,48,0.14);
+  --can-shadow-lg:  0 20px 60px rgba(0,24,48,0.20);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-.canada-study-container {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--canada-text-dark);
+.can-study-container {
+  font-family: var(--can-font-body);
+  color: var(--can-text-dark);
   line-height: 1.6;
+  background: var(--can-cream);
+  overflow-x: hidden;
 }
 
-/* Hero Section */
-.canada-hero-section {
+/* ─────────────────────────────────────────────
+   HERO — Official Canada Flag (Wikipedia SVG)
+   High-contrast dark overlay for readability
+───────────────────────────────────────────── */
+.can-hero-section {
   position: relative;
-  height: 500px;
-  background: linear-gradient(120deg, var(--canada-primary-blue) 0%, var(--canada-primary-orange) 100%);
-  overflow: hidden;
-}
-
-.canada-hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,160L48,170.7C96,181,192,203,288,192C384,181,480,139,576,133.3C672,128,768,160,864,165.3C960,171,1056,149,1152,133.3C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-  background-size: cover;
-}
-
-.canada-hero-overlay {
-  position: relative;
-  height: 100%;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Canada flag — official SVG from Wikimedia */
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/1280px-Flag_of_Canada_%28Pantone%29.svg.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.can-hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 24, 48, 0.75) 0%,
+    rgba(0, 24, 48, 0.60) 45%,
+    rgba(0, 24, 48, 0.82) 100%
+  );
   z-index: 1;
 }
 
-.canada-hero-content {
-  text-align: center;
-  color: var(--canada-white);
-  padding: 0 20px;
-}
-
-.canada-hero-title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  animation: canada-fadeInUp 1s ease-out;
-}
-
-.canada-hero-subtitle {
-  font-size: 1.3rem;
-  font-weight: 300;
-  max-width: 700px;
-  margin: 0 auto;
-  animation: canada-fadeInUp 1s ease-out 0.3s backwards;
-}
-
-@keyframes canada-fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Content Wrapper */
-.canada-content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Introduction Section */
-.canada-intro-section {
-  padding: 80px 0;
-  background: var(--canada-white);
-}
-
-.canada-intro-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--canada-text-light);
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Why Study Section */
-.canada-why-section {
-  padding: 80px 0;
-  background: var(--canada-gray-bg);
-}
-
-.canada-section-title {
-  font-size: 2.5rem;
-  color: var(--canada-primary-blue);
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.canada-why-intro {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 50px;
-  font-size: 1.1rem;
-  color: var(--canada-text-light);
-  line-height: 1.8;
-}
-
-.canada-reasons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.canada-reason-card {
-  background: var(--canada-white);
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.canada-reason-card::before {
+/* Red + blue accent stripe at bottom — Canada flag colours */
+.can-hero-section::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--canada-primary-blue) 0%, var(--canada-primary-orange) 100%);
+  bottom: 0; left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--can-red) 0%, var(--can-maple) 40%, var(--can-blue) 100%);
+  z-index: 3;
 }
 
-.canada-reason-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(246, 139, 31, 0.2);
-}
-
-.canada-reason-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.canada-reason-card h3 {
-  color: var(--canada-primary-blue);
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.canada-reason-card p {
-  color: var(--canada-text-light);
-  line-height: 1.6;
-}
-
-/* Education System Section */
-.canada-education-system {
-  padding: 80px 0;
-  background: var(--canada-white);
-}
-
-.canada-system-content {
-  max-width: 900px;
-  margin: 0 auto;
-  margin-top: 30px;
-}
-
-.canada-system-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--canada-text-light);
-  margin-bottom: 20px;
-}
-
-/* Services Section */
-.canada-services-section {
-  padding: 80px 0;
-  background: linear-gradient(135deg, var(--canada-light-blue) 0%, var(--canada-gray-bg) 100%);
-}
-
-.canada-services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.canada-service-card {
-  background: var(--canada-white);
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+.can-hero-overlay {
   position: relative;
-  border-bottom: 5px solid var(--canada-primary-blue);
-}
-
-.canada-service-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 102, 161, 0.2);
-  border-bottom-color: var(--canada-primary-orange);
-}
-
-.canada-service-number {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: linear-gradient(135deg, var(--canada-primary-blue) 0%, var(--canada-primary-orange) 100%);
-  color: var(--canada-white);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  z-index: 2;
+  width: 100%;
+  padding: clamp(50px, 8vh, 90px) 24px 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
-  font-weight: 700;
-  box-shadow: 0 4px 10px rgba(0, 102, 161, 0.3);
 }
 
-.canada-service-card h3 {
-  color: var(--canada-primary-blue);
-  font-size: 1.3rem;
-  margin-bottom: 15px;
+.can-hero-content {
+  max-width: 780px;
+  width: 100%;
+  color: var(--can-white);
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.can-hero-eyebrow {
+  display: inline-block;
+  background: rgba(213, 43, 30, 0.22);
+  border: 1px solid rgba(213, 43, 30, 0.55);
+  color: #FFB3AE;
+  padding: 7px 24px;
+  border-radius: 50px;
+  font-size: 0.75rem;
   font-weight: 600;
-  padding-right: 60px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  animation: can-riseUp 0.7s ease-out;
 }
 
-.canada-service-card p {
-  color: var(--canada-text-light);
+.can-hero-title {
+  font-family: var(--can-font-display);
+  font-size: clamp(2.4rem, 6.5vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  animation: can-riseUp 0.7s ease-out 0.1s backwards;
+}
+
+.can-hero-title em {
+  font-style: italic;
+  color: #FF9088;
+  display: block;
+  font-size: clamp(1.4rem, 3.8vw, 2.6rem);
+  font-weight: 600;
+  margin-top: 10px;
+  letter-spacing: 0.01em;
+}
+
+.can-hero-subtitle {
+  font-size: clamp(0.95rem, 2.3vw, 1.1rem);
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 600px;
+  margin: 0 auto 48px;
+  animation: can-riseUp 0.7s ease-out 0.2s backwards;
+}
+
+.can-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: can-riseUp 0.7s ease-out 0.3s backwards;
+}
+
+.can-btn-primary {
+  background: var(--can-red);
+  color: var(--can-white);
+  border: none;
+  padding: 16px 42px;
+  font-family: var(--can-font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(213,43,30,0.50);
+  letter-spacing: 0.02em;
+}
+
+.can-btn-primary:hover {
+  background: var(--can-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(213,43,30,0.65);
+}
+
+@keyframes can-riseUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─────────────────────────────────────────────
+   SHARED
+───────────────────────────────────────────── */
+.can-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.can-section-title {
+  font-family: var(--can-font-display);
+  font-size: clamp(2rem, 4.2vw, 2.8rem);
+  font-weight: 700;
+  color: var(--can-blue-dark);
+  text-align: center;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.can-section-title span { color: var(--can-red); }
+
+.can-section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--can-text-mid);
+  max-width: 680px;
+  margin: 0 auto 58px;
+  line-height: 1.85;
+  font-weight: 400;
+}
+
+/* ─────────────────────────────────────────────
+   INTRO
+───────────────────────────────────────────── */
+.can-intro-section {
+  padding: 96px 0;
+  background: var(--can-white);
+}
+
+.can-intro-inner {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.can-intro-divider {
+  width: 1px;
+  height: 120px;
+  background: linear-gradient(180deg, transparent, var(--can-red), transparent);
+  margin: auto;
+}
+
+.can-intro-left h2 {
+  font-family: var(--can-font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--can-blue-dark);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.can-intro-left h2 span { color: var(--can-red); }
+
+.can-intro-left p,
+.can-intro-right p {
+  font-size: 1rem;
+  color: var(--can-text-mid);
+  line-height: 1.9;
+}
+
+/* ─────────────────────────────────────────────
+   WHY STUDY — HD image cards
+───────────────────────────────────────────── */
+.can-why-section {
+  padding: 96px 0;
+  background: var(--can-warm-gray);
+}
+
+.can-reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.can-reason-card {
+  background: var(--can-white);
+  border-radius: 16px;
+  border: 1px solid var(--can-border);
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
+  position: relative;
+}
+
+.can-reason-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--can-red) 0%, var(--can-blue) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.can-reason-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--can-shadow-lg);
+  border-color: transparent;
+}
+
+.can-reason-card:hover::after { transform: scaleX(1); }
+
+.can-reason-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.can-reason-body {
+  padding: 24px 28px 30px;
+}
+
+.can-reason-card h3 {
+  font-family: var(--can-font-display);
+  color: var(--can-blue-dark);
+  font-size: 1.18rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.can-reason-card p {
+  color: var(--can-text-mid);
+  font-size: 0.93rem;
   line-height: 1.7;
 }
 
-/* Application Section */
-.canada-application-section {
-  padding: 80px 0;
-  background: var(--canada-white);
-}
-
-.canada-application-intro {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 50px;
-  font-size: 1.1rem;
-  color: var(--canada-text-light);
-  line-height: 1.8;
-}
-
-.canada-application-steps {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.canada-application-steps::before {
-  content: '';
-  position: absolute;
-  left: 30px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, var(--canada-primary-blue) 0%, var(--canada-primary-orange) 100%);
-}
-
-.canada-step {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.canada-step-number {
-  flex-shrink: 0;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, var(--canada-primary-blue) 0%, var(--canada-primary-orange) 100%);
-  color: var(--canada-white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  box-shadow: 0 4px 15px rgba(0, 102, 161, 0.3);
-  z-index: 1;
-}
-
-.canada-step-content {
-  flex: 1;
-  padding-top: 5px;
-}
-
-.canada-step-content h3 {
-  color: var(--canada-primary-blue);
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.canada-step-content p {
-  color: var(--canada-text-light);
-  line-height: 1.6;
-}
-
-/* CTA Section */
-.canada-cta-section {
-  padding: 100px 0;
-  background: linear-gradient(120deg, var(--canada-primary-blue) 0%, var(--canada-primary-orange) 100%);
+/* ─────────────────────────────────────────────
+   EDUCATION SYSTEM — dark navy bg
+───────────────────────────────────────────── */
+.can-education-section {
+  padding: 96px 0;
+  background: var(--can-navy);
   position: relative;
   overflow: hidden;
 }
 
-.canada-cta-section::before {
+.can-education-section::before {
   content: '';
   position: absolute;
-  bottom: -50%;
-  left: -10%;
-  width: 500px;
-  height: 500px;
-  background: var(--canada-white);
-  border-radius: 50%;
-  opacity: 0.1;
+  top: -100px; right: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(213,43,30,0.14) 0%, transparent 65%);
+  pointer-events: none;
 }
 
-.canada-cta-content {
+.can-education-section .can-section-title { color: var(--can-white); }
+.can-education-section .can-section-subtitle { color: rgba(255,255,255,0.58); }
+
+.can-degree-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.can-degree-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.can-degree-card:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(213,43,30,0.45);
+  box-shadow: 0 8px 32px rgba(213,43,30,0.15);
+  transform: translateY(-5px);
+}
+
+.can-degree-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.can-degree-body {
+  padding: 26px 26px 30px;
+}
+
+.can-degree-card h3 {
+  font-family: var(--can-font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FF8A7A;
+  margin-bottom: 7px;
+}
+
+.can-degree-dur {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.44);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 13px;
+  font-family: var(--can-font-body);
+}
+
+.can-degree-card p {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.70);
+  line-height: 1.75;
+}
+
+.can-edu-note {
+  margin-top: 48px;
+  background: rgba(213,43,30,0.10);
+  border: 1px solid rgba(213,43,30,0.25);
+  border-radius: 12px;
+  padding: 24px 36px;
+  color: rgba(255,255,255,0.84);
+  font-size: 0.97rem;
+  line-height: 1.8;
   text-align: center;
-  color: var(--canada-white);
+}
+
+/* ─────────────────────────────────────────────
+   SERVICES — HD image cards
+───────────────────────────────────────────── */
+.can-services-section {
+  padding: 96px 0;
+  background: var(--can-cream);
+}
+
+.can-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.can-service-card {
+  background: var(--can-white);
+  border-radius: 16px;
+  border: 1px solid var(--can-border);
+  overflow: hidden;
+  transition: all 0.3s ease;
   position: relative;
+}
+
+.can-service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--can-red) 0%, var(--can-blue) 100%);
   z-index: 1;
 }
 
-.canada-cta-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.can-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--can-shadow-md);
+  border-color: rgba(0,102,161,0.22);
+}
+
+.can-service-img {
+  width: 100%;
+  height: 158px;
+  object-fit: cover;
+  display: block;
+}
+
+.can-service-body {
+  padding: 24px 26px 28px;
+}
+
+.can-service-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--can-navy);
+  color: #FF8A7A;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  font-family: var(--can-font-display);
+  margin-bottom: 14px;
+}
+
+.can-service-card h3 {
+  font-family: var(--can-font-display);
+  color: var(--can-blue-dark);
+  font-size: 1.1rem;
+  margin-bottom: 10px;
   font-weight: 700;
 }
 
-.canada-cta-content p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+.can-service-card p {
+  color: var(--can-text-mid);
+  font-size: 0.92rem;
+  line-height: 1.72;
 }
 
-.canada-cta-button {
-  background: var(--canada-white);
-  color: var(--canada-primary-blue);
-  border: none;
-  padding: 18px 50px;
-  font-size: 1.1rem;
-  font-weight: 600;
+/* ─────────────────────────────────────────────
+   PATH TO CANADA — Horizontal card track
+   Completely different from Australia steps
+───────────────────────────────────────────── */
+.can-path-section {
+  padding: 100px 0;
+  background: var(--can-white);
+  overflow: hidden;
+}
+
+.can-path-track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 16px;
+}
+
+/* Connecting line behind all cards */
+.can-path-track::before {
+  content: '';
+  position: absolute;
+  top: 52px;
+  left: calc(10% + 20px);
+  right: calc(10% + 20px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--can-red) 0%, var(--can-blue) 100%);
+  z-index: 0;
+}
+
+.can-path-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px 36px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.can-path-card:hover { transform: translateY(-6px); }
+
+.can-path-num-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--can-red) 0%, var(--can-maple) 100%);
+  color: var(--can-white);
+  font-family: var(--can-font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  box-shadow: 0 6px 20px rgba(213,43,30,0.35);
+  border: 4px solid var(--can-white);
+  outline: 2px solid rgba(213,43,30,0.25);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.can-path-card:hover .can-path-num-badge {
+  box-shadow: 0 10px 30px rgba(213,43,30,0.50);
+  transform: scale(1.08);
+}
+
+.can-path-card h3 {
+  font-family: var(--can-font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--can-blue-dark);
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.can-path-card p {
+  font-size: 0.86rem;
+  color: var(--can-text-mid);
+  line-height: 1.65;
+}
+
+/* ─────────────────────────────────────────────
+   CTA — Canadian Red, white text
+───────────────────────────────────────────── */
+.can-cta-section {
+  padding: 112px 0;
+  background: linear-gradient(135deg, var(--can-red-dark) 0%, var(--can-red) 55%, var(--can-red-mid) 100%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.can-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 720px; height: 720px;
+  background: radial-gradient(circle, rgba(255,255,255,0.09) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.can-cta-section::after {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,180,150,0.16) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.can-cta-content { position: relative; z-index: 1; }
+
+.can-cta-eyebrow {
+  display: inline-block;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.42);
+  color: var(--can-white);
+  padding: 7px 24px;
   border-radius: 50px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.can-cta-content h2 {
+  font-family: var(--can-font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.12;
+  color: var(--can-white);
+  text-shadow: 0 2px 14px rgba(120,15,10,0.20);
+}
+
+.can-cta-content p {
+  font-size: 1.08rem;
+  color: rgba(255,255,255,0.90);
+  max-width: 580px;
+  margin: 0 auto 46px;
+  line-height: 1.8;
+}
+
+.can-cta-button {
+  background: var(--can-white);
+  color: var(--can-red-dark);
+  border: none;
+  padding: 18px 54px;
+  font-family: var(--can-font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.18);
+  letter-spacing: 0.02em;
 }
 
-.canada-cta-button:hover {
-  background: #f0f0f0;
+.can-cta-button:hover {
+  background: #FFF0EE;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.24);
 }
 
-/* Responsive Design */
+/* ─────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .can-path-track { grid-template-columns: repeat(3, 1fr); row-gap: 40px; }
+  .can-path-track::before { display: none; }
+}
+
 @media (max-width: 1024px) {
-  .canada-hero-title {
-    font-size: 3rem;
-  }
-  
-  .canada-section-title {
-    font-size: 2.2rem;
-  }
-  
-  .canada-reasons-grid,
-  .canada-services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-  }
+  .can-reasons-grid,
+  .can-services-grid,
+  .can-degree-grid { grid-template-columns: repeat(2, 1fr); }
+  .can-content-wrapper { padding: 0 32px; }
 }
 
 @media (max-width: 768px) {
-  .canada-hero-section {
-    height: 400px;
+  .can-hero-section {
+    min-height: 100svh;
+    min-height: 100vh;
   }
-  
-  .canada-hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .canada-hero-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .canada-section-title {
-    font-size: 2rem;
-  }
-  
-  .canada-intro-section,
-  .canada-why-section,
-  .canada-education-system,
-  .canada-services-section,
-  .canada-application-section {
-    padding: 60px 0;
-  }
-  
-  .canada-cta-section {
-    padding: 80px 0;
-  }
-  
-  .canada-reasons-grid,
-  .canada-services-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .canada-application-steps::before {
-    left: 20px;
-  }
-  
-  .canada-step {
-    gap: 20px;
-  }
-  
-  .canada-step-number {
-    width: 50px;
-    height: 50px;
-    font-size: 1.3rem;
-  }
-  
-  .canada-cta-content h2 {
-    font-size: 2rem;
-  }
-  
-  .canada-cta-content p {
-    font-size: 1.1rem;
-  }
+  .can-hero-overlay { padding: 80px 20px 60px; }
+  .can-reasons-grid,
+  .can-services-grid,
+  .can-degree-grid,
+  .can-path-track { grid-template-columns: 1fr; }
+  .can-path-track::before { display: none; }
+  .can-intro-inner { grid-template-columns: 1fr; gap: 28px; padding: 0 20px; }
+  .can-intro-divider { display: none; }
+  .can-content-wrapper { padding: 0 20px; }
+  .can-hero-actions { flex-direction: column; align-items: stretch; }
+  .can-btn-primary { text-align: center; }
+  .can-why-section,
+  .can-services-section,
+  .can-path-section,
+  .can-education-section,
+  .can-intro-section { padding: 64px 0; }
 }
 
 @media (max-width: 480px) {
-  .canada-hero-section {
-    height: 350px;
-  }
-  
-  .canada-hero-title {
-    font-size: 2rem;
-  }
-  
-  .canada-hero-subtitle {
-    font-size: 1rem;
-  }
-  
-  .canada-section-title {
-    font-size: 1.8rem;
-  }
-  
-  .canada-intro-text p,
-  .canada-why-intro,
-  .canada-system-content p,
-  .canada-application-intro {
-    font-size: 1rem;
-  }
-  
-  .canada-reason-card,
-  .canada-service-card {
-    padding: 30px 20px;
-  }
-  
-  .canada-service-number {
-    width: 45px;
-    height: 45px;
-    font-size: 1.1rem;
-    top: 15px;
-    right: 15px;
-  }
-  
-  .canada-service-card h3 {
-    padding-right: 50px;
-  }
-  
-  .canada-cta-button {
-    padding: 15px 40px;
-    font-size: 1rem;
-  }
+  .can-hero-overlay { padding: 80px 16px 64px; }
+  .can-edu-note { padding: 18px; }
+  .can-cta-section { padding: 72px 0; }
 }

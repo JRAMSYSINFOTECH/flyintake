@@ -66,37 +66,70 @@ const Navbar = () => {
   const [openSecondLevel, setOpenSecondLevel] = useState(null);
   const [mobileOpenDropdown, setMobileOpenDropdown] = useState(null);
   const [mobileOpenSubmenu, setMobileOpenSubmenu] = useState(null);
-  const dropdownRef = React.useRef(null);
+  
   const closeTimeoutRef = React.useRef(null);
 
-  const closeDropdown = () => {
-    setOpenDropdown(null);
+  // Clear any pending timeout
+  const clearCloseTimeout = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+  };
+
+  // Close dropdown with delay
+  const scheduleClose = () => {
+    clearCloseTimeout();
+    closeTimeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+      setOpenSecondLevel(null);
+    }, 500); // Increased to 500ms for best stability
+  };
+
+  // Handle nav item hover (main menu)
+  const handleNavItemEnter = (key) => {
+    clearCloseTimeout();
+    setOpenDropdown(key);
     setOpenSecondLevel(null);
   };
 
-  const handleNavItemEnter = (key) => {
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-    }
-    setOpenDropdown(key);
-  };
-
   const handleNavItemLeave = () => {
-    closeTimeoutRef.current = setTimeout(() => {
-      closeDropdown();
-    }, 150);
+    scheduleClose();
   };
 
+  // Handle dropdown menu hover (keep it open)
   const handleDropdownEnter = () => {
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-    }
+    clearCloseTimeout();
   };
 
   const handleDropdownLeave = () => {
-    closeTimeoutRef.current = setTimeout(() => {
-      closeDropdown();
-    }, 150);
+    scheduleClose();
+  };
+
+  // Handle dropdown item hover (for second level)
+  const handleDropdownItemEnter = (label) => {
+    clearCloseTimeout();
+    if (submenuData[label]) {
+      setOpenSecondLevel(label);
+    } else {
+      setOpenSecondLevel(null);
+    }
+  };
+
+  // Handle second level menu hover
+  const handleSecondLevelEnter = () => {
+    clearCloseTimeout();
+  };
+
+  const handleSecondLevelLeave = () => {
+    scheduleClose();
+  };
+
+  // Close dropdown immediately on click
+  const closeDropdown = () => {
+    clearCloseTimeout();
+    setOpenDropdown(null);
+    setOpenSecondLevel(null);
   };
 
   const toggleMobileMenu = () => {
@@ -139,9 +172,7 @@ const Navbar = () => {
 
   useEffect(() => {
     return () => {
-      if (closeTimeoutRef.current) {
-        clearTimeout(closeTimeoutRef.current);
-      }
+      clearCloseTimeout();
     };
   }, []);
 
@@ -211,8 +242,7 @@ const Navbar = () => {
 
                   {openDropdown === key && (
                     <ul 
-                      className="dropdown-menu" 
-                      ref={dropdownRef}
+                      className="dropdown-menu"
                       onMouseEnter={handleDropdownEnter}
                       onMouseLeave={handleDropdownLeave}
                     >
@@ -220,8 +250,7 @@ const Navbar = () => {
                         <li
                           key={idx}
                           className={`dropdown-item ${submenuData[item.label] ? 'has-submenu' : ''}`}
-                          onMouseEnter={() => setOpenSecondLevel(item.label)}
-                          onMouseLeave={() => setOpenSecondLevel(null)}
+                          onMouseEnter={() => handleDropdownItemEnter(item.label)}
                         >
                           <Link
                             to={item.path}
@@ -235,9 +264,17 @@ const Navbar = () => {
                           </Link>
 
                           {submenuData[item.label] && openSecondLevel === item.label && (
-                            <ul className="second-level-menu">
+                            <ul 
+                              className="second-level-menu"
+                              onMouseEnter={handleSecondLevelEnter}
+                              onMouseLeave={handleSecondLevelLeave}
+                            >
                               {submenuData[item.label].map((sub, sIdx) => (
-                                <li key={sIdx} className="dropdown-item">
+                                <li 
+                                  key={sIdx} 
+                                  className="dropdown-item"
+                                  onMouseEnter={handleSecondLevelEnter}
+                                >
                                   <Link
                                     to={sub.path}
                                     onClick={closeDropdown}
@@ -303,13 +340,13 @@ const Navbar = () => {
           </div>
           
           <div className="mobile-social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon">
+            <a href="https://www.facebook.com/share/1CBT99eDFS/" target="_blank" rel="noopener noreferrer" className="mobile-social-icon">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon">
+            <a href="https://www.instagram.com/flyintake_global_consulting?igsh=b3FrcHo3b3B3ZzY5" target="_blank" rel="noopener noreferrer" className="mobile-social-icon">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon">
+            <a href="https://www.linkedin.com/company/flyintake-global-consulting-private-limited/" target="_blank" rel="noopener noreferrer" className="mobile-social-icon">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </div>

@@ -403,11 +403,7 @@ export default function App() {
           path="/study-destinations"
           element={
             <WhiteLinkLayout>
-              <StudyDestinationsHero
-                title="Find Your Perfect Study Abroad Destination"
-                subtitle="Explore top universities and programs across the globe."
-                backgroundImage="/assets/abroad.jpg"
-              />
+              <StudyDestinationsHero/>
               <Destinations />
               <Contact />
             </WhiteLinkLayout>

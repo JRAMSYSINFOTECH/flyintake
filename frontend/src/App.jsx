@@ -1,6 +1,5 @@
 import React from "react";
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
-import ScrollToTop from "./ScrollToTop";
 
 // Common Components
 import Navbar from "./components/Navbar/Navbar";
@@ -156,7 +155,6 @@ const WhiteLinkLayout = ({ children }) => (
 export default function App() {
   return (
     <HashRouter>
-      <ScrollToTop />
       <Routes>
         {/* 🏠 Home Page */}
         <Route
@@ -599,7 +597,11 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <TechServices />
+<<<<<<< HEAD
               
+=======
+             
+>>>>>>> 6332b31b66d090208ee2cb10e8b2c679fc873e6d
             </WhiteLinkLayout>
           }
         />

@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import './TechServices.css';
+import { Link } from 'react-router-dom';
 
 /* ─────────────────────────────────────────────────────────────
    IMAGES — High-quality Unsplash URLs
@@ -317,7 +318,7 @@ const MIMG = {
   'Corporate Solutions':
     'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=95&fit=crop&auto=format',
   'Research & Innovation':
-    'https://images.unsplash.com/photo-1532094349884-543559244985?w=800&q=95&fit=crop&auto=format',
+    'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=95&fit=crop&auto=format',
   'Workshops & Bootcamps':
     'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=95&fit=crop&auto=format',
   'Knowledge Hub':
@@ -566,7 +567,8 @@ function FitTrainingSection({ trainings, accentColor, eyebrow, title, subtitle }
                       <li key={j}><span className="fit__tc-dot" />{t}</li>
                     ))}
                   </ul>
-                  <button className="fit__tc-btn">Enrol Now</button>
+                  <Link to="/contact" className="fit__tc-btn" 
+                  style={{ background: accentColor }}>Enquire Now</Link>
                 </div>
               </div>
             ))}
@@ -698,8 +700,7 @@ function FitInternshipsSection() {
                     </span>
                     <h4 className="fit__role-title">{role.title}</h4>
                     <p className="fit__role-desc">{role.desc}</p>
-                    <a
-                      href="/contact"
+                    <Link to="/contact"
                       className="fit__role-cta"
                       style={{ 
                         background: selected.color,
@@ -720,7 +721,8 @@ function FitInternshipsSection() {
                       }}
                     >
                       Enquire
-                    </a>
+                      </Link>
+                  
                   </div>
                 </div>
               ))}
@@ -762,7 +764,9 @@ function FitMoreSection() {
                   <li key={j}><IconCheckOrange />{pt}</li>
                 ))}
               </ul>
-              <a href="/contact" className="fit__more-cta">Get in Touch</a>
+              <Link to="/contact" className="fit__more-cta">
+                Learn More
+              </Link>
             </div>
           </div>
         ))}

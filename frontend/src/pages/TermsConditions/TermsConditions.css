@@ -1,0 +1,213 @@
+/* =============================================
+   TERMS & PRIVACY POLICY — CLEAN SIMPLE STYLE
+   Matches exxeella.com reference layout
+   Prefix: tp-
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --tp-blue:        #0066A1;
+  --tp-blue-dark:   #004d7a;
+  --tp-orange:      #F68B1F;
+  --tp-orange-dark: #e07a0e;
+  --tp-white:       #ffffff;
+  --tp-bg:          #f8f9fa;
+  --tp-text:        #333333;
+  --tp-text-light:  #555555;
+  --tp-border:      #e2e8f0;
+  --tp-link:        #0066A1;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+.tp-page {
+  font-family: 'Nunito', sans-serif;
+  color: var(--tp-text);
+  background: var(--tp-white);
+  line-height: 1.7;
+}
+
+/* ── HERO ── */
+.tp-hero {
+  background: linear-gradient(135deg, var(--tp-blue-dark) 0%, var(--tp-blue) 100%);
+  padding: 72px 24px 60px;
+  text-align: center;
+}
+
+.tp-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tp-hero-title {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--tp-white);
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+
+.tp-hero-date {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.70);
+  font-weight: 500;
+}
+
+/* ── CONTENT WRAPPER ── */
+.tp-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 32px 72px;
+}
+
+/* ── INTRO PARAGRAPH ── */
+.tp-intro {
+  font-size: 1.05rem;
+  color: var(--tp-text-light);
+  line-height: 1.85;
+  margin-bottom: 48px;
+  padding-bottom: 36px;
+  border-bottom: 2px solid var(--tp-border);
+}
+
+.tp-intro strong {
+  color: var(--tp-blue);
+  font-weight: 700;
+}
+
+/* ── CONTENT BLOCKS ── */
+.tp-block {
+  margin-bottom: 40px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--tp-border);
+}
+
+.tp-block:last-of-type {
+  border-bottom: none;
+  margin-bottom: 36px;
+}
+
+.tp-block h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--tp-blue);
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 16px;
+}
+
+.tp-block h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 3px;
+  bottom: 3px;
+  width: 4px;
+  background: var(--tp-orange);
+  border-radius: 2px;
+}
+
+.tp-block p {
+  font-size: 1rem;
+  color: var(--tp-text-light);
+  line-height: 1.85;
+  margin-bottom: 12px;
+}
+
+.tp-block p:last-child {
+  margin-bottom: 0;
+}
+
+.tp-block a {
+  color: var(--tp-link);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tp-block a:hover {
+  text-decoration: underline;
+}
+
+/* ── CONTACT NOTE ── */
+.tp-contact-note {
+  background: #EEF5FB;
+  border-left: 4px solid var(--tp-blue);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-top: 8px;
+}
+
+.tp-contact-note p {
+  font-size: 0.97rem;
+  color: var(--tp-text-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.tp-contact-note a {
+  color: var(--tp-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tp-contact-note a:hover {
+  text-decoration: underline;
+}
+
+/* ── CTA SECTION ── */
+.tp-cta {
+  background: linear-gradient(135deg, var(--tp-blue-dark) 0%, var(--tp-blue) 100%);
+  padding: 72px 24px;
+  text-align: center;
+}
+
+.tp-cta-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tp-cta h2 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 800;
+  color: var(--tp-white);
+  margin-bottom: 28px;
+  line-height: 1.25;
+}
+
+.tp-cta-btn {
+  background: var(--tp-orange);
+  color: var(--tp-white);
+  border: none;
+  padding: 16px 48px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 18px rgba(246, 139, 31, 0.40);
+  letter-spacing: 0.01em;
+}
+
+.tp-cta-btn:hover {
+  background: var(--tp-orange-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(246, 139, 31, 0.50);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .tp-hero { padding: 56px 20px 44px; }
+  .tp-wrapper { padding: 44px 20px 56px; }
+  .tp-block h2 { font-size: 1.1rem; }
+  .tp-block p { font-size: 0.97rem; }
+  .tp-intro { font-size: 0.97rem; margin-bottom: 36px; padding-bottom: 28px; }
+  .tp-cta { padding: 56px 20px; }
+}
+
+@media (max-width: 480px) {
+  .tp-hero { padding: 48px 16px 36px; }
+  .tp-wrapper { padding: 36px 16px 48px; }
+  .tp-cta-btn { width: 100%; padding: 15px 32px; }
+}

@@ -56,33 +56,8 @@ export default function What() {
           <p className="box">IELTS courses</p>
         </a>
         </div>
-        {/* A subheading for the "Related articles" section. */}
-        <h1 className="h2"><span className="ul">R</span>elated articles</h1>
-        {/* This grid displays cards linking to related articles. */}
-        <div className="cards-grid">
-          {/* A card that links to a Google search for a related topic. */}
-          <a 
-            href="https://www.google.com/search?q=IELTS+vs+other+English+language+proficiency+tests" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="card">
-              <h3 className="card-title">IELTS vs other English language proficiency tests</h3>
-              <p className="card-desc">Planning to take your English proficiency test? There are a number of factors you need to consider. Let’s look into them in detail.</p>
-            </div>
-          </a>
-          {/* Another card that links to a Google search for a related topic. */}
-          <a 
-            href="https://www.google.com/search?q=Minimum+IELTS+score+requirements+for+UK+universities" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="card">
-              <h3 className="card-title">Minimum IELTS score requirements for UK universities</h3>
-              <p className="card-desc">Minimum IELTS band score requirements for the UK. Check the required IELTS score for UK universities, courses, and student visa.</p>
-            </div>
-          </a>
-        </div>
+
+       
     </div>
 
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import "...../WhyStdyAbrd/StdyAbcnt.css"; /* Reuses same stylesheet */
 
 const SECTIONS = [
@@ -103,12 +104,10 @@ export default function HowToApplyContent() {
             <h3>Ready to Start Your Application?</h3>
             <p>Let our expert counsellors handle the complexity — from document prep to visa submission — so you can focus on your future.</p>
           </div>
-          <a href="/contact" className="wsa-cta-btn">
+         <Link to="/contact" className="wsa-cta-btn">
             Get Free Consultation
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
+          </Link>
+          
         </div>
       </div>
 

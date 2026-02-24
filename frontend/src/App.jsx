@@ -116,6 +116,7 @@ import StudyDestinationsHero from "./pages/white-link/StudyDestinations/StudyDes
 //about and contact us pages
 import ContactUs from "./pages/ContactUs/ContactUs";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import TermsConditions from "./pages/TermsConditions/TermsCodtitions.jsx";
 
 // Footer Pages
 import IntakeCareers from "./pages/white-link/FooterPages/IntakeCareers";
@@ -316,6 +317,15 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+
+        <Route
+          path="/terms-conditions"
+          element={
+            <WhiteLinkLayout>
+              <TermsConditions />
             </WhiteLinkLayout>
           }
         />

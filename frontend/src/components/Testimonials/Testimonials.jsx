@@ -59,7 +59,7 @@ const Testimonials = () => {
                 <Link to="/about-us" className="about-btn-primary">
                   Explore More
                 </Link>
-                <Link to="/contact-us" className="about-btn-secondary">
+                <Link to="/contact" className="about-btn-secondary">
                   Free Counselling
                 </Link>
               </div>

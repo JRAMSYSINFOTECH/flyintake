@@ -94,7 +94,7 @@ export default function IELTSPage() {
         {/* This container holds navigation boxes to other pages. */}
         <div className="box-container">
        {/* Each Link component navigates to a different page or external site. */}
-       <Link to="https://r.search.yahoo.com/_ylt=Awr1UUrSbz9p_QEArDq7HAx.;_ylu=Y29sbwNzZzMEcG9zAzIEdnRpZAMEc2VjA3Ny/RV=2/RE=1766974674/RO=10/RU=https%3a%2f%2ftakeielts.britishcouncil.org%2fblog%2fbenefits-ielts-why-take-test/RK=2/RS=EqFgHy55sBlz0FdUtDqcQqh0Fhs-"><p className="box">Why take IELTS?</p></Link>
+       <Link to="https://takeielts.britishcouncil.org/blog/benefits-ielts-why-take-test"><p className="box">Why take IELTS?</p></Link>
        <Link to="/pages/Prep"><p className="box">How to Prepare for IELTS</p></Link>
       <Link to="/pages/What"><p className="box">What is IELTS</p></Link>
     </div>

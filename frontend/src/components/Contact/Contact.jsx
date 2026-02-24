@@ -482,7 +482,9 @@ export default function ContactPage() {
                 <input type="checkbox" name="agreeTerms" checked={formData.agreeTerms}
                   onChange={handleInputChange} required />
                 I agree to Jramsys{" "}
-                <span className="terms-text">Terms &amp; Privacy Policy</span>
+                <a href="/#/terms-conditions" target="_blank" rel="noopener noreferrer" className="terms-text">
+                  Terms & Conditions
+                </a>
               </label>
             </div>
 

@@ -6,6 +6,7 @@ import {
   ArrowRight, ArrowUpRight, ChevronRight
 } from "lucide-react";
 import "./AboutUs.css";
+import { Link } from "react-router-dom";
 
 /* ────────────────────────────────────────────
    DATA
@@ -396,9 +397,11 @@ export default function AboutUs() {
               <h3>Ready to Begin Your Global Journey?</h3>
               <p>Our expert counselors are here to guide you every step of the way.</p>
             </div>
-            <a href="/contact" className="flyintake-cta-btn">
-              Start Your Journey <ArrowRight size={18} />
-            </a>
+           <Link to="/contact" className="flyintake-cta-btn">
+             Get Free Consultation
+              
+            </Link>
+
           </div>
         </div>
       </section>

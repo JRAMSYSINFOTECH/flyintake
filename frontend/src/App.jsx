@@ -597,11 +597,7 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <TechServices />
-<<<<<<< HEAD
-              
-=======
              
->>>>>>> 6332b31b66d090208ee2cb10e8b2c679fc873e6d
             </WhiteLinkLayout>
           }
         />

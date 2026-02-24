@@ -599,7 +599,7 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <TechServices />
-              <Contact />
+              
             </WhiteLinkLayout>
           }
         />

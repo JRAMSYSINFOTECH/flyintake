@@ -82,6 +82,9 @@ import FindCountryPage from "./pages/black-link/Find/FindCountryPage";
 import InfoSection from "./pages/black-link/Find/InfoSection";
 import TechServices from "./pages/TechServices/TechServices.jsx";
 
+// Careers Page
+import Careers from "./pages/Careers/Careers";
+
 //Find a course and IELTS 
 
 import CourseA from "./pages/white-link/Find_A_Course/CourseAdvice/CourseAdvice";
@@ -118,7 +121,7 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import TermsConditions from "./pages/TermsConditions/TermsCodtitions.jsx";
 
 // Footer Pages
-import IntakeCareers from "./pages/white-link/FooterPages/IntakeCareers";
+
 import AskIntake from "./pages/white-link/FooterPages/AskIntake";
 import CostOfLiving from "./pages/white-link/FooterPages/CostOfLiving";
 import StatementOfPurpose from "./pages/white-link/FooterPages/StatementOfPurpose";
@@ -315,6 +318,15 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+
+        <Route
+          path="/careers"
+          element={
+            <WhiteLinkLayout>
+              <Careers />
             </WhiteLinkLayout>
           }
         />
@@ -940,15 +952,7 @@ export default function App() {
           }
         />
 
-        {/* 📄 Footer Pages */}
-        <Route
-          path="/intake-careers"
-          element={
-            <WhiteLinkLayout>
-              <IntakeCareers />
-            </WhiteLinkLayout>
-          }
-        />
+        
         <Route
           path="/ask-intake"
           element={

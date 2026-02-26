@@ -10,7 +10,6 @@ const DESTINATIONS = [
   { code: "eu", name: "Europe" },
   { code: "de", name: "Germany" },
   { code: "ie", name: "Ireland" },
-  
 ];
 
 export default function Hero() {
@@ -122,10 +121,10 @@ export default function Hero() {
   return (
     <section className="hero-wrap">
 
-      {/* ── 1. Dark navy background — strictly inside hero bounds ── */}
+      {/* ── 1. Dark navy background ── */}
       <div className="hero-bg" />
 
-      {/* ── 2. Airplane image — left side, nose pointing right ── */}
+      {/* ── 2. Airplane / decorative background image ── */}
       <div className="plane-bg" aria-hidden="true">
         <img
           className="plane-img"
@@ -147,19 +146,31 @@ export default function Hero() {
           <div className="text-area">
             <div className="badge">
               <span className="badge-dot" />
-              <span className="badge-text">Trusted Student Consultancy</span>
+              <span className="badge-text">Trusted IT &amp; Business Consulting Partner</span>
             </div>
 
             <h1 className="main-title">
-              Your Dream<br />
-              <span className="orange">Study Abroad</span><br />
-              Starts Here.
+              Technology.<br />
+              <span className="orange">Strategy.</span><br />
+              Knowledge. Growth.
             </h1>
 
             <p className="subtitle">
-              Expert guidance for university admissions, student visas,
-              scholarships, and seamless relocation — tailored to your goals.
+              Empowering businesses and professionals with innovative technology
+              solutions, strategic management consulting, and expert educational support
+              — all under one roof.
             </p>
+
+            <div className="hero-points">
+              <div className="hero-point">
+                <span className="point-dot" />
+                <span>Helping organizations modernize systems &amp; optimize operations</span>
+              </div>
+              <div className="hero-point">
+                <span className="point-dot" />
+                <span>Building future-ready capabilities through integrated IT &amp; business advisory</span>
+              </div>
+            </div>
 
             <div className="divider">
               <div className="div-line" />
@@ -168,7 +179,7 @@ export default function Hero() {
             </div>
 
             <div className="dest-section">
-              <p className="dest-label">Popular Destinations</p>
+              <p className="dest-label">Global Reach</p>
               <div className="dest-flags">
                 {DESTINATIONS.map(d => (
                   <div key={d.code} className="dest-flag" title={d.name}>
@@ -188,15 +199,12 @@ export default function Hero() {
             </div>
 
             <div className="btn-row">
-              
               <Link
-                              to="/contact"
-                              className="btn-primary"
-                              
-                            >
-                            Get Free Consultation
-                            </Link>
-              
+                to="/contact"
+                className="btn-primary"
+              >
+                Get Free Consultation
+              </Link>
             </div>
           </div>
 

@@ -285,7 +285,7 @@ export default function ContactUs() {
 
   const contactMethods = [
     { icon: Mail,   title: "Email Us",   subtitle: "Quick Response",        detail: "officeflyintake@gmail.com", link: "mailto:officeflyintake@gmail.com", description: "Get expert advice via email",         color: "" },
-    { icon: Phone,  title: "Call Us",    subtitle: "Direct Support",        detail: "+91 9121767948",            link: "tel:+919121767948",                            color: "orange" },
+    { icon: Phone,  title: "Call Us",    subtitle: "Direct Support",        detail: "+44 7741020217",            link: "tel:+44 7741020217",                            color: "orange" },
     { icon: MapPin, title: "Visit Us",    detail: "Balanagar, Hyderabad, India",          link: null,                                           color: "" }
   ];
 
@@ -525,12 +525,8 @@ export default function ContactUs() {
                         className="fi-input fi-select" required
                       >
                         <option value="">Select a service</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="admission">University Admission</option>
-                        <option value="visa">Visa Consultation</option>
-                        <option value="counseling">Career Counseling</option>
-                        <option value="scholarship">Scholarship Guidance</option>
-                        <option value="test-prep">Test Preparation</option>
+                        <option value="Abroad">Abroad Services</option>
+                        <option value="Tech Services">IT Tech Services</option>
                         <option value="other">Other Services</option>
                       </select>
                     </div>
@@ -587,8 +583,8 @@ export default function ContactUs() {
                 <div className="fi-urgent-card__icon"><Phone size={32} strokeWidth={1.5} /></div>
                 <h3 className="fi-urgent-card__title">Need Immediate Help?</h3>
                 <p className="fi-urgent-card__text">Speak directly with our counselors for urgent queries</p>
-                <a href="tel:+919121767948" className="fi-urgent-card__btn">
-                  <Phone size={20} />+91 9121767948
+                <a href="tel:+44 7741020217" className="fi-urgent-card__btn">
+                  <Phone size={20} />+44 7741020217
                 </a>
                 
               </div>

@@ -108,6 +108,7 @@
   background: linear-gradient(150deg, var(--fi-navy-dk) 0%, var(--fi-navy) 55%, #1e4f82 100%);
   overflow: hidden;
   padding: 120px 0 150px;
+  padding-top: 15px;
 }
 
 .flyintake-hero-mesh {

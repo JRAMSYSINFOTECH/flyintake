@@ -63,7 +63,7 @@ const uspServiceImgs = [
   // Student with books/notes studying for exam — Test Preparation (GRE/GMAT/SAT)
   'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80',
   // University campus admissions building / campus tour — University Assistance
-  'https://images.unsplash.com/photo-1607013251379-e6eecfffe234?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80',
   // Counselor with student looking at program guide — Program Selection
   'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80',
   // US immigration / visa documents / passport — F-1 Visa Assistance

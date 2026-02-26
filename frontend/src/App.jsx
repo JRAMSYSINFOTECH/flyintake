@@ -84,6 +84,7 @@ import TechServices from "./pages/TechServices/TechServices.jsx";
 
 // Careers Page
 import Careers from "./pages/Careers/Careers";
+import ScrollToTop from "./ScrollToTop";
 
 //Find a course and IELTS 
 
@@ -158,6 +159,7 @@ const WhiteLinkLayout = ({ children }) => (
 export default function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Routes>
         {/* 🏠 Home Page */}
         <Route

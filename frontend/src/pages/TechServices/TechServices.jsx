@@ -567,7 +567,7 @@ function FitTrainingSection({ trainings, accentColor, eyebrow, title, subtitle }
                       <li key={j}><span className="fit__tc-dot" />{t}</li>
                     ))}
                   </ul>
-                  <Link to="/contact" className="fit__tc-btn" 
+                  <Link to="/contact-us" className="fit__tc-btn" 
                   style={{ background: accentColor }}>Enquire Now</Link>
                 </div>
               </div>
@@ -700,7 +700,7 @@ function FitInternshipsSection() {
                     </span>
                     <h4 className="fit__role-title">{role.title}</h4>
                     <p className="fit__role-desc">{role.desc}</p>
-                    <Link to="/contact"
+                    <Link to="/contact-us"
                       className="fit__role-cta"
                       style={{ 
                         background: selected.color,
@@ -764,7 +764,7 @@ function FitMoreSection() {
                   <li key={j}><IconCheckOrange />{pt}</li>
                 ))}
               </ul>
-              <Link to="/contact" className="fit__more-cta">
+              <Link to="/contact-us" className="fit__more-cta">
                 Learn More
               </Link>
             </div>

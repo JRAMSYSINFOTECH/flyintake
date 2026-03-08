@@ -49,11 +49,11 @@ const Testimonials = () => {
             {/* Right — text + buttons */}
             <div className="about-card-right">
               <p className="about-card-text">
-                FLYINTAKE Global Consulting Private Limited is a trusted abroad education
-                consulting firm offering comprehensive guidance and educational support
-                services to students aspiring to study overseas. With a global outlook
-                and technology-enabled processes, Flyintake simplifies international
-                education journeys.
+                FLYINTAKE Global Consulting Private Limited is a dynamic consulting and 
+                technology solutions firm providing IT services, strategic business consulting, and 
+                global education support. With a global outlook and technology-enabled processes, Flyintake helps 
+                organizations modernize systems, optimize operations, and empowers students with comprehensive 
+                guidance for international education opportunities.
               </p>
               <div className="about-btns">
                 <Link to="/about-us" className="about-btn-primary">

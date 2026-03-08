@@ -152,7 +152,7 @@ export default function CareerPage() {
           <p className="cp-cta__text">Reach out directly and introduce yourself</p>
           <div className="cp-cta__buttons">
             <a
-              href="mailto:officeflyintake@gmail.com?subject=Career Opportunity at FlyinTake"
+              href="mailto:office@flyintakegc.com?subject=Career Opportunity at FlyinTake"
               className="cp-btn-primary"
             >
               <IconMail />
@@ -167,7 +167,7 @@ export default function CareerPage() {
         <strong>FlyinTake Global Consulting Pvt. Ltd.</strong>
         &nbsp;·&nbsp;Technology Consulting &amp; Educational Support Services
         &nbsp;·&nbsp;
-        <a href="mailto:officeflyintake@gmail.com">officeflyintake@gmail.com</a>
+        <a href="mailto:office@flyintakegc.com">office@flyintakegc.com</a>
       </footer>
 
     </div>

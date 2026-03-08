@@ -18,6 +18,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 // menu structure now groups all study/abroad related items under a single "Abroad Services" dropdown.
+// a second dropdown is added for the new Tech Services list.
 const dropdownData = {
   "Abroad-services": {
     // path: "/abroad-services",
@@ -28,7 +29,7 @@ const dropdownData = {
         // original step items become second‑level submenu
         subItems: [
           { label: "Why study abroad?", path: "/study-abroad/why-study-abroad" },
-          { label: "Where and what to study?", path: "/study-abroad/where-to-study" },
+          { label: "Where and what to study?", path: "/study-destinations/uk" },
           { label: "How do I apply?", path: "/study-abroad/how-to-apply" },
           { label: "After receiving an offer", path: "/study-abroad/after-offer" },
           { label: "Prepare to depart", path: "/study-abroad/prepare-to-depart" },
@@ -57,6 +58,20 @@ const dropdownData = {
           { label: "Study in Europe", path: "/study-destinations/europe" },
         ],
       },
+    ],
+  },
+  "Tech-services": {
+    items: [
+      { label: "IT Consultancy", path: "/pages/ITConsultancy" },
+      { label: "Website & Software Development", path: "/pages/WebsiteSoftwareDevelopment" },
+      { label: "AI Solutions & Automation", path: "/pages/AISolutionsAutomation" },
+      { label: "Cloud Infrastructure & Integration", path: "/pages/CloudInfrastructureIntegration" },
+      { label: "Cybersecurity Consulting", path: "/pages/CybersecurityConsulting" },
+      { label: "Data & Analytics Solutions", path: "/pages/DataAnalyticsSolutions" },
+      { label: "Digital Transformation", path: "/pages/DigitalTransformation" },
+      { label: "Technical Support & Managed Services", path: "/pages/TechnicalSupportManagedServices" },
+      { label: "Technical Talent Acquisition", path: "/pages/TechnicalTalentAcquisition" },
+      { label: "Technical Training & Workshops", path: "/pages/TechnicalTrainingWorkshops" },
     ],
   },
 };
@@ -197,9 +212,13 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faPhone} className="contact-icon" />
               <span>+44 7741020217</span>
             </a>
-            <a href="mailto:officeflyintake@gmail.com" className="contact-item">
+            <a href="tel:+919121767948" className="contact-item">
+              <FontAwesomeIcon icon={faPhone} className="contact-icon" />
+              <span>+91 9121767948</span>
+            </a>
+            <a href="mailto:office@flyintakegc.com" className="contact-item">
               <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
-              <span>officeflyintake@gmail.com</span>
+              <span>office@flyintakegc.com</span>
             </a>
           </div>
           
@@ -221,17 +240,59 @@ const Navbar = () => {
       <nav className="main-navbar">
         <div className="navbar-container">
           <Link to="/" className="logo-link">
-            <img src="/assets/flyintake LOGO.jpeg" alt="FlyIntake Global Consulting" className="logo" />
+            <img src="/assets/FLYINTAKE.svg" alt="FlyIntake Global Consulting" className="logo" />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="nav-center">
             <ul className="nav-links">
-              {/* Tech services first */}
+              {/* Trainings & Internships link (renamed from Tech Services) */}
               <li className="nav-item">
                 <Link to="/pages/TechServices" className="nav-link">
-                  Tech Services
+                  Trainings & Internships
                 </Link>
+              </li>
+
+              {/* Tech services dropdown */}
+              <li
+                key="Tech-services"
+                className="nav-item has-dropdown"
+                onMouseEnter={() => handleNavItemEnter("Tech-services")}
+                onMouseLeave={handleNavItemLeave}
+              >
+                <Link
+                  to="/pages/TechServices"
+                  className="nav-link"
+                  aria-haspopup="true"
+                  aria-expanded={openDropdown === "Tech-services"}
+                >
+                  Tech Services
+                  <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
+                </Link>
+
+                {openDropdown === "Tech-services" && (
+                  <ul
+                    className="dropdown-menu"
+                    onMouseEnter={handleDropdownEnter}
+                    onMouseLeave={handleDropdownLeave}
+                  >
+                    {dropdownData["Tech-services"].items.map((item, idx) => (
+                      <li
+                        key={idx}
+                        className={`dropdown-item ${item.subItems ? 'has-submenu' : ''}`}
+                        onMouseEnter={() => handleDropdownItemEnter(item)}
+                      >
+                        <Link
+                          to={item.path}
+                          onClick={closeDropdown}
+                          className="dropdown-link"
+                        >
+                          <span>{item.label}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
 
               {/* Abroad services dropdown containing the 3 categories */}
@@ -341,13 +402,17 @@ const Navbar = () => {
         {/* Mobile Top Bar - Inside Sidebar */}
         <div className="mobile-top-bar">
           <div className="mobile-contact-info">
+            <a href="tel:+44 7741020217" className="mobile-contact-item">
+              <FontAwesomeIcon icon={faPhone} />
+              <span>+44 7741020217</span>
+            </a>
             <a href="tel:+919121767948" className="mobile-contact-item">
               <FontAwesomeIcon icon={faPhone} />
               <span>+91 9121767948</span>
             </a>
-            <a href="mailto:officeflyintake@gmail.com" className="mobile-contact-item">
+            <a href="mailto:office@flyintakegc.com" className="mobile-contact-item">
               <FontAwesomeIcon icon={faEnvelope} />
-              <span>officeflyintake@gmail.com</span>
+              <span>office@flyintakegc.com</span>
             </a>
           </div>
           
@@ -367,15 +432,49 @@ const Navbar = () => {
         {/* Mobile Menu Content */}
         <div className="mobile-sidebar-content">
           <ul className="mobile-links">
-            {/* TechServices link */}
+            {/* Trainings & Internships link */}
             <li className="mobile-nav-item">
               <Link
                 to="/pages/TechServices"
                 className="mobile-nav-link"
                 onClick={closeMobileMenu}
               >
-                Tech Services
+                Trainings & Internships
               </Link>
+            </li>
+
+            {/* Tech Services mobile dropdown */}
+            <li className="mobile-nav-item">
+              <div className="mobile-nav-header">
+                <span className="mobile-nav-link">Tech Services</span>
+                <button
+                  className="mobile-dropdown-toggle"
+                  onClick={(e) => toggleMobileDropdown("Tech-services", e)}
+                  aria-label="Toggle Tech Services menu"
+                  aria-expanded={mobileOpenDropdown === "Tech-services"}
+                >
+                  <FontAwesomeIcon
+                    icon={faChevronDown}
+                    className={`mobile-chevron ${mobileOpenDropdown === "Tech-services" ? 'rotate' : ''}`}
+                  />
+                </button>
+              </div>
+
+              {mobileOpenDropdown === "Tech-services" && (
+                <ul className="mobile-dropdown">
+                  {dropdownData["Tech-services"].items.map((item, idx) => (
+                    <li key={idx} className="mobile-dropdown-item">
+                      <Link
+                        to={item.path}
+                        className="mobile-nav-link"
+                        onClick={closeMobileMenu}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
 
             {/* Abroad Services group */}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const companyName  = 'Flyintake Global Consulting Pvt Ltd';
 const websiteUrl   = 'www.flyintakegc.com';
-const contactEmail = 'officeflyintake@gmail.com';
+const contactEmail = 'office@flyintakegc.com';
 const lastUpdated  = 'February 24, 2026';
 
 /* ═══════════════════════════════════════════

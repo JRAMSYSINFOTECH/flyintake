@@ -10,7 +10,17 @@ const Footer = () => {
     <footer className="flyintake-footer">
       {/* Main Footer Content Sections */}
       <div className="flyintake-footer-sections">
-        {/* English Tests Section - First */}
+        {/* Logo and Company Info Section - First */}
+        <div className="flyintake-footer-column flyintake-footer-logo">
+          <div className="flyintake-footer-logo-container">
+            <img src="/assets/FLYINTAKE.svg" alt="FlyInTake Global Consulting" className="flyintake-footer-logo-img" />
+            <p className="flyintake-footer-description">
+              Your trusted partner for global education and technology consulting services.
+            </p>
+          </div>
+        </div>
+
+        {/* English Tests Section */}
         <div className="flyintake-footer-column">
           <h2>English Tests</h2>
           <ul>
@@ -39,7 +49,7 @@ const Footer = () => {
           <ul>
             <li><Link to="/statement-of-purpose">Statement of Purpose</Link></li>
             <li><Link to="/letter-of-recommendation">Letter of Recommendation</Link></li>
-            <li><Link to="/pages/TechServices">TechServices</Link></li>
+            <li><Link to="/pages/TechServices">Trainings & Internships</Link></li>
             <li><Link to="/about-us">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
             <li><Link to="/terms-conditions">Terms & Conditions</Link></li>

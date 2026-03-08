@@ -82,6 +82,18 @@ import FindCountryPage from "./pages/black-link/Find/FindCountryPage";
 import InfoSection from "./pages/black-link/Find/InfoSection";
 import TechServices from "./pages/TechServices/TechServices.jsx";
 
+// additional pages for new tech services
+import ITConsultancy from "./pages/ITConsultancy/ITConsultancy.jsx";
+import WebsiteSoftwareDevelopment from "./pages/WebsiteSoftwareDevelopment/WebsiteSoftwareDevelopment.jsx";
+import AISolutionsAutomation from "./pages/AISolutionsAutomation/AISolutionsAutomation.jsx";
+import CloudInfrastructureIntegration from "./pages/CloudInfrastructureIntegration/CloudInfrastructureIntegration.jsx";
+import CybersecurityConsulting from "./pages/CybersecurityConsulting/CybersecurityConsulting.jsx";
+import DataAnalyticsSolutions from "./pages/DataAnalyticsSolutions/DataAnalyticsSolutions.jsx";
+import DigitalTransformation from "./pages/DigitalTransformation/DigitalTransformation.jsx";
+import TechnicalSupportManagedServices from "./pages/TechnicalSupportManagedServices/TechnicalSupportManagedServices.jsx";
+import TechnicalTalentAcquisition from "./pages/TechnicalTalentAcquisition/TechnicalTalentAcquisition.jsx";
+import TechnicalTrainingWorkshops from "./pages/TechnicalTrainingWorkshops/TechnicalTrainingWorkshops.jsx";
+
 // Careers Page
 import Careers from "./pages/Careers/Careers";
 import ScrollToTop from "./ScrollToTop";
@@ -611,7 +623,88 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <TechServices />
-             
+            </WhiteLinkLayout>
+          }
+        />
+
+        {/* individual tech service pages */}
+        <Route
+          path="/pages/ITConsultancy"
+          element={
+            <WhiteLinkLayout>
+              <ITConsultancy />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/pages/WebsiteSoftwareDevelopment"
+          element={
+            <WhiteLinkLayout>
+              <WebsiteSoftwareDevelopment />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/pages/AISolutionsAutomation"
+          element={
+            <WhiteLinkLayout>
+              <AISolutionsAutomation />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/pages/CloudInfrastructureIntegration"
+          element={
+            <WhiteLinkLayout>
+              <CloudInfrastructureIntegration />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/pages/CybersecurityConsulting"
+          element={
+            <WhiteLinkLayout>
+              <CybersecurityConsulting />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/pages/DataAnalyticsSolutions"
+          element={
+            <WhiteLinkLayout>
+              <DataAnalyticsSolutions />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/pages/DigitalTransformation"
+          element={
+            <WhiteLinkLayout>
+              <DigitalTransformation />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/pages/TechnicalSupportManagedServices"
+          element={
+            <WhiteLinkLayout>
+              <TechnicalSupportManagedServices />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/pages/TechnicalTalentAcquisition"
+          element={
+            <WhiteLinkLayout>
+              <TechnicalTalentAcquisition />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/pages/TechnicalTrainingWorkshops"
+          element={
+            <WhiteLinkLayout>
+              <TechnicalTrainingWorkshops />
             </WhiteLinkLayout>
           }
         />

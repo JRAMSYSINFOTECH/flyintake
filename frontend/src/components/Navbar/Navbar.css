@@ -144,7 +144,8 @@ button {
 }
 
 .logo {
-  height: 80px;
+  height: 150px;
+  padding-top: 20px;
   width: auto;
   object-fit: contain;
 }
@@ -708,7 +709,7 @@ button {
   }
   
   .logo {
-    height: 70px;
+    height: 100px;
   }
   
   .contact-info {
@@ -745,7 +746,7 @@ button {
   }
   
   .logo {
-    height: 65px;
+    height: 100px;
   }
   
   .contact-info {
@@ -814,7 +815,7 @@ button {
   }
   
   .logo {
-    height: 55px;
+    height: 100px;
   }
   
   .mobile-sidebar {
@@ -838,7 +839,7 @@ button {
   }
   
   .logo {
-    height: 50px;
+    height: 100px;
   }
   
   .mobile-menu-btn {
@@ -900,7 +901,7 @@ button {
   }
   
   .logo {
-    height: 45px;
+    height: 100px;
   }
   
   .mobile-menu-btn {

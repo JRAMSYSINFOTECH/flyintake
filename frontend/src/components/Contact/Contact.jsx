@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import "./Contact.css";
 import contactImg from "/public/assets/prep1.jpg";
 
-
 const COUNTRIES = [
   { code: "af", dial: "+93",   label: "Afghanistan" },
   { code: "al", dial: "+355",  label: "Albania" },
@@ -197,14 +196,26 @@ const COUNTRIES = [
   { code: "zw", dial: "+263",  label: "Zimbabwe" },
 ];
 
-// ── PhoneField component with real flags + searchable dropdown ──
-function PhoneField({ value, onChange }) {
-  const [selected, setSelected] = useState(COUNTRIES.find(c => c.code === "gb") || COUNTRIES[0]);
+const DEFAULT_COUNTRY = COUNTRIES.find(c => c.code === "gb") || COUNTRIES[0];
+
+// ── PhoneField component with reset support ──
+function PhoneField({ value, onChange, reset }) {
+  const [selected, setSelected] = useState(DEFAULT_COUNTRY);
   const [open, setOpen]         = useState(false);
   const [search, setSearch]     = useState("");
   const [number, setNumber]     = useState("");
   const wrapperRef              = useRef(null);
   const searchInputRef          = useRef(null);
+
+  // ✅ Reset phone field when parent triggers reset
+  useEffect(() => {
+    if (reset) {
+      setSelected(DEFAULT_COUNTRY);
+      setNumber("");
+      setSearch("");
+      setOpen(false);
+    }
+  }, [reset]);
 
   useEffect(() => {
     const handler = (e) => {
@@ -287,7 +298,6 @@ function PhoneField({ value, onChange }) {
               >×</button>
             )}
           </div>
-
           <ul className="phone-country-list">
             {filtered.length === 0 && (
               <li className="phone-no-result">No countries found</li>
@@ -324,8 +334,9 @@ export default function ContactPage() {
     funding: "",
     agreeTerms: false,
   });
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
+  const [loading, setLoading]       = useState(false);
+  const [message, setMessage]       = useState("");
+  const [phoneReset, setPhoneReset] = useState(false); // ✅ controls phone reset
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -341,7 +352,6 @@ export default function ContactPage() {
     setMessage("");
 
     try {
-      // ✅ Updated URL — matches api/counselling.js
       const res = await fetch("/api/counselling", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -349,14 +359,18 @@ export default function ContactPage() {
       });
 
       const data = await res.json();
-
       if (!res.ok) throw new Error(data.message || "Something went wrong");
 
       setMessage("✅ Counselling request submitted successfully! Check your email for confirmation.");
+
+      // ✅ Reset all form fields including phone
       setFormData({
         firstName: "", lastName: "", email: "", mobile: "",
         destination: "", startTime: "", studyLevel: "", funding: "", agreeTerms: false,
       });
+      setPhoneReset(true);
+      setTimeout(() => setPhoneReset(false), 100); // reset the trigger
+
     } catch (error) {
       setMessage("❌ Failed to submit. Please try again later.");
       console.error(error);
@@ -411,6 +425,7 @@ export default function ContactPage() {
                 <PhoneField
                   value={formData.mobile}
                   onChange={(val) => setFormData((p) => ({ ...p, mobile: val }))}
+                  reset={phoneReset}
                 />
               </div>
             </div>

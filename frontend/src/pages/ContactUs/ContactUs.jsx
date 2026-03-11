@@ -3,19 +3,19 @@ import { Mail, Phone, MapPin, Send, Clock, MessageCircle, User, Shield, CheckCir
 import "./ContactUs.css";
 import { Link } from "react-router-dom";
 
-
 export default function ContactUs() {
   const [formData, setFormData] = React.useState({
     name: '',
     email: '',
-    countryCode: '+91',
-    countryIso: 'in',
+    countryCode: '+44',
+    countryIso: 'gb',
     phone: '',
     subject: '',
     message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [submitMessage, setSubmitMessage] = React.useState('');
   const [showDropdown, setShowDropdown] = React.useState(false);
   const [searchQuery, setSearchQuery] = React.useState('');
   const pickerRef = React.useRef(null);
@@ -242,7 +242,7 @@ export default function ContactUs() {
       );
 
   const selected = countryCodes.find(c => c.code === formData.countryCode && c.iso2 === formData.countryIso)
-    || countryCodes.find(c => c.code === '+91');
+    || countryCodes.find(c => c.code === '+44');
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
   const handlePhoneChange = (e) => setFormData({ ...formData, phone: e.target.value.replace(/\D/g, '') });
@@ -258,9 +258,11 @@ export default function ContactUs() {
     if (showDropdown) setSearchQuery('');
   };
 
+  // ✅ Fixed: reset only on success, show inline message instead of alert
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage('');
     try {
       const res = await fetch('/api/send-email', {
         method: 'POST',
@@ -272,22 +274,34 @@ export default function ContactUs() {
           message: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.countryCode} ${formData.phone}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`
         }),
       });
+
       if (res.ok) {
-        setFormData({ name: '', email: '', countryCode: '+91', countryIso: 'in', phone: '', subject: '', message: '' });
+        // ✅ Reset all fields only on success
+        setFormData({
+          name: '',
+          email: '',
+          countryCode: '+44',
+          countryIso: 'gb',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+        setSubmitMessage('✅ Message sent! We will contact you within 24 hours.');
+      } else {
+        setSubmitMessage('❌ Failed to send message. Please try again.');
       }
-      alert('Thank you for contacting us! We will get back to you within 24 hours.');
     } catch {
-      alert('Message sent! We will contact you soon.');
+      setSubmitMessage('❌ Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const contactMethods = [
-    { icon: Mail,   title: "Email Us",   subtitle: "Quick Response",        detail: "office@flyintakegc.com", link: "mailto:office@flyintakegc.com", description: "Get expert advice via email",         color: "" },
-    { icon: Phone,  title: "Call Us",    subtitle: "Direct Support",        detail: "+44 7741020217<br>+91 9121767948", link: "tel:+44 7741020217",                            color: "orange" },
-    { icon: MapPin, title: "Visit Us",   subtitle: "India Office",          detail: "Balanagar, Hyderabad, India", link: "https://maps.google.com/?q=Balanagar,Hyderabad,India", color: "" },
-    { icon: MapPin, title: "UK Office",  subtitle: "United Kingdom",        detail: "CV2 4FB, Coventry",           link: "https://maps.google.com/?q=CV24fb,Coventry,UK", color: "" }
+    { icon: Mail,   title: "Email Us",   subtitle: "Quick Response",   detail: "office@flyintakegc.com",         link: "mailto:office@flyintakegc.com", description: "Get expert advice via email", color: "" },
+    { icon: Phone,  title: "Call Us",    subtitle: "Direct Support",   detail: "+44 7741020217<br>+91 9121767948", link: "tel:+447741020217", color: "orange" },
+    { icon: MapPin, title: "Visit Us",   subtitle: "India Office",     detail: "Balanagar, Hyderabad, India",    link: "https://maps.google.com/?q=Balanagar,Hyderabad,India", color: "" },
+    { icon: MapPin, title: "UK Office",  subtitle: "United Kingdom",   detail: "CV2 4FB, Coventry",              link: "https://maps.google.com/?q=CV24fb,Coventry,UK", color: "" }
   ];
 
   const whyChooseUs = [
@@ -400,7 +414,6 @@ export default function ContactUs() {
               <form onSubmit={handleSubmit} className="fi-form">
 
                 <div className="fi-form__row">
-                  {/* Name */}
                   <div className="fi-form__group">
                     <label htmlFor="fi-name" className="fi-form__label">
                       Full Name <span className="fi-form__required">*</span>
@@ -414,7 +427,6 @@ export default function ContactUs() {
                       />
                     </div>
                   </div>
-                  {/* Email */}
                   <div className="fi-form__group">
                     <label htmlFor="fi-email" className="fi-form__label">
                       Email Address <span className="fi-form__required">*</span>
@@ -431,12 +443,9 @@ export default function ContactUs() {
                 </div>
 
                 <div className="fi-form__row">
-                  {/* Phone */}
                   <div className="fi-form__group">
                     <label className="fi-form__label">Phone Number</label>
                     <div className="fly-phone__row">
-
-                      {/* FLAG PICKER */}
                       <div className="fly-phone__picker" ref={pickerRef}>
                         <button
                           type="button"
@@ -453,7 +462,6 @@ export default function ContactUs() {
 
                         {showDropdown && (
                           <div className="fly-phone__dropdown-wrap">
-                            {/* Search */}
                             <div className="fly-phone__search-bar">
                               <svg className="fly-phone__search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -475,8 +483,6 @@ export default function ContactUs() {
                                 >×</button>
                               )}
                             </div>
-
-                            {/* List */}
                             <ul className="fly-phone__list" role="listbox">
                               {filtered.length === 0 ? (
                                 <li className="fly-phone__no-result">No countries found</li>
@@ -499,9 +505,7 @@ export default function ContactUs() {
                           </div>
                         )}
                       </div>
-                      {/* /FLAG PICKER */}
 
-                      {/* Number */}
                       <div className="fi-input-wrap fly-phone__number-wrap">
                         <Phone size={18} className="fi-input-wrap__icon" />
                         <input
@@ -513,7 +517,6 @@ export default function ContactUs() {
                     </div>
                   </div>
 
-                  {/* Subject */}
                   <div className="fi-form__group">
                     <label htmlFor="fi-subject" className="fi-form__label">
                       Service Required <span className="fi-form__required">*</span>
@@ -534,7 +537,6 @@ export default function ContactUs() {
                   </div>
                 </div>
 
-                {/* Message */}
                 <div className="fi-form__group fi-form__group--full">
                   <label htmlFor="fi-message" className="fi-form__label">
                     Your Message <span className="fi-form__required">*</span>
@@ -547,6 +549,21 @@ export default function ContactUs() {
                     rows="6" required
                   ></textarea>
                 </div>
+
+                {/* ✅ Inline success/error message */}
+                {submitMessage && (
+                  <p style={{
+                    padding: "12px 16px",
+                    borderRadius: "6px",
+                    fontSize: "14px",
+                    marginBottom: "12px",
+                    background: submitMessage.startsWith("✅") ? "#f0fdf4" : "#fef2f2",
+                    color: submitMessage.startsWith("✅") ? "#166534" : "#991b1b",
+                    border: `1px solid ${submitMessage.startsWith("✅") ? "#bbf7d0" : "#fecaca"}`
+                  }}>
+                    {submitMessage}
+                  </p>
+                )}
 
                 <button type="submit" className="fi-submit-btn" disabled={isSubmitting}>
                   {isSubmitting
@@ -563,7 +580,6 @@ export default function ContactUs() {
 
             {/* ── SIDEBAR ── */}
             <div className="fi-sidebar">
-              {/* Services */}
               <div className="fi-sidebar-card">
                 <div className="fi-sidebar-card__head">
                   <h3 className="fi-sidebar-card__title">Our Services</h3>
@@ -579,29 +595,18 @@ export default function ContactUs() {
                 </ul>
               </div>
 
-              {/* Urgent */}
               <div className="fi-sidebar-card fi-urgent-card">
                 <div className="fi-urgent-card__icon"><Phone size={32} strokeWidth={1.5} /></div>
                 <h3 className="fi-urgent-card__title">Need Immediate Help?</h3>
                 <p className="fi-urgent-card__text">Speak directly with our counselors for urgent queries</p>
-                <a href="tel:+44 7741020217" className="fi-urgent-card__btn">
-                  <Phone size={20} />+44 7741020217
-                  
-                </a>
-                <a href="tel:+91 9121767948" className="fi-urgent-card__btn">
-                  <Phone size={20} />+91 9121767948
-                  
-                </a>
-                
+                <a href="tel:+447741020217" className="fi-urgent-card__btn"><Phone size={20} />+44 7741020217</a>
+                <a href="tel:+919121767948" className="fi-urgent-card__btn"><Phone size={20} />+91 9121767948</a>
               </div>
 
-              {/* Promo */}
               <div className="fi-sidebar-card fi-promo-card">
                 <div className="fi-promo-card__badge">FREE</div>
                 <h3 className="fi-promo-card__title">Initial Consultation</h3>
-                <p className="fi-promo-card__desc">
-                  Book a complimentary 30-minute session with our expert counselors
-                </p>
+                <p className="fi-promo-card__desc">Book a complimentary 30-minute session with our expert counselors</p>
                 <Link to="/pages/white-link/Avail" className="fi-promo-card__btn">Book Now</Link>
               </div>
             </div>
@@ -613,10 +618,8 @@ export default function ContactUs() {
       <section className="fi-map">
         <div className="fi-map__header">
           <div className="fi-container">
-            <h2 className="fi-map__title"> India Office Location</h2>
-            <p className="fi-map__sub">
-              <MapPin size={20} />Located in Hyderabad, India - Serving students globally
-            </p>
+            <h2 className="fi-map__title">India Office Location</h2>
+            <p className="fi-map__sub"><MapPin size={20} />Located in Hyderabad, India - Serving students globally</p>
           </div>
         </div>
         <iframe
@@ -626,27 +629,25 @@ export default function ContactUs() {
           referrerPolicy="no-referrer-when-downgrade"
           title="FLYINTAKE Office - Hyderabad"
         ></iframe>
-        
-      {/* ── UK OFFICE MAP ── */}
-      <section className="fi-map">
-        <div className="fi-map__header">
-          <div className="fi-container">
-            <h2 className="fi-map__title">UK Office Location</h2>
-            <p className="fi-map__sub">
-              <MapPin size={20} />Located in CV24fb, Coventry, United Kingdom
-            </p>
+
+        <section className="fi-map">
+          <div className="fi-map__header">
+            <div className="fi-container">
+              <h2 className="fi-map__title">UK Office Location</h2>
+              <p className="fi-map__sub"><MapPin size={20} />Located in CV24fb, Coventry, United Kingdom</p>
+            </div>
           </div>
-        </div>
-        <iframe
-          className="fi-map__embed"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.123456789012!2d-1.512345678901234!3d52.406822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48774b2c6b9c6b9d%3A0x1234567890abcdef!2sCV24fb%2C%20Coventry%2C%20UK!5e0!3m2!1sen!2suk!4v1234567890123!5m2!1sen!2suk"
-          allowFullScreen="" loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="FLYINTAKE UK Office - Coventry"
-        ></iframe>
-      </section>      </section>
+          <iframe
+            className="fi-map__embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.123456789012!2d-1.512345678901234!3d52.406822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48774b2c6b9c6b9d%3A0x1234567890abcdef!2sCV24fb%2C%20Coventry%2C%20UK!5e0!3m2!1sen!2suk!4v1234567890123!5m2!1sen!2suk"
+            allowFullScreen="" loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="FLYINTAKE UK Office - Coventry"
+          ></iframe>
+        </section>
+      </section>
 
       <div className="fi-footer-bar"></div>
     </div>
   );
-} 
+}

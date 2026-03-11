@@ -206,7 +206,6 @@ function PhoneField({ value, onChange }) {
   const wrapperRef              = useRef(null);
   const searchInputRef          = useRef(null);
 
-  // Close dropdown on outside click
   useEffect(() => {
     const handler = (e) => {
       if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
@@ -218,14 +217,12 @@ function PhoneField({ value, onChange }) {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  // Auto-focus search on open
   useEffect(() => {
     if (open && searchInputRef.current) {
       setTimeout(() => searchInputRef.current?.focus(), 50);
     }
   }, [open]);
 
-  // Filter by name or dial code
   const filtered = COUNTRIES.filter((c) =>
     c.label.toLowerCase().includes(search.toLowerCase()) ||
     c.dial.includes(search)
@@ -246,8 +243,6 @@ function PhoneField({ value, onChange }) {
 
   return (
     <div className="phone-field" ref={wrapperRef}>
-
-      {/* ── Trigger: real flag + dial code ── */}
       <button
         type="button"
         className="phone-flag-btn"
@@ -255,13 +250,11 @@ function PhoneField({ value, onChange }) {
         aria-haspopup="listbox"
         aria-expanded={open}
       >
-        {/* Real flag via flag-icons library */}
         <span className={`fi fi-${selected.code} phone-flag-icon`}></span>
         <span className="phone-dial-code">{selected.dial}</span>
         <span className="phone-chevron">{open ? "▲" : "▼"}</span>
       </button>
 
-      {/* Number input */}
       <input
         className="phone-number-input"
         type="tel"
@@ -271,11 +264,8 @@ function PhoneField({ value, onChange }) {
         required
       />
 
-      {/* ── Dropdown with search bar ── */}
       {open && (
         <div className="phone-dropdown" role="listbox">
-
-          {/* Search input */}
           <div className="phone-search-wrap">
             <svg className="phone-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -298,7 +288,6 @@ function PhoneField({ value, onChange }) {
             )}
           </div>
 
-          {/* Country list */}
           <ul className="phone-country-list">
             {filtered.length === 0 && (
               <li className="phone-no-result">No countries found</li>
@@ -311,7 +300,6 @@ function PhoneField({ value, onChange }) {
                 role="option"
                 aria-selected={c.code === selected.code}
               >
-                {/* Real flag via flag-icons */}
                 <span className={`fi fi-${c.code} phone-flag-icon`}></span>
                 <span className="phone-country-name">{c.label}</span>
                 <span className="phone-country-dial">{c.dial}</span>
@@ -351,15 +339,20 @@ export default function ContactPage() {
     e.preventDefault();
     setLoading(true);
     setMessage("");
+
     try {
-      const res = await fetch("/api/counselling/submit", {
+      // ✅ Updated URL — matches api/counselling.js
+      const res = await fetch("/api/counselling", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+
       const data = await res.json();
+
       if (!res.ok) throw new Error(data.message || "Something went wrong");
-      setMessage("✅ Counselling request submitted successfully!");
+
+      setMessage("✅ Counselling request submitted successfully! Check your email for confirmation.");
       setFormData({
         firstName: "", lastName: "", email: "", mobile: "",
         destination: "", startTime: "", studyLevel: "", funding: "", agreeTerms: false,
@@ -411,7 +404,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Row 3 — Mobile with real flag picker */}
+            {/* Row 3 — Mobile */}
             <div className="form-row">
               <div className="form-field full-width">
                 <label>Mobile number*</label>
@@ -481,7 +474,7 @@ export default function ContactPage() {
               <label className="checkbox-label">
                 <input type="checkbox" name="agreeTerms" checked={formData.agreeTerms}
                   onChange={handleInputChange} required />
-                I agree to Jramsys{" "}
+                I agree to Flyintake{" "}
                 <a href="/#/terms-conditions" target="_blank" rel="noopener noreferrer" className="terms-text">
                   Terms & Conditions
                 </a>

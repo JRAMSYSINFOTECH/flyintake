@@ -26,19 +26,20 @@ export default function CareerPage() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [error, setError]             = useState("");
 
-  const handleSubmit = () => {
-    if (!email.trim()) {
-      setError("Please enter your email address.");
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
-    setError("");
-    setShowSuccess(true);
-    setEmail("");
-  };
+ const handleSubmit = async () => {
+  if (!email.trim()) { setError("Please enter your email address."); return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError("Please enter a valid email address."); return; }
+  setError("");
+  try {
+    await fetch("/api/notify-careers", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+  } catch {}
+  setShowSuccess(true);
+  setEmail("");
+};
 
   return (
     <div>

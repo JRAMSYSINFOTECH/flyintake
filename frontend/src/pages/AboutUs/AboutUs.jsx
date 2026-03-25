@@ -83,12 +83,12 @@ const BENEFITS = [
 
 const CHAIRMAN_MSG = [
   "Dear Students and Parents,",
-  "Welcome to Flyintake Global Consulting Pvt. Ltd., where we are dedicated to turning your aspirations for global education and career success into reality. As Chairman, I am proud to lead a team of committed professionals who are passionate about guiding students toward meaningful academic, professional, and personal growth.",
-  "At Flyintake, we believe education goes beyond classrooms — it shapes futures. Our mission is to provide comprehensive support and personalized guidance to help students confidently navigate the journey of studying abroad. We understand that every student's path is unique, and we are here to make that journey smooth, informed, and rewarding.",
-  "In addition to overseas education services, we offer industry-focused IT and Management training programs designed to equip students with practical, in-demand skills. We also facilitate internship opportunities that provide real-world exposure, enabling students to build strong professional foundations and gain a competitive edge in today's global job market. Furthermore, our in-house project development initiatives allow students to work on live, practical projects, enhancing their technical expertise, problem-solving abilities, and workplace readiness.",
-  "Our commitment goes beyond admissions — we focus on long-term success. From career-oriented training and hands-on project experience to international academic placements, Flyintake Global Consulting Pvt. Ltd. stands as a trusted partner in shaping brighter futures.",
-  "We look forward to being part of your success story.",
-  "— Marketing Executive Chairman, Flyintake Global Consulting Pvt. Ltd."
+"Welcome to Flyintake Global Consulting Pvt. Ltd., where we are dedicated to turning your aspirations for global education and career success into reality. As Chairman, I am proud to lead a team of committed professionals who are passionate about guiding students toward meaningful academic, professional, and personal growth.",
+"At Flyintake, we believe education goes beyond classrooms — it shapes futures. While we specialize in overseas education consultancy, we equally emphasize building strong career foundations through industry-relevant skills and practical learning.",
+"In addition to our abroad consultancy services, we offer industry-focused IT and Management training programs designed to equip students with practical, in-demand skills. We also facilitate internship opportunities that provide real-world exposure, enabling students to build strong professional foundations and gain a competitive edge in today's global job market. Furthermore, our in-house project development initiatives allow students to work on live, practical projects, enhancing their technical expertise, problem-solving abilities, and workplace readiness.",
+"Our commitment goes beyond admissions — we focus on long-term success. By combining international education guidance with hands-on training, internships, and real-time project experience, Flyintake Global Consulting Pvt. Ltd. stands as a trusted partner in shaping brighter futures.",
+"We look forward to being part of your success story.",
+"— Marketing Executive Chairman, Flyintake Global Consulting Pvt. Ltd."
 ];
 
 /* ────────────────────────────────────────────

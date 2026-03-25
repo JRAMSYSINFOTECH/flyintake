@@ -11,8 +11,16 @@ import { Link } from 'react-router-dom';
 const IMG = {
   'Full Stack Development':
     'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=90&fit=crop',
-  'Data Science & AI':
-    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=90&fit=crop',
+  'Data Science':
+  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=90&fit=crop',
+
+ 
+'Data Analysis':
+  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=90&fit=crop',
+
+ 
+'Artificial Intelligence':
+  'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=90&fit=crop',
   'Cybersecurity':
     'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=90&fit=crop',
   'Cloud & DevOps':
@@ -357,16 +365,43 @@ const IT_TRAININGS = [
     category: 'Development',
   },
   {
-    title: 'Data Science & AI',
-    desc: 'Master data analysis, machine learning, and AI-powered solutions at scale.',
+    title: 'Data Science',
+    desc: 'Master statistical modelling, machine learning fundamentals, and data-driven decision making using Python and industry tools.',
     topics: [
-      'Python for Data Science',
-      'Machine Learning',
-      'Deep Learning & Neural Networks',
-      'NLP & Computer Vision',
-      'MLOps & Deployment',
+      'Python for Data Science (NumPy, Pandas)',
+      'Statistical Modelling & Probability',
+      'Machine Learning Fundamentals (Scikit-learn)',
+      'Feature Engineering & Data Preprocessing',
+      'Model Evaluation & Hyperparameter Tuning',
+      'MLOps & Model Deployment',
     ],
-    category: 'AI & Data',
+    category: 'Data Science',
+  },
+  {
+    title: 'Data Analysis',
+    desc: 'Transform raw data into clear business insights through analytics, dashboards, and compelling data visualisations.',
+    topics: [
+      'Excel & Google Sheets Advanced Analytics',
+      'SQL for Data Analysis (Joins, CTEs, Window Functions)',
+      'Python Data Analysis (Pandas, Matplotlib, Seaborn)',
+      'Power BI & Tableau Dashboard Building',
+      'Data Cleaning & Exploratory Data Analysis (EDA)',
+      'KPI Reporting & Business Storytelling',
+    ],
+    category: 'Data Analysis',
+  },
+  {
+    title: 'Artificial Intelligence',
+    desc: 'Build cutting-edge AI systems with deep learning, NLP, computer vision, and generative AI — from research to production.',
+    topics: [
+      'Deep Learning & Neural Networks (TensorFlow, PyTorch)',
+      'Natural Language Processing (NLP) & Transformers',
+      'Computer Vision & Image Recognition (OpenCV, YOLO)',
+      'Generative AI, LLMs & Prompt Engineering',
+      'Reinforcement Learning Fundamentals',
+      'AI Ethics, Safety & Responsible Deployment',
+    ],
+    category: 'Artificial Intelligence',
   },
   {
     title: 'Cybersecurity',
